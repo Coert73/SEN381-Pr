@@ -59,5 +59,10 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Country);
             return hashCode;
         }
+
+        public override string ToString()
+        {
+            return $"Street:{Street},Code:{Code},Suburb:{Suburb}, Country:{Country}"; ;
+        }
     }
 }

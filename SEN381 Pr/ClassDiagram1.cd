@@ -12,14 +12,14 @@
   <Class Name="SEN381_Pr.BusinessClient">
     <Position X="7" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAQAAAAAAAAggAAAAAAAAAAAAIAASAQABEAAAAA=</HashCode>
       <FileName>BusinessClient.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN381_Pr.IndividualClient">
     <Position X="9" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAQAAAAAAAAkgAAAAAAAAAAAAIAASAQABEAAAAA=</HashCode>
       <FileName>IndividualClient.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -140,7 +140,7 @@
   <Class Name="SEN381_Pr.Package">
     <Position X="13.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAgAAAAAAAAAACAIAAAAAIAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAEgAAAAAAAAAACAIAAAAAIAAAAAAA=</HashCode>
       <FileName>Package.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -150,7 +150,7 @@
   <Class Name="SEN381_Pr.Address">
     <Position X="5.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAgAgEAgAAAAAAIAAIAAAAIAACAgAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAgEgEAgAAAAAAIAAIAAAAIAACAgAAQ=</HashCode>
       <FileName>Address.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -161,22 +161,22 @@
     <Position X="8" Y="8.75" Width="1.5" />
     <AssociationLine Name="BusinessClient" Type="SEN381_Pr.BusinessClient" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8.422" Y="9.618" />
-        <Point X="8.422" Y="9.993" />
-        <Point X="7.75" Y="9.993" />
+        <Point X="8.422" Y="12.997" />
+        <Point X="8.422" Y="13.127" />
+        <Point X="7.75" Y="13.127" />
         <Point X="7.75" Y="13.25" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="IndividualClient" Type="SEN381_Pr.IndividualClient" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8.906" Y="9.618" />
-        <Point X="8.906" Y="9.993" />
-        <Point X="9.688" Y="9.993" />
+        <Point X="8.906" Y="12.997" />
+        <Point X="8.906" Y="13.127" />
+        <Point X="9.688" Y="13.127" />
         <Point X="9.688" Y="13.25" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAQAAAAgAACgBAACAAAMAIAAAAAASAQAhEBAAAA=</HashCode>
       <FileName>Client.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -188,14 +188,14 @@
     <Position X="24" Y="8.75" Width="1.5" />
     <AssociationLine Name="Jobs" Type="SEN381_Pr.Jobs" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="24" Y="9.184" />
-        <Point X="23.625" Y="9.184" />
+        <Point X="24" Y="10.426" />
+        <Point X="23.625" Y="10.426" />
         <Point X="23.625" Y="11.812" />
         <Point X="23.25" Y="11.812" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAAAAAAAAkgEAAAAQABAAAAIAAAAAAgAAEAAA=</HashCode>
       <FileName>Technician.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

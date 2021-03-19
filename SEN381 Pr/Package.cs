@@ -34,5 +34,17 @@ namespace SEN381_Pr
         {
             return -1301553130 + EqualityComparer<List<Service>>.Default.GetHashCode(_serviceslsit);
         }
+
+        public override string ToString()
+        {
+            string line = string.Empty;
+
+            foreach (Service item in Serviceslsit)
+            {
+                line += item.ServiceName +" " + item.ServiceAgreement + " " + item.ServiceDescription + " " + item.ServiceDuration + " " + item.ServiceLevel + "\n";
+            }
+
+            return line;
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace SEN381_Pr
         private string _referenceNumber;
         private string _company;
         private string _position;
+        private int test;
 
         public string Name { get => _name; set => _name = value; }
         public string Surname { get => _surname; set => _surname = value; }

@@ -16,5 +16,10 @@ namespace SEN381_Pr
         public abstract DateTime CallLogging { get; set; }
         public abstract Service ServiceType { get; set; }
         public abstract string ClientRequest { get; set; }
+
+        public override string ToString()
+        {
+            return "ClientRequest" + ClientRequest;
+        }
     }
 }

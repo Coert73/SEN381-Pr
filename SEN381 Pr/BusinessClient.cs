@@ -28,6 +28,12 @@ namespace SEN381_Pr
             Position = position;
         }
 
+
+        public override string ToString()
+        {
+            return "BusinessClient Details :" + Name + " " + Surname + " " + Type + " " + Address + " " + Contract + " " + CallsMade + " " + ReferenceNumber;
+        }
+        
         public override bool Equals(object obj)
         {
             return obj is BusinessClient client &&
@@ -73,6 +79,7 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CallsMade);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Position);
             return hashCode;
+
         }
     }
 }

@@ -60,5 +60,10 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + ServiceLevel.GetHashCode();
             return hashCode;
         }
+
+        public override string ToString()
+        {
+            return $"Name:{ServiceName},Description:{ServiceDescription},Duration:{ServiceDuration}, Level:{ServiceLevel}, Agreeement.:{ServiceAgreement}"; 
+        }
     }
 }

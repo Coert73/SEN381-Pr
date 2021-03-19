@@ -51,5 +51,10 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<List<Package>>.Default.GetHashCode(_packages);
             return hashCode;
         }
+
+        public override string ToString()
+        {
+            return "Contract: " + ContractName + " " + ContractType + " " + ContractService;
+        }
     }
 }

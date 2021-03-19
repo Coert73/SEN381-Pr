@@ -31,7 +31,7 @@ namespace SEN381_Pr
 
         public override string ToString()
         {
-            return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position}"; ;
+            return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position}"; 
         }
 
         public override bool Equals(object obj)

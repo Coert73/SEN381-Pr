@@ -16,6 +16,14 @@ namespace SEN381_Pr
 
         public List<Service> Serviceslsit { get => _serviceslsit; set => _serviceslsit = value; }
 
+        public Contract Contract
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Package package &&

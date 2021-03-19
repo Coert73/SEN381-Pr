@@ -30,7 +30,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>EAAAIAAAAAAAAAQgQAACCAQIBAAABAACAQQIhEAEIAA=</HashCode>
+      <HashCode>EAAAIAAAAAAAAAQgQAACCAQIBAAABAAKAQQIhEAEIAA=</HashCode>
       <FileName>IndividualClient.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -199,6 +199,13 @@
     <TypeIdentifier>
       <HashCode>CA0AAAAAAAAAAAEAAAAAAAAAAAQAAAAIAAQAABAABAA=</HashCode>
       <FileName>DataHandeler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEN381_Pr.Package">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAgAAAAAAAAAACAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

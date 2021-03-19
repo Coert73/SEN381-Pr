@@ -46,6 +46,10 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ClientRequest);
             return hashCode;
         }
+        public override string ToString()
+        {
+            return "ClientRequest" + ClientRequest;
+        }
     }
 
 }

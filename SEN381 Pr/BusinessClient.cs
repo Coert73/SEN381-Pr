@@ -27,5 +27,10 @@ namespace SEN381_Pr
             CallsMade = callsMade;
             Position = position;
         }
+
+        public override string ToString()
+        {
+            return "BusinessClient Details :" + Name + " " + Surname + " " + Type + " " + Address + " " + Contract + " " + CallsMade + " " + ReferenceNumber;
+        }
     }
 }

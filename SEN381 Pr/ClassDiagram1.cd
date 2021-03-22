@@ -12,7 +12,7 @@
   <Class Name="SEN381_Pr.BusinessClient">
     <Position X="7" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAQAAAAAAAAggAAAAAAAAAAAAIAASAQABEAAAAA=</HashCode>
+      <HashCode>AgAAAAQAAAAAAAAkgAAAAAAAAAAAAIAASAQABEAAAAA=</HashCode>
       <FileName>BusinessClient.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -33,7 +33,7 @@
   <Class Name="SEN381_Pr.Service">
     <Position X="11.5" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAACAAAAEAAgAAQAAAgAAAAAIAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAgAAAAACAAAAEAEgAAQAAAgAAAAAIAAAAAAAAAABAA=</HashCode>
       <FileName>Service.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -98,7 +98,7 @@
   <Class Name="SEN381_Pr.Job">
     <Position X="21.75" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAgAAAAAAIEgAAAABAAAAAAAIAAAAAAAAAAIAA=</HashCode>
+      <HashCode>IAAAAAAgAAQAAAIEgAAAABAAAAAAAIAAAAAAAAAAIAA=</HashCode>
       <FileName>Job.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -112,7 +112,7 @@
   <Class Name="SEN381_Pr.Call">
     <Position X="17.5" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAIAAAAAAAAgAAIAAAAAAAAAIAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAIAAAIAAAAAAAEgAAIAAAAAAAAAIAAAAAAAAAAAAQ=</HashCode>
       <FileName>Call.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -170,8 +170,8 @@
     <AssociationLine Name="IndividualClient" Type="SEN381_Pr.IndividualClient" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="8.906" Y="12.997" />
-        <Point X="8.906" Y="13.127" />
-        <Point X="9.688" Y="13.127" />
+        <Point X="8.906" Y="13.197" />
+        <Point X="9.688" Y="13.197" />
         <Point X="9.688" Y="13.25" />
       </Path>
     </AssociationLine>

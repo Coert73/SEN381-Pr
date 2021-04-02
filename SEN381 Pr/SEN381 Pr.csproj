@@ -52,6 +52,12 @@
     <Compile Include="CallHandler.cs" />
     <Compile Include="Calls.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ClientFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientFrm.Designer.cs">
+      <DependentUpon>ClientFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contract.cs" />
     <Compile Include="DataHandeler.cs" />
     <Compile Include="FileHandler.cs" />
@@ -61,9 +67,21 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFrm.Designer.cs">
+      <DependentUpon>MenuFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IndividualClient.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="Jobs.cs" />
+    <Compile Include="OptionsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsFrm.Designer.cs">
+      <DependentUpon>OptionsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Package.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +90,12 @@
     <Compile Include="Service.cs" />
     <Compile Include="Services.cs" />
     <Compile Include="Technician.cs" />
+    <EmbeddedResource Include="MenuFrm.resx">
+      <DependentUpon>MenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsFrm.resx">
+      <DependentUpon>OptionsFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

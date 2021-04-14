@@ -67,6 +67,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestFrm.Designer.cs">
+      <DependentUpon>RequestFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechPanelFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechPanelFrm.Designer.cs">
+      <DependentUpon>TechPanelFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +114,24 @@
     <Compile Include="Service.cs" />
     <Compile Include="Services.cs" />
     <Compile Include="Technician.cs" />
+    <Compile Include="TechnicianFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechnicianFrm.Designer.cs">
+      <DependentUpon>TechnicianFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestFrm.resx">
+      <DependentUpon>RequestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechPanelFrm.resx">
+      <DependentUpon>TechPanelFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuFrm.resx">
       <DependentUpon>MenuFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +147,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TechnicianFrm.resx">
+      <DependentUpon>TechnicianFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

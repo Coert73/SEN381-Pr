@@ -133,9 +133,6 @@
     <Compile Include="TechnicianFrm.Designer.cs">
       <DependentUpon>TechnicianFrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CallHandlerFrm.resx" />
-    <EmbeddedResource Include="ContractsFrm.resx">
-      <DependentUpon>ContractsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

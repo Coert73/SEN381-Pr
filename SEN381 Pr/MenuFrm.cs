@@ -12,6 +12,7 @@ namespace SEN381_Pr
 {
     public partial class MenuFrm : Form
     {
+
         public MenuFrm()
         {
             InitializeComponent();
@@ -39,7 +40,8 @@ namespace SEN381_Pr
 
         private void btnClientsOpen_Click(object sender, EventArgs e)
         {
-
+            (new ClientFrm()).Show();
+            this.Hide();
         }
 
         private void btnJobsOpen_Click(object sender, EventArgs e)
@@ -54,16 +56,18 @@ namespace SEN381_Pr
 
         private void btnOptionsOpen_Click(object sender, EventArgs e)
         {
-            
+            (new OptionsFrm()).Show();
+            this.Hide();
             
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-
+            (new LoginFrm()).Show();
+            this.Hide();
         }
 
-        private void btnCallOpen_MouseHover(object sender, EventArgs e)
+        private void btnCallOpen_MouseEnter(object sender, EventArgs e)
         {
             btnCallOpen.BackColor = Color.MediumSpringGreen;
             btnCallOpen.ForeColor = Color.White;
@@ -75,100 +79,100 @@ namespace SEN381_Pr
             btnCallOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnReportsOpen_MouseHover(object sender, EventArgs e)
+        private void btnReportsOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnReportsOpen.BackColor = Color.MediumSpringGreen;
+            btnReportsOpen.ForeColor = Color.White;
         }
 
         private void btnReportsOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnReportsOpen.BackColor = SystemColors.ButtonFace;
+            btnReportsOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnRequestsOpen_MouseHover(object sender, EventArgs e)
+        private void btnRequestsOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnRequestsOpen.BackColor = Color.MediumSpringGreen;
+            btnRequestsOpen.ForeColor = Color.White;
         }
 
         private void btnRequestsOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnRequestsOpen.BackColor = SystemColors.ButtonFace;
+            btnRequestsOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnContractsOpen_MouseHover(object sender, EventArgs e)
+        private void btnContractsOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnContractsOpen.BackColor = Color.MediumSpringGreen;
+            btnContractsOpen.ForeColor = Color.White;
         }
 
         private void btnContractsOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnContractsOpen.BackColor = SystemColors.ButtonFace;
+            btnContractsOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnClientsOpen_MouseHover(object sender, EventArgs e)
+        private void btnClientsOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnClientsOpen.BackColor = Color.MediumSpringGreen;
+            btnClientsOpen.ForeColor = Color.White;
         }
 
         private void btnClientsOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnClientsOpen.BackColor = SystemColors.ButtonFace;
+            btnClientsOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnJobsOpen_MouseHover(object sender, EventArgs e)
+        private void btnJobsOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnJobsOpen.BackColor = Color.MediumSpringGreen;
+            btnJobsOpen.ForeColor = Color.White;
         }
 
         private void btnJobsOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnJobsOpen.BackColor = SystemColors.ButtonFace;
+            btnJobsOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnTechOpen_MouseHover(object sender, EventArgs e)
+        private void btnTechOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnTechOpen.BackColor = Color.MediumSpringGreen;
+            btnTechOpen.ForeColor = Color.White;
         }
 
         private void btnTechOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnTechOpen.BackColor = SystemColors.ButtonFace;
+            btnTechOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnOptionsOpen_MouseHover(object sender, EventArgs e)
+        private void btnOptionsOpen_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnOptionsOpen.BackColor = Color.MediumSpringGreen;
+            btnOptionsOpen.ForeColor = Color.White;
         }
 
         private void btnOptionsOpen_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnOptionsOpen.BackColor = SystemColors.ButtonFace;
+            btnOptionsOpen.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnLogOut_MouseHover(object sender, EventArgs e)
+        private void btnLogOut_MouseEnter(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = Color.MediumSpringGreen;
-            btnCallOpen.ForeColor = Color.White;
+            btnLogOut.BackColor = Color.MediumSpringGreen;
+            btnLogOut.ForeColor = Color.White;
         }
 
         private void btnLogOut_MouseLeave(object sender, EventArgs e)
         {
-            btnCallOpen.BackColor = SystemColors.ButtonFace;
-            btnCallOpen.ForeColor = SystemColors.ControlText;
+            btnLogOut.BackColor = SystemColors.ButtonFace;
+            btnLogOut.ForeColor = SystemColors.ControlText;
         }
     }
 }

@@ -25,7 +25,8 @@ namespace SEN381_Pr
         private void btnLogin_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome");
-            (new TechnicianFrm()).Show();
+            (new MenuFrm()).Show();
+            //(new TechnicianFrm()).Show();
             InitializeComponent();
             this.FormClosed +=
                new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);

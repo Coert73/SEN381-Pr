@@ -86,7 +86,7 @@ namespace SEN381_Pr
             // 
             // btnCallOpen
             // 
-            this.btnCallOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCallOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCallOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnCallOpen.FlatAppearance.BorderSize = 3;
             this.btnCallOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -100,11 +100,11 @@ namespace SEN381_Pr
             this.btnCallOpen.UseVisualStyleBackColor = false;
             this.btnCallOpen.Click += new System.EventHandler(this.btnCallOpen_Click);
             this.btnCallOpen.MouseLeave += new System.EventHandler(this.btnCallOpen_MouseLeave);
-            this.btnCallOpen.MouseHover += new System.EventHandler(this.btnCallOpen_MouseHover);
+            this.btnCallOpen.MouseEnter += new System.EventHandler(this.btnCallOpen_MouseEnter);
             // 
             // btnReportsOpen
             // 
-            this.btnReportsOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnReportsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnReportsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnReportsOpen.FlatAppearance.BorderSize = 3;
             this.btnReportsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -117,11 +117,11 @@ namespace SEN381_Pr
             this.btnReportsOpen.UseVisualStyleBackColor = false;
             this.btnReportsOpen.Click += new System.EventHandler(this.btnReportsOpen_Click);
             this.btnReportsOpen.MouseLeave += new System.EventHandler(this.btnReportsOpen_MouseLeave);
-            this.btnReportsOpen.MouseHover += new System.EventHandler(this.btnReportsOpen_MouseHover);
+            this.btnReportsOpen.MouseEnter += new System.EventHandler(this.btnReportsOpen_MouseEnter);
             // 
             // btnRequestsOpen
             // 
-            this.btnRequestsOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRequestsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRequestsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnRequestsOpen.FlatAppearance.BorderSize = 3;
             this.btnRequestsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,7 +134,7 @@ namespace SEN381_Pr
             this.btnRequestsOpen.UseVisualStyleBackColor = false;
             this.btnRequestsOpen.Click += new System.EventHandler(this.btnRequestsOpen_Click);
             this.btnRequestsOpen.MouseLeave += new System.EventHandler(this.btnRequestsOpen_MouseLeave);
-            this.btnRequestsOpen.MouseHover += new System.EventHandler(this.btnRequestsOpen_MouseHover);
+            this.btnRequestsOpen.MouseEnter += new System.EventHandler(this.btnRequestsOpen_MouseEnter);
             // 
             // panel3
             // 
@@ -154,7 +154,7 @@ namespace SEN381_Pr
             // 
             // btnLogOut
             // 
-            this.btnLogOut.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnLogOut.FlatAppearance.BorderSize = 3;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -167,11 +167,11 @@ namespace SEN381_Pr
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             this.btnLogOut.MouseLeave += new System.EventHandler(this.btnLogOut_MouseLeave);
-            this.btnLogOut.MouseHover += new System.EventHandler(this.btnLogOut_MouseHover);
+            this.btnLogOut.MouseEnter += new System.EventHandler(this.btnLogOut_MouseEnter);
             // 
             // btnOptionsOpen
             // 
-            this.btnOptionsOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnOptionsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnOptionsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnOptionsOpen.FlatAppearance.BorderSize = 3;
             this.btnOptionsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -184,11 +184,11 @@ namespace SEN381_Pr
             this.btnOptionsOpen.UseVisualStyleBackColor = false;
             this.btnOptionsOpen.Click += new System.EventHandler(this.btnOptionsOpen_Click);
             this.btnOptionsOpen.MouseLeave += new System.EventHandler(this.btnOptionsOpen_MouseLeave);
-            this.btnOptionsOpen.MouseHover += new System.EventHandler(this.btnOptionsOpen_MouseHover);
+            this.btnOptionsOpen.MouseEnter += new System.EventHandler(this.btnOptionsOpen_MouseEnter);
             // 
             // btnTechOpen
             // 
-            this.btnTechOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTechOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTechOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnTechOpen.FlatAppearance.BorderSize = 3;
             this.btnTechOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -201,11 +201,11 @@ namespace SEN381_Pr
             this.btnTechOpen.UseVisualStyleBackColor = false;
             this.btnTechOpen.Click += new System.EventHandler(this.btnTechOpen_Click);
             this.btnTechOpen.MouseLeave += new System.EventHandler(this.btnTechOpen_MouseLeave);
-            this.btnTechOpen.MouseHover += new System.EventHandler(this.btnTechOpen_MouseHover);
+            this.btnTechOpen.MouseEnter += new System.EventHandler(this.btnTechOpen_MouseEnter);
             // 
             // btnJobsOpen
             // 
-            this.btnJobsOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnJobsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJobsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnJobsOpen.FlatAppearance.BorderSize = 3;
             this.btnJobsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -218,11 +218,11 @@ namespace SEN381_Pr
             this.btnJobsOpen.UseVisualStyleBackColor = false;
             this.btnJobsOpen.Click += new System.EventHandler(this.btnJobsOpen_Click);
             this.btnJobsOpen.MouseLeave += new System.EventHandler(this.btnJobsOpen_MouseLeave);
-            this.btnJobsOpen.MouseHover += new System.EventHandler(this.btnJobsOpen_MouseHover);
+            this.btnJobsOpen.MouseEnter += new System.EventHandler(this.btnJobsOpen_MouseEnter);
             // 
             // btnClientsOpen
             // 
-            this.btnClientsOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClientsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClientsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnClientsOpen.FlatAppearance.BorderSize = 3;
             this.btnClientsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -235,11 +235,11 @@ namespace SEN381_Pr
             this.btnClientsOpen.UseVisualStyleBackColor = false;
             this.btnClientsOpen.Click += new System.EventHandler(this.btnClientsOpen_Click);
             this.btnClientsOpen.MouseLeave += new System.EventHandler(this.btnClientsOpen_MouseLeave);
-            this.btnClientsOpen.MouseHover += new System.EventHandler(this.btnClientsOpen_MouseHover);
+            this.btnClientsOpen.MouseEnter += new System.EventHandler(this.btnClientsOpen_MouseEnter);
             // 
             // btnContractsOpen
             // 
-            this.btnContractsOpen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnContractsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnContractsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnContractsOpen.FlatAppearance.BorderSize = 3;
             this.btnContractsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -252,16 +252,18 @@ namespace SEN381_Pr
             this.btnContractsOpen.UseVisualStyleBackColor = false;
             this.btnContractsOpen.Click += new System.EventHandler(this.btnContractsOpen_Click);
             this.btnContractsOpen.MouseLeave += new System.EventHandler(this.btnContractsOpen_MouseLeave);
-            this.btnContractsOpen.MouseHover += new System.EventHandler(this.btnContractsOpen_MouseHover);
+            this.btnContractsOpen.MouseEnter += new System.EventHandler(this.btnContractsOpen_MouseEnter);
             // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(394, 523);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuFrm";
             this.Text = "Main Menu";
             this.panel1.ResumeLayout(false);

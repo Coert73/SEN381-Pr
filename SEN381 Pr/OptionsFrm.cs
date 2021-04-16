@@ -65,5 +65,17 @@ namespace SEN381_Pr
             button1.BackColor = SystemColors.ButtonFace;
             button1.ForeColor = SystemColors.ControlText;
         }
+
+        private void btnAudioOptions_Click(object sender, EventArgs e)
+        {
+            (new AudOptionFrm()).Show();
+            this.Hide();
+        }
+
+        private void btnVisOptions_Click(object sender, EventArgs e)
+        {
+            (new VisOptionFrm()).Show();
+            this.Hide();
+        }
     }
 }

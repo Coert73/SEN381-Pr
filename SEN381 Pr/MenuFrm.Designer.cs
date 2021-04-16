@@ -99,8 +99,8 @@ namespace SEN381_Pr
             this.btnCallOpen.Text = "Call";
             this.btnCallOpen.UseVisualStyleBackColor = false;
             this.btnCallOpen.Click += new System.EventHandler(this.btnCallOpen_Click);
-            this.btnCallOpen.MouseLeave += new System.EventHandler(this.btnCallOpen_MouseLeave);
             this.btnCallOpen.MouseEnter += new System.EventHandler(this.btnCallOpen_MouseEnter);
+            this.btnCallOpen.MouseLeave += new System.EventHandler(this.btnCallOpen_MouseLeave);
             // 
             // btnReportsOpen
             // 
@@ -116,8 +116,8 @@ namespace SEN381_Pr
             this.btnReportsOpen.Text = "Reports";
             this.btnReportsOpen.UseVisualStyleBackColor = false;
             this.btnReportsOpen.Click += new System.EventHandler(this.btnReportsOpen_Click);
-            this.btnReportsOpen.MouseLeave += new System.EventHandler(this.btnReportsOpen_MouseLeave);
             this.btnReportsOpen.MouseEnter += new System.EventHandler(this.btnReportsOpen_MouseEnter);
+            this.btnReportsOpen.MouseLeave += new System.EventHandler(this.btnReportsOpen_MouseLeave);
             // 
             // btnRequestsOpen
             // 
@@ -133,8 +133,8 @@ namespace SEN381_Pr
             this.btnRequestsOpen.Text = "Requests";
             this.btnRequestsOpen.UseVisualStyleBackColor = false;
             this.btnRequestsOpen.Click += new System.EventHandler(this.btnRequestsOpen_Click);
-            this.btnRequestsOpen.MouseLeave += new System.EventHandler(this.btnRequestsOpen_MouseLeave);
             this.btnRequestsOpen.MouseEnter += new System.EventHandler(this.btnRequestsOpen_MouseEnter);
+            this.btnRequestsOpen.MouseLeave += new System.EventHandler(this.btnRequestsOpen_MouseLeave);
             // 
             // panel3
             // 
@@ -166,8 +166,8 @@ namespace SEN381_Pr
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            this.btnLogOut.MouseLeave += new System.EventHandler(this.btnLogOut_MouseLeave);
             this.btnLogOut.MouseEnter += new System.EventHandler(this.btnLogOut_MouseEnter);
+            this.btnLogOut.MouseLeave += new System.EventHandler(this.btnLogOut_MouseLeave);
             // 
             // btnOptionsOpen
             // 
@@ -183,8 +183,8 @@ namespace SEN381_Pr
             this.btnOptionsOpen.Text = "Options";
             this.btnOptionsOpen.UseVisualStyleBackColor = false;
             this.btnOptionsOpen.Click += new System.EventHandler(this.btnOptionsOpen_Click);
-            this.btnOptionsOpen.MouseLeave += new System.EventHandler(this.btnOptionsOpen_MouseLeave);
             this.btnOptionsOpen.MouseEnter += new System.EventHandler(this.btnOptionsOpen_MouseEnter);
+            this.btnOptionsOpen.MouseLeave += new System.EventHandler(this.btnOptionsOpen_MouseLeave);
             // 
             // btnTechOpen
             // 
@@ -200,8 +200,8 @@ namespace SEN381_Pr
             this.btnTechOpen.Text = "Technicians";
             this.btnTechOpen.UseVisualStyleBackColor = false;
             this.btnTechOpen.Click += new System.EventHandler(this.btnTechOpen_Click);
-            this.btnTechOpen.MouseLeave += new System.EventHandler(this.btnTechOpen_MouseLeave);
             this.btnTechOpen.MouseEnter += new System.EventHandler(this.btnTechOpen_MouseEnter);
+            this.btnTechOpen.MouseLeave += new System.EventHandler(this.btnTechOpen_MouseLeave);
             // 
             // btnJobsOpen
             // 
@@ -217,8 +217,8 @@ namespace SEN381_Pr
             this.btnJobsOpen.Text = "Jobs";
             this.btnJobsOpen.UseVisualStyleBackColor = false;
             this.btnJobsOpen.Click += new System.EventHandler(this.btnJobsOpen_Click);
-            this.btnJobsOpen.MouseLeave += new System.EventHandler(this.btnJobsOpen_MouseLeave);
             this.btnJobsOpen.MouseEnter += new System.EventHandler(this.btnJobsOpen_MouseEnter);
+            this.btnJobsOpen.MouseLeave += new System.EventHandler(this.btnJobsOpen_MouseLeave);
             // 
             // btnClientsOpen
             // 
@@ -234,8 +234,8 @@ namespace SEN381_Pr
             this.btnClientsOpen.Text = "Clients";
             this.btnClientsOpen.UseVisualStyleBackColor = false;
             this.btnClientsOpen.Click += new System.EventHandler(this.btnClientsOpen_Click);
-            this.btnClientsOpen.MouseLeave += new System.EventHandler(this.btnClientsOpen_MouseLeave);
             this.btnClientsOpen.MouseEnter += new System.EventHandler(this.btnClientsOpen_MouseEnter);
+            this.btnClientsOpen.MouseLeave += new System.EventHandler(this.btnClientsOpen_MouseLeave);
             // 
             // btnContractsOpen
             // 
@@ -251,18 +251,21 @@ namespace SEN381_Pr
             this.btnContractsOpen.Text = "Contracts";
             this.btnContractsOpen.UseVisualStyleBackColor = false;
             this.btnContractsOpen.Click += new System.EventHandler(this.btnContractsOpen_Click);
-            this.btnContractsOpen.MouseLeave += new System.EventHandler(this.btnContractsOpen_MouseLeave);
             this.btnContractsOpen.MouseEnter += new System.EventHandler(this.btnContractsOpen_MouseEnter);
+            this.btnContractsOpen.MouseLeave += new System.EventHandler(this.btnContractsOpen_MouseLeave);
             // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
             this.ClientSize = new System.Drawing.Size(394, 523);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultTextColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuFrm";
             this.Text = "Main Menu";

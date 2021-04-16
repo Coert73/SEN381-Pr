@@ -190,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
             this.ClientSize = new System.Drawing.Size(925, 584);
             this.Controls.Add(this.picboxLogin);
             this.Controls.Add(this.textBox4);
@@ -204,11 +204,13 @@
             this.Controls.Add(this.lblLoginPassword);
             this.Controls.Add(this.lblLoginUsername);
             this.Controls.Add(this.lblLoginText);
+            this.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginFrm";
             this.Load += new System.EventHandler(this.LoginFrm_Load);
+            this.Shown += new System.EventHandler(this.LoginFrm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

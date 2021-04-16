@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="ADOController.cs" />
+    <Compile Include="AudOptionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AudOptionFrm.Designer.cs">
+      <DependentUpon>AudOptionFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BusinessClient.cs" />
     <Compile Include="Call.cs" />
     <Compile Include="CallHandler.cs" />
@@ -124,6 +130,15 @@
     <Compile Include="TechnicianFrm.Designer.cs">
       <DependentUpon>TechnicianFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisOptionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisOptionFrm.Designer.cs">
+      <DependentUpon>VisOptionFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AudOptionFrm.resx">
+      <DependentUpon>AudOptionFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientFrm.resx">
       <DependentUpon>ClientFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="TechnicianFrm.resx">
       <DependentUpon>TechnicianFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisOptionFrm.resx">
+      <DependentUpon>VisOptionFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

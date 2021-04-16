@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace SEN381_Pr
 {
-    public partial class Form2 : Form
+    public partial class JobsFrm : Form
     {
-        public Form2()
+        public JobsFrm()
         {
             InitializeComponent();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

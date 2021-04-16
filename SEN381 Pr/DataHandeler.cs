@@ -21,8 +21,7 @@ namespace SEN381_Pr
             try
             {
                 _connection = new SqlConnection(_connectionString);
-                _connection.Open();
-                MessageBox.Show("Database Connected");
+                _connection.Open();                
             }
             catch (Exception ex)
             {

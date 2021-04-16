@@ -12,7 +12,7 @@ namespace SEN381_Pr
 {
     public partial class OptionsFrm : Form
     {
-        MenuFrm MenuForm = new MenuFrm();
+        
         public OptionsFrm()
         {
             InitializeComponent();
@@ -20,8 +20,50 @@ namespace SEN381_Pr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm.Show();
+            (new MenuFrm()).Show();
             this.Hide();
+            
+        }
+
+        private void OptionsFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVisOptions_MouseEnter(object sender, EventArgs e)
+        {
+            btnVisOptions.BackColor = Color.MediumSpringGreen;
+            btnVisOptions.ForeColor = Color.White;
+        }
+
+        private void btnVisOptions_MouseLeave(object sender, EventArgs e)
+        {
+            btnVisOptions.BackColor = SystemColors.ButtonFace;
+            btnVisOptions.ForeColor = SystemColors.ControlText;
+        }
+
+        private void btnAudioOptions_MouseEnter(object sender, EventArgs e)
+        {
+            btnAudioOptions.BackColor = Color.MediumSpringGreen;
+            btnAudioOptions.ForeColor = Color.White;
+        }
+
+        private void btnAudioOptions_MouseLeave(object sender, EventArgs e)
+        {
+            btnAudioOptions.BackColor = SystemColors.ButtonFace;
+            btnAudioOptions.ForeColor = SystemColors.ControlText;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.MediumSpringGreen;
+            button1.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.ForeColor = SystemColors.ControlText;
         }
     }
 }

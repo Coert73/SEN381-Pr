@@ -59,10 +59,10 @@ namespace SEN381_Pr
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 12);
+            this.label1.Font = new System.Drawing.Font("Impact", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 31);
+            this.label1.Size = new System.Drawing.Size(319, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Premiere Service Solutions";
             // 
@@ -77,45 +77,64 @@ namespace SEN381_Pr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(146, 1);
+            this.label2.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(154, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 31);
+            this.label2.Size = new System.Drawing.Size(68, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Menu";
             // 
             // btnCallOpen
             // 
-            this.btnCallOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCallOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCallOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnCallOpen.FlatAppearance.BorderSize = 3;
+            this.btnCallOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCallOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCallOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCallOpen.Location = new System.Drawing.Point(22, 14);
             this.btnCallOpen.Name = "btnCallOpen";
             this.btnCallOpen.Size = new System.Drawing.Size(334, 33);
             this.btnCallOpen.TabIndex = 2;
             this.btnCallOpen.Text = "Call";
-            this.btnCallOpen.UseVisualStyleBackColor = true;
+            this.btnCallOpen.UseVisualStyleBackColor = false;
             this.btnCallOpen.Click += new System.EventHandler(this.btnCallOpen_Click);
+            this.btnCallOpen.MouseLeave += new System.EventHandler(this.btnCallOpen_MouseLeave);
+            this.btnCallOpen.MouseEnter += new System.EventHandler(this.btnCallOpen_MouseEnter);
             // 
             // btnReportsOpen
             // 
-            this.btnReportsOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnReportsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnReportsOpen.FlatAppearance.BorderSize = 3;
+            this.btnReportsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportsOpen.Location = new System.Drawing.Point(22, 53);
             this.btnReportsOpen.Name = "btnReportsOpen";
             this.btnReportsOpen.Size = new System.Drawing.Size(334, 33);
             this.btnReportsOpen.TabIndex = 3;
             this.btnReportsOpen.Text = "Reports";
-            this.btnReportsOpen.UseVisualStyleBackColor = true;
+            this.btnReportsOpen.UseVisualStyleBackColor = false;
             this.btnReportsOpen.Click += new System.EventHandler(this.btnReportsOpen_Click);
+            this.btnReportsOpen.MouseLeave += new System.EventHandler(this.btnReportsOpen_MouseLeave);
+            this.btnReportsOpen.MouseEnter += new System.EventHandler(this.btnReportsOpen_MouseEnter);
             // 
             // btnRequestsOpen
             // 
-            this.btnRequestsOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRequestsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRequestsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnRequestsOpen.FlatAppearance.BorderSize = 3;
+            this.btnRequestsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRequestsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequestsOpen.Location = new System.Drawing.Point(22, 92);
             this.btnRequestsOpen.Name = "btnRequestsOpen";
             this.btnRequestsOpen.Size = new System.Drawing.Size(334, 33);
             this.btnRequestsOpen.TabIndex = 4;
             this.btnRequestsOpen.Text = "Requests";
-            this.btnRequestsOpen.UseVisualStyleBackColor = true;
+            this.btnRequestsOpen.UseVisualStyleBackColor = false;
             this.btnRequestsOpen.Click += new System.EventHandler(this.btnRequestsOpen_Click);
+            this.btnRequestsOpen.MouseLeave += new System.EventHandler(this.btnRequestsOpen_MouseLeave);
+            this.btnRequestsOpen.MouseEnter += new System.EventHandler(this.btnRequestsOpen_MouseEnter);
             // 
             // panel3
             // 
@@ -135,78 +154,116 @@ namespace SEN381_Pr
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnLogOut.FlatAppearance.BorderSize = 3;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Location = new System.Drawing.Point(22, 354);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(334, 33);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.btnLogOut.MouseLeave += new System.EventHandler(this.btnLogOut_MouseLeave);
+            this.btnLogOut.MouseEnter += new System.EventHandler(this.btnLogOut_MouseEnter);
             // 
             // btnOptionsOpen
             // 
-            this.btnOptionsOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptionsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnOptionsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnOptionsOpen.FlatAppearance.BorderSize = 3;
+            this.btnOptionsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOptionsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOptionsOpen.Location = new System.Drawing.Point(22, 315);
             this.btnOptionsOpen.Name = "btnOptionsOpen";
             this.btnOptionsOpen.Size = new System.Drawing.Size(334, 33);
             this.btnOptionsOpen.TabIndex = 9;
             this.btnOptionsOpen.Text = "Options";
-            this.btnOptionsOpen.UseVisualStyleBackColor = true;
+            this.btnOptionsOpen.UseVisualStyleBackColor = false;
             this.btnOptionsOpen.Click += new System.EventHandler(this.btnOptionsOpen_Click);
+            this.btnOptionsOpen.MouseLeave += new System.EventHandler(this.btnOptionsOpen_MouseLeave);
+            this.btnOptionsOpen.MouseEnter += new System.EventHandler(this.btnOptionsOpen_MouseEnter);
             // 
             // btnTechOpen
             // 
-            this.btnTechOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTechOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTechOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnTechOpen.FlatAppearance.BorderSize = 3;
+            this.btnTechOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTechOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTechOpen.Location = new System.Drawing.Point(22, 248);
             this.btnTechOpen.Name = "btnTechOpen";
             this.btnTechOpen.Size = new System.Drawing.Size(334, 33);
             this.btnTechOpen.TabIndex = 8;
             this.btnTechOpen.Text = "Technicians";
-            this.btnTechOpen.UseVisualStyleBackColor = true;
+            this.btnTechOpen.UseVisualStyleBackColor = false;
             this.btnTechOpen.Click += new System.EventHandler(this.btnTechOpen_Click);
+            this.btnTechOpen.MouseLeave += new System.EventHandler(this.btnTechOpen_MouseLeave);
+            this.btnTechOpen.MouseEnter += new System.EventHandler(this.btnTechOpen_MouseEnter);
             // 
             // btnJobsOpen
             // 
-            this.btnJobsOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJobsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnJobsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnJobsOpen.FlatAppearance.BorderSize = 3;
+            this.btnJobsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobsOpen.Location = new System.Drawing.Point(22, 209);
             this.btnJobsOpen.Name = "btnJobsOpen";
             this.btnJobsOpen.Size = new System.Drawing.Size(334, 33);
             this.btnJobsOpen.TabIndex = 7;
             this.btnJobsOpen.Text = "Jobs";
-            this.btnJobsOpen.UseVisualStyleBackColor = true;
+            this.btnJobsOpen.UseVisualStyleBackColor = false;
             this.btnJobsOpen.Click += new System.EventHandler(this.btnJobsOpen_Click);
+            this.btnJobsOpen.MouseLeave += new System.EventHandler(this.btnJobsOpen_MouseLeave);
+            this.btnJobsOpen.MouseEnter += new System.EventHandler(this.btnJobsOpen_MouseEnter);
             // 
             // btnClientsOpen
             // 
-            this.btnClientsOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClientsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnClientsOpen.FlatAppearance.BorderSize = 3;
+            this.btnClientsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientsOpen.Location = new System.Drawing.Point(22, 170);
             this.btnClientsOpen.Name = "btnClientsOpen";
             this.btnClientsOpen.Size = new System.Drawing.Size(334, 33);
             this.btnClientsOpen.TabIndex = 6;
             this.btnClientsOpen.Text = "Clients";
-            this.btnClientsOpen.UseVisualStyleBackColor = true;
+            this.btnClientsOpen.UseVisualStyleBackColor = false;
             this.btnClientsOpen.Click += new System.EventHandler(this.btnClientsOpen_Click);
+            this.btnClientsOpen.MouseLeave += new System.EventHandler(this.btnClientsOpen_MouseLeave);
+            this.btnClientsOpen.MouseEnter += new System.EventHandler(this.btnClientsOpen_MouseEnter);
             // 
             // btnContractsOpen
             // 
-            this.btnContractsOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContractsOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnContractsOpen.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnContractsOpen.FlatAppearance.BorderSize = 3;
+            this.btnContractsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContractsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContractsOpen.Location = new System.Drawing.Point(22, 131);
             this.btnContractsOpen.Name = "btnContractsOpen";
             this.btnContractsOpen.Size = new System.Drawing.Size(334, 33);
             this.btnContractsOpen.TabIndex = 5;
             this.btnContractsOpen.Text = "Contracts";
-            this.btnContractsOpen.UseVisualStyleBackColor = true;
+            this.btnContractsOpen.UseVisualStyleBackColor = false;
             this.btnContractsOpen.Click += new System.EventHandler(this.btnContractsOpen_Click);
+            this.btnContractsOpen.MouseLeave += new System.EventHandler(this.btnContractsOpen_MouseLeave);
+            this.btnContractsOpen.MouseEnter += new System.EventHandler(this.btnContractsOpen_MouseEnter);
             // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(394, 523);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuFrm";
             this.Text = "Main Menu";
             this.panel1.ResumeLayout(false);

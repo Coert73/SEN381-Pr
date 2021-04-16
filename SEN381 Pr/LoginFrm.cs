@@ -45,7 +45,13 @@ namespace SEN381_Pr
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Reset();
             Application.Exit();
+        }
+
+        private void LoginFrm_Shown(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reload();
         }
     }
 }

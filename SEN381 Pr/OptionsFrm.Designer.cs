@@ -126,16 +126,20 @@ namespace SEN381_Pr
             this.btnAudioOptions.TabIndex = 4;
             this.btnAudioOptions.Text = "Audio Options";
             this.btnAudioOptions.UseVisualStyleBackColor = false;
+            this.btnAudioOptions.Click += new System.EventHandler(this.btnAudioOptions_Click);
             this.btnAudioOptions.MouseEnter += new System.EventHandler(this.btnAudioOptions_MouseEnter);
             this.btnAudioOptions.MouseLeave += new System.EventHandler(this.btnAudioOptions_MouseLeave);
             // 
             // btnVisOptions
             // 
-            this.btnVisOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVisOptions.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
+            this.btnVisOptions.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultTextColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnVisOptions.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.btnVisOptions.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnVisOptions.FlatAppearance.BorderSize = 3;
             this.btnVisOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVisOptions.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisOptions.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
             this.btnVisOptions.Location = new System.Drawing.Point(14, 16);
             this.btnVisOptions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVisOptions.Name = "btnVisOptions";
@@ -143,6 +147,7 @@ namespace SEN381_Pr
             this.btnVisOptions.TabIndex = 3;
             this.btnVisOptions.Text = "Visual Options";
             this.btnVisOptions.UseVisualStyleBackColor = false;
+            this.btnVisOptions.Click += new System.EventHandler(this.btnVisOptions_Click);
             this.btnVisOptions.MouseEnter += new System.EventHandler(this.btnVisOptions_MouseEnter);
             this.btnVisOptions.MouseLeave += new System.EventHandler(this.btnVisOptions_MouseLeave);
             // 

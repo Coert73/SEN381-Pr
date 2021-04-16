@@ -17,9 +17,9 @@ namespace SEN381_Pr
 
         }
 
-        public List<string> ReadFromLogFile()
-        {
+        //public List<string> ReadFromLogFile()
+        //{
 
-        } 
+        //} 
     }
 }

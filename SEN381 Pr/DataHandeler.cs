@@ -3,51 +3,40 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SEN381_Pr
 {
     public class DataHandeler
     {
-        private string _connectionString;
-        private SqlConnection _connection;
-        private SqlCommand _command;
+        //Sorts out the connection for the database
+
+        private string _connectionString = "Server=LocalHost;Database=PremierServiceSolutionsDB;Trusted_Connection=True;";
+
+        private SqlConnection _connection;    
         private SqlDataReader _reader;   
 
-        public DataHandeler(string ConnectionString)
+        public DataHandeler()
         {
-            _connectionString = ConnectionString;
-            _connection = new SqlConnection(_connectionString);
-            _connection.Open();
+            try
+            {
+                _connection = new SqlConnection(_connectionString);
+                _connection.Open();
+                MessageBox.Show("Database Connected");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to connect to Database - Error: " + ex);
+                throw;
+            }         
         }
 
-        public void ReadFromDatabase()
+        public SqlConnection Connection { get => _connection; set => _connection = value; }
+
+        public void CloseConnection()
         {
-
-        }
-
-        public void DeleteFromDatabase(string TextLine)
-        {
-
-        }
-
-        public void SearchDatabase(string TextLine)
-        {
-
-        }
-
-        public void UpdateDatabase(string TextLine)
-        {
-
-        }
-
-        public void InsertDatabase(string TextLine)
-        {
-
-        }
-
-        public void SortDatabase(string TextLine)
-        {
-
+            this.Connection.Close();
+            MessageBox.Show("Connection Closed");
         }
     }
 }

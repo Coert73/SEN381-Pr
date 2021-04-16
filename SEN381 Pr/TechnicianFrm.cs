@@ -21,5 +21,23 @@ namespace SEN381_Pr
         {
 
         }
+
+        private void TechnicianFrm_Load(object sender, EventArgs e)
+        {
+            ADOMethodController Con = new ADOMethodController();
+            dgvTechnician.AutoGenerateColumns = true;           
+            dgvTechnician.DataSource = Con.LoadData();
+            dgvTechnician.DataMember = "Table";         
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

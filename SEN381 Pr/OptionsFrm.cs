@@ -12,7 +12,7 @@ namespace SEN381_Pr
 {
     public partial class OptionsFrm : Form
     {
-        MenuFrm MenuForm = new MenuFrm();
+        
         public OptionsFrm()
         {
             InitializeComponent();
@@ -20,8 +20,13 @@ namespace SEN381_Pr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm.Show();
-            this.Hide();
+            
+            
+        }
+
+        private void OptionsFrm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

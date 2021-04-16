@@ -35,9 +35,9 @@ namespace SEN381_Pr
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnVisOptions = new System.Windows.Forms.Button();
-            this.btnAudioOptions = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAudioOptions = new System.Windows.Forms.Button();
+            this.btnVisOptions = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,15 +89,16 @@ namespace SEN381_Pr
             this.panel3.Size = new System.Drawing.Size(367, 193);
             this.panel3.TabIndex = 4;
             // 
-            // btnVisOptions
+            // button1
             // 
-            this.btnVisOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisOptions.Location = new System.Drawing.Point(15, 16);
-            this.btnVisOptions.Name = "btnVisOptions";
-            this.btnVisOptions.Size = new System.Drawing.Size(342, 33);
-            this.btnVisOptions.TabIndex = 3;
-            this.btnVisOptions.Text = "Visual Options";
-            this.btnVisOptions.UseVisualStyleBackColor = true;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 148);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(342, 33);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Return";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAudioOptions
             // 
@@ -109,16 +110,15 @@ namespace SEN381_Pr
             this.btnAudioOptions.Text = "Audio Options";
             this.btnAudioOptions.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnVisOptions
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(342, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Return";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnVisOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisOptions.Location = new System.Drawing.Point(15, 16);
+            this.btnVisOptions.Name = "btnVisOptions";
+            this.btnVisOptions.Size = new System.Drawing.Size(342, 33);
+            this.btnVisOptions.TabIndex = 3;
+            this.btnVisOptions.Text = "Visual Options";
+            this.btnVisOptions.UseVisualStyleBackColor = true;
             // 
             // OptionsFrm
             // 
@@ -131,6 +131,7 @@ namespace SEN381_Pr
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OptionsFrm";
             this.Text = "Options";
+            this.Load += new System.EventHandler(this.OptionsFrm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

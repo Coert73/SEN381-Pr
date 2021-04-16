@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrm));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblLoginText = new System.Windows.Forms.Label();
             this.lblLoginUsername = new System.Windows.Forms.Label();
@@ -36,9 +37,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnContactAdmin = new System.Windows.Forms.Button();
             this.btnForgotPass = new System.Windows.Forms.Button();
-            this.lblLoginWelcome = new System.Windows.Forms.Label();
+            this.btnContactAdmin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.picboxLogin = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -49,97 +54,162 @@
             // lblLoginText
             // 
             this.lblLoginText.AutoSize = true;
-            this.lblLoginText.Location = new System.Drawing.Point(555, 81);
+            this.lblLoginText.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginText.Location = new System.Drawing.Point(372, 46);
             this.lblLoginText.Name = "lblLoginText";
-            this.lblLoginText.Size = new System.Drawing.Size(33, 13);
+            this.lblLoginText.Size = new System.Drawing.Size(180, 80);
             this.lblLoginText.TabIndex = 2;
-            this.lblLoginText.Text = "Login";
+            this.lblLoginText.Text = "LOGIN";
             // 
             // lblLoginUsername
             // 
             this.lblLoginUsername.AutoSize = true;
-            this.lblLoginUsername.Location = new System.Drawing.Point(434, 155);
+            this.lblLoginUsername.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginUsername.Location = new System.Drawing.Point(426, 250);
             this.lblLoginUsername.Name = "lblLoginUsername";
-            this.lblLoginUsername.Size = new System.Drawing.Size(55, 13);
+            this.lblLoginUsername.Size = new System.Drawing.Size(73, 19);
             this.lblLoginUsername.TabIndex = 3;
             this.lblLoginUsername.Text = "Username";
             // 
             // lblLoginPassword
             // 
             this.lblLoginPassword.AutoSize = true;
-            this.lblLoginPassword.Location = new System.Drawing.Point(434, 214);
+            this.lblLoginPassword.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginPassword.Location = new System.Drawing.Point(427, 309);
             this.lblLoginPassword.Name = "lblLoginPassword";
-            this.lblLoginPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblLoginPassword.Size = new System.Drawing.Size(71, 19);
             this.lblLoginPassword.TabIndex = 4;
             this.lblLoginPassword.Text = "Password";
             this.lblLoginPassword.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(434, 171);
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(325, 272);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(275, 20);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(434, 230);
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(325, 331);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(275, 20);
             this.textBox2.TabIndex = 6;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(534, 269);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(404, 370);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(116, 38);
             this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // btnContactAdmin
-            // 
-            this.btnContactAdmin.Location = new System.Drawing.Point(12, 468);
-            this.btnContactAdmin.Name = "btnContactAdmin";
-            this.btnContactAdmin.Size = new System.Drawing.Size(134, 23);
-            this.btnContactAdmin.TabIndex = 8;
-            this.btnContactAdmin.Text = "Contact Admin";
-            this.btnContactAdmin.UseVisualStyleBackColor = true;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnForgotPass
             // 
-            this.btnForgotPass.Location = new System.Drawing.Point(725, 230);
+            this.btnForgotPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnForgotPass.FlatAppearance.BorderSize = 0;
+            this.btnForgotPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgotPass.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPass.Location = new System.Drawing.Point(388, 414);
             this.btnForgotPass.Name = "btnForgotPass";
-            this.btnForgotPass.Size = new System.Drawing.Size(119, 23);
-            this.btnForgotPass.TabIndex = 9;
-            this.btnForgotPass.Text = "Forgot Password";
-            this.btnForgotPass.UseVisualStyleBackColor = true;
+            this.btnForgotPass.Size = new System.Drawing.Size(148, 39);
+            this.btnForgotPass.TabIndex = 12;
+            this.btnForgotPass.Text = "FORGOT PASSWORD";
+            this.btnForgotPass.UseVisualStyleBackColor = false;
             // 
-            // lblLoginWelcome
+            // btnContactAdmin
             // 
-            this.lblLoginWelcome.AutoSize = true;
-            this.lblLoginWelcome.Location = new System.Drawing.Point(530, 111);
-            this.lblLoginWelcome.Name = "lblLoginWelcome";
-            this.lblLoginWelcome.Size = new System.Drawing.Size(83, 13);
-            this.lblLoginWelcome.TabIndex = 10;
-            this.lblLoginWelcome.Text = "Welcome Back!";
+            this.btnContactAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnContactAdmin.FlatAppearance.BorderSize = 0;
+            this.btnContactAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContactAdmin.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContactAdmin.Location = new System.Drawing.Point(12, 534);
+            this.btnContactAdmin.Name = "btnContactAdmin";
+            this.btnContactAdmin.Size = new System.Drawing.Size(114, 38);
+            this.btnContactAdmin.TabIndex = 13;
+            this.btnContactAdmin.Text = "Contact Admin";
+            this.btnContactAdmin.UseVisualStyleBackColor = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(796, 534);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(114, 38);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(325, 289);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(275, 3);
+            this.textBox3.TabIndex = 15;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Location = new System.Drawing.Point(325, 348);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(275, 3);
+            this.textBox4.TabIndex = 16;
+            // 
+            // picboxLogin
+            // 
+            this.picboxLogin.Image = ((System.Drawing.Image)(resources.GetObject("picboxLogin.Image")));
+            this.picboxLogin.Location = new System.Drawing.Point(412, 129);
+            this.picboxLogin.Name = "picboxLogin";
+            this.picboxLogin.Size = new System.Drawing.Size(100, 100);
+            this.picboxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxLogin.TabIndex = 17;
+            this.picboxLogin.TabStop = false;
             // 
             // LoginFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 503);
-            this.Controls.Add(this.lblLoginWelcome);
-            this.Controls.Add(this.btnForgotPass);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(925, 584);
+            this.Controls.Add(this.picboxLogin);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnContactAdmin);
+            this.Controls.Add(this.btnForgotPass);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblLoginPassword);
             this.Controls.Add(this.lblLoginUsername);
             this.Controls.Add(this.lblLoginText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginFrm";
+            this.Load += new System.EventHandler(this.LoginFrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,8 +224,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnContactAdmin;
         private System.Windows.Forms.Button btnForgotPass;
-        private System.Windows.Forms.Label lblLoginWelcome;
+        private System.Windows.Forms.Button btnContactAdmin;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.PictureBox picboxLogin;
     }
 }

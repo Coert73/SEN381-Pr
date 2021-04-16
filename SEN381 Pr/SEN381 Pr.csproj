@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="ADOController.cs" />
     <Compile Include="BusinessClient.cs" />
     <Compile Include="Call.cs" />
     <Compile Include="CallHandler.cs" />
     <Compile Include="Calls.cs" />
+    <Compile Include="ADOMethodController.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ClientFrm.cs">
       <SubType>Form</SubType>
@@ -79,6 +81,7 @@
     <Compile Include="RequestFrm.Designer.cs">
       <DependentUpon>RequestFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TechADOController.cs" />
     <Compile Include="TechPanelFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data Access Layer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

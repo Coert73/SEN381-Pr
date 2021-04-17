@@ -22,5 +22,22 @@ namespace SEN381_Pr
             (new MenuFrm()).Show();
             this.Hide();
         }
+
+        ADOMethodController Con = new ADOMethodController();
+
+        private void RequestFrm_Load(object sender, EventArgs e)
+        {
+            Con.LoadReqData(dgvRequests);
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            Con.SortData(dgvRequests, cbxRequestSort.Text);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Con.LoadReqData(dgvRequests);
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace SEN381_Pr
         TechADOController TechCon = new TechADOController();
         JobsADOController JobCon = new JobsADOController();
         LoginADOController SecCon = new LoginADOController();
+        RequestADOController ReqCon = new RequestADOController();
 
         //Methods For Technicians
 
@@ -97,6 +98,22 @@ namespace SEN381_Pr
             }
 
             return UserCredentials;
+        }
+
+        //Request ADO Controllers/Methods
+
+        public void LoadReqData(DataGridView tab)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = ReqCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void SortData(DataGridView tab,string sort)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = ReqCon.SortData(sort);
+            tab.DataMember = "Table";
         }
     }
 }

@@ -18,6 +18,11 @@ namespace SEN381_Pr
             InitializeComponent();
         }
 
+        public MenuFrm(string username)
+        {
+            InitializeComponent();
+        }
+
         private void btnCallOpen_Click(object sender, EventArgs e)
         {
 
@@ -177,5 +182,12 @@ namespace SEN381_Pr
             btnLogOut.BackColor = SystemColors.ButtonFace;
             btnLogOut.ForeColor = SystemColors.ControlText;
         }
+
+        private void MenuFrm_Load(object sender, EventArgs e)
+        {
+            lblUser.Text = "User";
+        }
+
+       
     }
 }

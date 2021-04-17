@@ -19,11 +19,13 @@ namespace SEN381_Pr
 
         public SecurityController(LoginFrm form, string user,string pass)
         {
+
             List<string> credentials = Controller.ValidateCredentials(user);
 
             if (credentials[0] == user && credentials[1] == pass)
             {
-                (new MenuFrm()).Show();
+                MenuFrm formMen = new MenuFrm();
+                formMen.Show();               
                 form.Hide();
             }
             else

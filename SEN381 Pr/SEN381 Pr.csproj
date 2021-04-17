@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -140,6 +141,8 @@
     <Compile Include="Presentation Layer\VisOptionFrm.Designer.cs">
       <DependentUpon>VisOptionFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data Access Layer\RequestADOController.cs" />
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="Presentation Layer\AudOptionFrm.resx">
       <DependentUpon>AudOptionFrm.cs</DependentUpon>
     </EmbeddedResource>

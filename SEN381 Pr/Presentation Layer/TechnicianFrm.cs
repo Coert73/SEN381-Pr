@@ -46,5 +46,11 @@ namespace SEN381_Pr
         {
             Con.DeleteTechData(dgvTechnician, _id);
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
+        }
     }
 }

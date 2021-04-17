@@ -268,6 +268,7 @@ namespace SEN381_Pr
             this.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

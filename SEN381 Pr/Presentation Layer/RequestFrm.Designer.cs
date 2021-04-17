@@ -36,7 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,17 +116,18 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // btnBack
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(922, 589);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 41);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Back";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(922, 589);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(172, 41);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // textBox4
             // 
@@ -147,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(1106, 642);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvRequests);
@@ -169,7 +170,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox textBox4;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SEN381_Pr
 {
@@ -14,9 +15,21 @@ namespace SEN381_Pr
         private string _username;
         private string _password;
 
-        public void VerifyCredentials(string user,string pass)
-        {
+        ADOMethodController Controller = new ADOMethodController();
 
-        }
+        public SecurityController(LoginFrm form, string user,string pass)
+        {
+            List<string> credentials = Controller.ValidateCredentials(user);
+
+            if (credentials[0] == user && credentials[1] == pass)
+            {
+                (new MenuFrm()).Show();
+                form.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Failed to validate Credentials!");
+            }
+        }      
     }
 }

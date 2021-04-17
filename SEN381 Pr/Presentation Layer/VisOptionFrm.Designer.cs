@@ -162,6 +162,7 @@ namespace SEN381_Pr
             this.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VisOptionFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisOptionFrm";
             this.Load += new System.EventHandler(this.VisOptionFrm_Load);
             this.Shown += new System.EventHandler(this.VisOptionFrm_Shown);

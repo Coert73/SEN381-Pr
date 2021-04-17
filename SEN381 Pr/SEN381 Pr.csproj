@@ -50,6 +50,7 @@
     <Compile Include="Data Access Layer\ClientADOController.cs" />
     <Compile Include="Data Access Layer\ContactsADOController.cs" />
     <Compile Include="Data Access Layer\ADOController.cs" />
+    <Compile Include="Data Access Layer\LoginADOController.cs" />
     <Compile Include="Presentation Layer\AudOptionFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +61,7 @@
     <Compile Include="Business Logic Layer\Call.cs" />
     <Compile Include="Business Logic Layer\CallHandler.cs" />
     <Compile Include="Business Logic Layer\Calls.cs" />
-    <Compile Include="Data Access Layer\ADOMethodController.cs" />
+    <Compile Include="Business Logic Layer\ADOMethodController.cs" />
     <Compile Include="Business Logic Layer\Client.cs" />
     <Compile Include="Presentation Layer\ClientFrm.cs">
       <SubType>Form</SubType>

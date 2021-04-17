@@ -16,6 +16,7 @@ namespace SEN381_Pr
 
         TechADOController TechCon = new TechADOController();
         JobsADOController JobCon = new JobsADOController();
+        LoginADOController SecCon = new LoginADOController();
 
         //Methods For Technicians
 
@@ -70,6 +71,32 @@ namespace SEN381_Pr
             tab.AutoGenerateColumns = true;
             tab.DataSource = JobCon.DeleteJob(id);
             tab.DataMember = "Table";
+        }
+
+        //Security Layer Controllers
+
+        public List<string> ValidateCredentials(string username)
+        {
+            List<string> UserCredentials = new List<string>();
+            int i = 0;
+
+            foreach (DataRow row in SecCon.LoadData(username).Tables[i].Rows)
+            {               
+                if (username == row.ItemArray.GetValue(1).ToString())
+                {
+                    UserCredentials.Add(row.ItemArray.GetValue(1).ToString());
+                    UserCredentials.Add(row.ItemArray.GetValue(3).ToString());
+                    break;
+                }
+                else
+                {
+                    UserCredentials.Add(null);
+                    UserCredentials.Add(null);
+                }
+                i++;
+            }
+
+            return UserCredentials;
         }
     }
 }

@@ -23,10 +23,8 @@ namespace SEN381_Pr
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {            
-            TechnicianFrm techFrm = new TechnicianFrm();
-            techFrm.Show();
-            this.Hide();
+        {
+            SecurityController Con = new SecurityController(this,txtUsername.Text,txtPassword.Text);        
         }        
 
         private void LoginFrm_Load(object sender, EventArgs e)

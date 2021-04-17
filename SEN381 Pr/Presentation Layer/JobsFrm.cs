@@ -40,5 +40,11 @@ namespace SEN381_Pr
             dgvJobs.DataSource = Con.LoadJobData();
             dgvJobs.DataMember = "Table";
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
+        }
     }
 }

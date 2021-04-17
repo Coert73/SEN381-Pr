@@ -34,14 +34,14 @@ namespace SEN381_Pr
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.brnReturn = new System.Windows.Forms.Button();
             this.btnCustVol = new System.Windows.Forms.Button();
             this.btnhearaid = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,6 +103,28 @@ namespace SEN381_Pr
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(367, 193);
             this.panel3.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
+            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultTextColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.label6.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
+            this.label6.Location = new System.Drawing.Point(302, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(253, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Volume:";
             // 
             // trackBar1
             // 
@@ -182,28 +204,6 @@ namespace SEN381_Pr
             this.btnhearaid.UseVisualStyleBackColor = false;
             this.btnhearaid.Click += new System.EventHandler(this.btnhearaid_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(253, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Volume:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
-            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("ForeColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultTextColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.label6.ForeColor = global::SEN381_Pr.Properties.Settings.Default.DefaultTextColor;
-            this.label6.Location = new System.Drawing.Point(302, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "0";
-            // 
             // AudOptionFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +216,7 @@ namespace SEN381_Pr
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::SEN381_Pr.Properties.Settings.Default, "DefaultBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AudOptionFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AudOptionFrm";
             this.Load += new System.EventHandler(this.AudOptionFrm_Load);
             this.Shown += new System.EventHandler(this.AudOptionFrm_Shown);

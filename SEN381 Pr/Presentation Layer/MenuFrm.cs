@@ -30,7 +30,8 @@ namespace SEN381_Pr
 
         private void btnRequestsOpen_Click(object sender, EventArgs e)
         {
-
+            (new RequestFrm()).Show();
+            this.Hide();
         }
 
         private void btnContractsOpen_Click(object sender, EventArgs e)
@@ -46,12 +47,14 @@ namespace SEN381_Pr
 
         private void btnJobsOpen_Click(object sender, EventArgs e)
         {
-
+            (new JobsFrm()).Show();
+            this.Hide();
         }
 
         private void btnTechOpen_Click(object sender, EventArgs e)
         {
-
+            (new TechnicianFrm()).Show();
+            this.Hide();
         }
 
         private void btnOptionsOpen_Click(object sender, EventArgs e)

@@ -34,8 +34,8 @@
             this.lblLoginText = new System.Windows.Forms.Label();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.lblLoginPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgotPass = new System.Windows.Forms.Button();
             this.btnContactAdmin = new System.Windows.Forms.Button();
@@ -82,23 +82,23 @@
             this.lblLoginPassword.Text = "Password";
             this.lblLoginPassword.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(325, 272);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Location = new System.Drawing.Point(325, 272);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(275, 20);
+            this.txtUsername.TabIndex = 5;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(325, 331);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Location = new System.Drawing.Point(325, 331);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(275, 20);
+            this.txtPassword.TabIndex = 6;
             // 
             // btnLogin
             // 
@@ -199,8 +199,8 @@
             this.Controls.Add(this.btnContactAdmin);
             this.Controls.Add(this.btnForgotPass);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblLoginPassword);
             this.Controls.Add(this.lblLoginUsername);
             this.Controls.Add(this.lblLoginText);
@@ -223,8 +223,8 @@
         private System.Windows.Forms.Label lblLoginText;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.Label lblLoginPassword;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnForgotPass;
         private System.Windows.Forms.Button btnContactAdmin;

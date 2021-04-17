@@ -12,15 +12,14 @@ namespace SEN381_Pr
         //Sorts out the connection for the database
 
         private string _connectionString = "Server=LocalHost;Database=PremierServiceSolutionsDB;Trusted_Connection=True;";
-
-        private SqlConnection _connection;    
+        private SqlConnection _connection = new SqlConnection();    
         private SqlDataReader _reader;   
 
         public DataHandeler()
         {
             try
-            {
-                _connection = new SqlConnection(_connectionString);
+            {                
+                _connection = new SqlConnection(ConnectionString);
                 _connection.Open();                
             }
             catch (Exception ex)
@@ -31,6 +30,7 @@ namespace SEN381_Pr
         }
 
         public SqlConnection Connection { get => _connection; set => _connection = value; }
+        public string ConnectionString { get => _connectionString; set => _connectionString = value; }
 
         public void CloseConnection()
         {

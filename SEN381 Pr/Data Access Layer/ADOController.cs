@@ -17,22 +17,27 @@ namespace SEN381_Pr
         private SqlDataAdapter _dataAdapter = new SqlDataAdapter();
         private DataTable _table = new DataTable();
         private DataSet _set = new DataSet();
+        private SqlConnection _con = new SqlConnection();
 
         public ADOController()
         {
           
         }
 
-        DataHandeler dataConnection = new DataHandeler();      
+        DataHandeler dataConnection = new DataHandeler();       
 
         public DataSet CarryCommand(string command)
-        {          
-            using (dataConnection.Connection)
-            {                
-                _dataAdapter.SelectCommand = new SqlCommand(command,dataConnection.Connection);
-                _dataAdapter.Fill(_set);
+        {        
+            using (var _con = new SqlConnection(dataConnection.ConnectionString))
+            {
+                using (var cmd = new SqlCommand(command, _con))
+                {
+                    _dataAdapter.SelectCommand = new SqlCommand(command,_con);
+                    _dataAdapter.Fill(_set);
+                }
             }
 
+            _dataAdapter.Dispose();
             _command.Dispose();
             return _set;
         }    

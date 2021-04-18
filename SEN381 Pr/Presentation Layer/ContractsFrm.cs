@@ -17,6 +17,8 @@ namespace SEN381_Pr.Presentation_Layer
             InitializeComponent();
         }
 
+        ADOMethodController Con = new ADOMethodController();
+
         private void dgvTechnician_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -25,6 +27,17 @@ namespace SEN381_Pr.Presentation_Layer
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
+        }
+
+        private void ContractsFrm_Load(object sender, EventArgs e)
+        {
+            Con.LoadContracts(dgvContracts);
         }
     }
 }

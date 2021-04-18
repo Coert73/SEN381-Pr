@@ -75,5 +75,12 @@ namespace SEN381_Pr
             (new MenuFrm()).Show();
             this.Hide();
         }
+
+        ADOMethodController Con = new ADOMethodController();
+
+        private void ClientFrm_Load(object sender, EventArgs e)
+        {
+            Con.LoadCallClients(dgvClients);
+        }
     }
 }

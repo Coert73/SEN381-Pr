@@ -28,69 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CallHandlerFrm));
-            this.dgvJobs = new System.Windows.Forms.DataGridView();
+            this.dgvClientsContact = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblContacts = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblCallHistory = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblCallHistory = new System.Windows.Forms.Label();
+            this.dgvDataCalls = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRequests = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnMakeCall = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientsContact)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDataCalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvJobs
+            // dgvClientsContact
             // 
-            this.dgvJobs.BackgroundColor = System.Drawing.Color.White;
-            this.dgvJobs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvJobs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvJobs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvJobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobs.GridColor = System.Drawing.Color.MediumSpringGreen;
-            this.dgvJobs.Location = new System.Drawing.Point(6, 36);
-            this.dgvJobs.Name = "dgvJobs";
-            this.dgvJobs.RowHeadersVisible = false;
-            this.dgvJobs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvJobs.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvJobs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvJobs.Size = new System.Drawing.Size(180, 392);
-            this.dgvJobs.TabIndex = 1;
-            this.dgvJobs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
+            this.dgvClientsContact.BackgroundColor = System.Drawing.Color.White;
+            this.dgvClientsContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvClientsContact.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvClientsContact.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientsContact.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvClientsContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientsContact.GridColor = System.Drawing.Color.MediumSpringGreen;
+            this.dgvClientsContact.Location = new System.Drawing.Point(6, 36);
+            this.dgvClientsContact.Name = "dgvClientsContact";
+            this.dgvClientsContact.RowHeadersVisible = false;
+            this.dgvClientsContact.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientsContact.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvClientsContact.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientsContact.Size = new System.Drawing.Size(180, 392);
+            this.dgvClientsContact.TabIndex = 1;
+            this.dgvClientsContact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lblContacts);
-            this.panel1.Controls.Add(this.dgvJobs);
+            this.panel1.Controls.Add(this.dgvClientsContact);
             this.panel1.Location = new System.Drawing.Point(12, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(192, 438);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblContacts
             // 
@@ -102,27 +104,27 @@
             this.lblContacts.TabIndex = 7;
             this.lblContacts.Text = "Contacts";
             // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(15, 32);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(186, 10);
-            this.textBox8.TabIndex = 18;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.lblCallHistory);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvDataCalls);
             this.panel2.Location = new System.Drawing.Point(222, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 438);
             this.panel2.TabIndex = 19;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(0, 27);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(426, 3);
+            this.textBox1.TabIndex = 19;
             // 
             // lblCallHistory
             // 
@@ -134,42 +136,31 @@
             this.lblCallHistory.TabIndex = 9;
             this.lblCallHistory.Text = "Call History";
             // 
-            // dataGridView1
+            // dgvDataCalls
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.MediumSpringGreen;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 385);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(3, 27);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(417, 10);
-            this.textBox1.TabIndex = 19;
+            this.dgvDataCalls.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDataCalls.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDataCalls.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvDataCalls.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataCalls.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dgvDataCalls.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDataCalls.GridColor = System.Drawing.Color.MediumSpringGreen;
+            this.dgvDataCalls.Location = new System.Drawing.Point(3, 43);
+            this.dgvDataCalls.Name = "dgvDataCalls";
+            this.dgvDataCalls.RowHeadersVisible = false;
+            this.dgvDataCalls.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDataCalls.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dgvDataCalls.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataCalls.Size = new System.Drawing.Size(417, 385);
+            this.dgvDataCalls.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -192,6 +183,7 @@
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel3
             // 
@@ -199,9 +191,9 @@
             this.panel3.Controls.Add(this.btnRequests);
             this.panel3.Controls.Add(this.btnReports);
             this.panel3.Controls.Add(this.btnMakeCall);
-            this.panel3.Location = new System.Drawing.Point(668, 114);
+            this.panel3.Location = new System.Drawing.Point(668, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(217, 234);
+            this.panel3.Size = new System.Drawing.Size(217, 373);
             this.panel3.TabIndex = 20;
             // 
             // btnRequests
@@ -216,6 +208,7 @@
             this.btnRequests.TabIndex = 2;
             this.btnRequests.Text = "Requests";
             this.btnRequests.UseVisualStyleBackColor = true;
+            this.btnRequests.Click += new System.EventHandler(this.btnRequests_Click);
             // 
             // btnReports
             // 
@@ -229,6 +222,7 @@
             this.btnReports.TabIndex = 1;
             this.btnReports.Text = "Reports";
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnMakeCall
             // 
@@ -243,6 +237,17 @@
             this.btnMakeCall.Text = "Make Call";
             this.btnMakeCall.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(0, 27);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(195, 3);
+            this.textBox2.TabIndex = 20;
+            // 
             // CallHandlerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,38 +258,39 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CallHandlerFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CallHandlerFrm";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
+            this.Load += new System.EventHandler(this.CallHandlerFrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientsContact)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDataCalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvJobs;
+        private System.Windows.Forms.DataGridView dgvClientsContact;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblContacts;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCallHistory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDataCalls;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnRequests;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnMakeCall;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

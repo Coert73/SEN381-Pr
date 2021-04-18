@@ -21,5 +21,36 @@ namespace SEN381_Pr.Presentation_Layer
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
+        }
+
+        ADOMethodController Con = new ADOMethodController();
+
+        private void CallHandlerFrm_Load(object sender, EventArgs e)
+        {
+            Con.LoadCallClients(dgvClientsContact);
+            Con.LoadCalls(dgvDataCalls);
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            (new Presentation_Layer.ReportFrm()).Show();
+            this.Hide();
+        }
+
+        private void btnRequests_Click(object sender, EventArgs e)
+        {
+            (new RequestFrm()).Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -64,6 +64,12 @@
     <Compile Include="Business Logic Layer\Calls.cs" />
     <Compile Include="Business Logic Layer\ADOMethodController.cs" />
     <Compile Include="Business Logic Layer\Client.cs" />
+    <Compile Include="Presentation Layer\CallHandlerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\CallHandlerFrm.Designer.cs">
+      <DependentUpon>CallHandlerFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\ClientFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,24 @@
     <Compile Include="Business Logic Layer\Contract.cs" />
     <Compile Include="Data Access Layer\DataHandeler.cs" />
     <Compile Include="Data Access Layer\FileHandler.cs" />
+    <Compile Include="Presentation Layer\ContractsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ContractsFrm.Designer.cs">
+      <DependentUpon>ContractsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\CreateContractFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\CreateContractFrm.Designer.cs">
+      <DependentUpon>CreateContractFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\CreatePackageFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\CreatePackageFrm.Designer.cs">
+      <DependentUpon>CreatePackageFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +109,12 @@
     </Compile>
     <Compile Include="Presentation Layer\JobsFrm.Designer.cs">
       <DependentUpon>JobsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\RequestFrm.cs">
       <SubType>Form</SubType>
@@ -146,14 +176,29 @@
     <EmbeddedResource Include="Presentation Layer\AudOptionFrm.resx">
       <DependentUpon>AudOptionFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\CallHandlerFrm.resx">
+      <DependentUpon>CallHandlerFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ClientFrm.resx">
       <DependentUpon>ClientFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ContractsFrm.resx">
+      <DependentUpon>ContractsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\CreateContractFrm.resx">
+      <DependentUpon>CreateContractFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\CreatePackageFrm.resx">
+      <DependentUpon>CreatePackageFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\JobsFrm.resx">
       <DependentUpon>JobsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\RequestFrm.resx">
       <DependentUpon>RequestFrm.cs</DependentUpon>

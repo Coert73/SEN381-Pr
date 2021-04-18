@@ -22,7 +22,7 @@ namespace SEN381_Pr
 
         public DataSet InsertTechnician(string name,string surname, string number)
         {
-            return Controller.CarryCommand($"INSERT INTO Technition (TechID,Name,Surname,Number) VALUES (0,'{name}','{surname}',{number})");
+            return Controller.CarryCommand($"INSERT INTO Technition (Name,Surname,Number) VALUES ('{name}','{surname}',{number})");
         }
 
         public DataSet DeleteTechnician(string id)

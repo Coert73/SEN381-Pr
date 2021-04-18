@@ -32,21 +32,25 @@ namespace SEN381_Pr
 
         public void InsertTechData(DataGridView tab, string name, string surname, string number)
         {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = TechCon.InsertTechnician(name, surname, number);
-            tab.DataMember = "Table";            
+            RefreshData(tab);
+            TechCon.InsertTechnician(name, surname, number);                     
+            tab.DataSource = TechCon.LoadData();
+            tab.DataMember = "Table";         
+            MessageBox.Show("Inserted Technician");             
+           
         }
 
         public void UpdateTechData(DataGridView tab, string name, string surname, string number, string id)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = TechCon.UpdateTechnician(name,surname,number,id);
             tab.DataMember = "Table";
+            tab.Refresh();
         }
 
         public void DeleteTechData(DataGridView tab,string id)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = TechCon.DeleteTechnician(id);
             tab.DataMember = "Table";
         }
@@ -59,21 +63,21 @@ namespace SEN381_Pr
 
         public void InsertJobData(DataGridView tab, string name, string surname, string number)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = JobCon.InsertJob(name, surname, number);
             tab.DataMember = "Table";
         }
 
         public void UpdateJobData(DataGridView tab, string name, string surname, string number, string id)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = JobCon.UpdateJob(name, surname, number, id);
             tab.DataMember = "Table";
         }
 
         public void DeleteJobData(DataGridView tab, string id)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = JobCon.DeleteJob(id);
             tab.DataMember = "Table";
         }
@@ -108,14 +112,14 @@ namespace SEN381_Pr
 
         public void LoadReqData(DataGridView tab)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = ReqCon.LoadData();
             tab.DataMember = "Table";
         }
 
         public void SortData(DataGridView tab,string sort)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = ReqCon.SortData(sort);
             tab.DataMember = "Table";
         }
@@ -153,6 +157,14 @@ namespace SEN381_Pr
             tab.DataSource = RepCon.LoadData();
             tab.DataMember = "Table";
         }       
+
+        public void RefreshData(DataGridView tab)
+        {
+            tab.DataSource = null;
+            tab.Rows.Clear();
+            tab.Update();
+            tab.Refresh();
+        }
        
     }
 }

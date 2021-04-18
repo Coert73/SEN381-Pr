@@ -26,15 +26,14 @@ namespace SEN381_Pr
         }
 
         private void TechnicianFrm_Load(object sender, EventArgs e)
-        {
-            dgvTechnician.AutoGenerateColumns = true;
+        {            
             dgvTechnician.DataSource = Con.LoadTechData();
             dgvTechnician.DataMember = "Table";
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
-        {
-            Con.InsertTechData(dgvTechnician,txtName.Text,txtSurname.Text,txtNumber.Text);
+        {        
+            Con.InsertTechData(dgvTechnician,txtName.Text,txtSurname.Text,txtNumber.Text);            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

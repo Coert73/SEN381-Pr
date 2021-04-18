@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business Logic Layer\Address.cs" />
-    <Compile Include="ContractADOController.cs" />
+    <Compile Include="Data Access Layer\ContractADOController.cs" />
     <Compile Include="Data Access Layer\CallsADOController.cs" />
     <Compile Include="Data Access Layer\ClientADOController.cs" />
     <Compile Include="Data Access Layer\ContactsADOController.cs" />
@@ -168,7 +168,7 @@
       <DependentUpon>VisOptionFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Access Layer\RequestADOController.cs" />
-    <Compile Include="ReportADOController.cs" />
+    <Compile Include="Data Access Layer\ReportADOController.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Presentation Layer\AudOptionFrm.resx">
       <DependentUpon>AudOptionFrm.cs</DependentUpon>

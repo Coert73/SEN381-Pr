@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business Logic Layer\Address.cs" />
+    <Compile Include="ContractADOController.cs" />
+    <Compile Include="Data Access Layer\CallsADOController.cs" />
     <Compile Include="Data Access Layer\ClientADOController.cs" />
     <Compile Include="Data Access Layer\ContactsADOController.cs" />
     <Compile Include="Data Access Layer\ADOController.cs" />
@@ -96,12 +98,6 @@
     </Compile>
     <Compile Include="Presentation Layer\CreatePackageFrm.Designer.cs">
       <DependentUpon>CreatePackageFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Access Layer\JobsADOController.cs" />
     <Compile Include="Presentation Layer\JobsFrm.cs">
@@ -172,6 +168,7 @@
       <DependentUpon>VisOptionFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Access Layer\RequestADOController.cs" />
+    <Compile Include="ReportADOController.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Presentation Layer\AudOptionFrm.resx">
       <DependentUpon>AudOptionFrm.cs</DependentUpon>
@@ -190,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\CreatePackageFrm.resx">
       <DependentUpon>CreatePackageFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\JobsFrm.resx">
       <DependentUpon>JobsFrm.cs</DependentUpon>

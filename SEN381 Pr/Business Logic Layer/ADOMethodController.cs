@@ -18,6 +18,10 @@ namespace SEN381_Pr
         JobsADOController JobCon = new JobsADOController();
         LoginADOController SecCon = new LoginADOController();
         RequestADOController ReqCon = new RequestADOController();
+        CallsADOController CallCon = new CallsADOController();
+        ClientADOController ClientCon = new ClientADOController();
+        ContractADOController ContractCon = new ContractADOController();
+        ReportADOController RepCon = new ReportADOController();
 
         //Methods For Technicians
 
@@ -115,5 +119,40 @@ namespace SEN381_Pr
             tab.DataSource = ReqCon.SortData(sort);
             tab.DataMember = "Table";
         }
+
+        //Call Handler ADO Method Controllers
+
+        public void LoadCallClients(DataGridView tab)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = ClientCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void LoadCalls(DataGridView tab)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = CallCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        //Contract ADO Controller Methods
+
+        public void LoadContracts(DataGridView tab)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        //Report ADO Controller Methods
+
+        public void LoadReports(DataGridView tab) {
+
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = RepCon.LoadData();
+            tab.DataMember = "Table";
+        }       
+       
     }
 }

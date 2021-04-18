@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace SEN381_Pr
 {
-    class ClientADOController
+    class CallsADOController
     {
+
         ADOController Controller = new ADOController();
+
         public DataSet LoadData()
         {
-            return Controller.CarryCommand("SELECT * FROM Client");
+            return Controller.CarryCommand("SELECT * FROM Calls");
         }
 
     }

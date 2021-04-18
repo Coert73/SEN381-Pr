@@ -70,6 +70,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate
             // 
@@ -232,7 +233,9 @@
             this.ClientSize = new System.Drawing.Size(408, 459);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreatePackageFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreatePackageFrm";
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

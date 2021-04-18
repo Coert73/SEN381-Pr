@@ -25,12 +25,14 @@ namespace SEN381_Pr
 
         private void btnCallOpen_Click(object sender, EventArgs e)
         {
-
+            (new Presentation_Layer.CallHandlerFrm()).Show();
+            this.Hide();
         }
 
         private void btnReportsOpen_Click(object sender, EventArgs e)
         {
-
+            (new Presentation_Layer.ReportFrm()).Show();
+            this.Hide();
         }
 
         private void btnRequestsOpen_Click(object sender, EventArgs e)
@@ -41,7 +43,8 @@ namespace SEN381_Pr
 
         private void btnContractsOpen_Click(object sender, EventArgs e)
         {
-
+            (new Presentation_Layer.ContractsFrm()).Show();
+            this.Hide();
         }
 
         private void btnClientsOpen_Click(object sender, EventArgs e)

@@ -164,6 +164,7 @@ namespace SEN381_Pr
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "OptionsFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Options";
             this.Load += new System.EventHandler(this.OptionsFrm_Load);
             this.panel2.ResumeLayout(false);

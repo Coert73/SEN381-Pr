@@ -12,9 +12,22 @@ namespace SEN381_Pr.Presentation_Layer
 {
     public partial class ReportFrm : Form
     {
+        ADOMethodController Con = new ADOMethodController();
+
         public ReportFrm()
         {
             InitializeComponent();
+        }
+
+        private void ReportFrm_Load(object sender, EventArgs e)
+        {
+            Con.LoadReports(dgvReport);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
         }
     }
 }

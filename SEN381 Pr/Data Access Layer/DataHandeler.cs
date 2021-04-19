@@ -19,7 +19,7 @@ namespace SEN381_Pr
         {
             try
             {                
-                _connection = new SqlConnection(ConnectionString);
+                _connection = new SqlConnection(ConnectionString);                
                 _connection.Open();                
             }
             catch (Exception ex)
@@ -34,8 +34,7 @@ namespace SEN381_Pr
 
         public void CloseConnection()
         {
-            this.Connection.Close();
-            MessageBox.Show("Connection Closed");
+            this.Connection.Close();            
         }
     }
 }

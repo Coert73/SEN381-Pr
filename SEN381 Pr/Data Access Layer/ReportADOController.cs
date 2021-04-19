@@ -9,7 +9,6 @@ namespace SEN381_Pr
 {
     class ReportADOController
     {
-
         ADOController Controller = new ADOController();
 
         public DataSet LoadData()

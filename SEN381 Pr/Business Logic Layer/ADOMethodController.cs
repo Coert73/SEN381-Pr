@@ -31,27 +31,27 @@ namespace SEN381_Pr
         }
 
         public void InsertTechData(DataGridView tab, string name, string surname, string number)
-        {
-            RefreshData(tab);
-            TechCon.InsertTechnician(name, surname, number);                     
+        {        
+            TechCon.InsertTechnician(name, surname, number);      
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";         
             MessageBox.Show("Inserted Technician");               
         }
 
-        public void UpdateTechData(DataGridView tab, string name, string surname, string number, string id)
+        public void UpdateTechData(DataGridView tab, string name, string surname, string number, int id)
         {
-            RefreshData(tab);
-            tab.DataSource = TechCon.UpdateTechnician(name,surname,number,id);
+            TechCon.UpdateTechnician(name,surname,number,id);
+            tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
-            tab.Refresh();
+            MessageBox.Show("Updated Technician");
         }
 
-        public void DeleteTechData(DataGridView tab,string id)
-        {
-            RefreshData(tab);
-            tab.DataSource = TechCon.DeleteTechnician(id);
+        public void DeleteTechData(DataGridView tab,int id)
+        {            
+            TechCon.DeleteTechnician(id);                      
+            tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
+            MessageBox.Show("Deleted Technician");
         }
 
         //Methods for Jobs
@@ -163,7 +163,6 @@ namespace SEN381_Pr
             tab.Rows.Clear();
             tab.Update();
             tab.Refresh();
-        }
-       
+        }       
     }
 }

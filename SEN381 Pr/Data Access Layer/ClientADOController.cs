@@ -15,5 +15,20 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Client");
         }
 
+        public DataSet InsertClient()
+        {
+            return Controller.CarryCommand($"");
+        }
+
+        public DataSet DeleteClient()
+        {
+            return Controller.CarryCommand($"DELETE FROM  WHERE ={}");
+        }
+
+        public DataSet UpdateClient()
+        {
+            return Controller.CarryCommand($"UPDATE  SET  WHERE = {id}");
+        }
+
     }
 }

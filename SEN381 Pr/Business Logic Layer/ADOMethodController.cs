@@ -36,8 +36,7 @@ namespace SEN381_Pr
             TechCon.InsertTechnician(name, surname, number);                     
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";         
-            MessageBox.Show("Inserted Technician");             
-           
+            MessageBox.Show("Inserted Technician");               
         }
 
         public void UpdateTechData(DataGridView tab, string name, string surname, string number, string id)

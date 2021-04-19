@@ -17,5 +17,9 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Reports");
         }
 
+        public DataSet SortReportData(string id)
+        {
+            return Controller.CarryCommand($"SELECT * FROM Reports WHERE ReferenceNumber ={id}");
+        }
     }
 }

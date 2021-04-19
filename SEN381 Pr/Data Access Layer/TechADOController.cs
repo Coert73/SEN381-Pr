@@ -27,7 +27,7 @@ namespace SEN381_Pr
 
         public DataSet DeleteTechnician(string id)
         {
-            return Controller.CarryCommand($"DELETE FROM Technition WHERE  TechID = {id}");
+            return Controller.CarryCommand($"DELETE FROM Technition WHERE TechID = {id}");
         }
 
         public DataSet UpdateTechnician(string name,string surname,string number,string id)

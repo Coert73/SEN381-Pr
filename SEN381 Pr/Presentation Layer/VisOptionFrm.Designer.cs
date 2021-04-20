@@ -45,6 +45,7 @@ namespace SEN381_Pr
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -65,6 +66,7 @@ namespace SEN381_Pr
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(11, 78);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -85,6 +87,7 @@ namespace SEN381_Pr
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.btnReturn);
@@ -118,7 +121,7 @@ namespace SEN381_Pr
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnReturn.BackColor = System.Drawing.Color.White;
             this.btnReturn.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnReturn.FlatAppearance.BorderSize = 3;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,7 +137,7 @@ namespace SEN381_Pr
             // 
             // btnVisOptions
             // 
-            this.btnVisOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVisOptions.BackColor = System.Drawing.Color.White;
             this.btnVisOptions.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnVisOptions.FlatAppearance.BorderSize = 3;
             this.btnVisOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

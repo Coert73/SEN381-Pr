@@ -24,12 +24,6 @@ namespace SEN381_Pr.Presentation_Layer
             Con.LoadReports(dgvReport);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            (new MenuFrm()).Show();
-            this.Hide();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Con.SearchReport(dgvReport, int.Parse(txtReferenceNumber.Text));
@@ -38,6 +32,12 @@ namespace SEN381_Pr.Presentation_Layer
         private void btnSort_Click(object sender, EventArgs e)
         {
             Con.SortReports(dgvReport);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
         }
     }
 }

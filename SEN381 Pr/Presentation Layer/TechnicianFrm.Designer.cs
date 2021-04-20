@@ -90,6 +90,7 @@
             this.dgvTechnician.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTechnician.Size = new System.Drawing.Size(715, 488);
             this.dgvTechnician.TabIndex = 0;
+            this.dgvTechnician.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnician_CellClick);
             // 
             // panel2
             // 

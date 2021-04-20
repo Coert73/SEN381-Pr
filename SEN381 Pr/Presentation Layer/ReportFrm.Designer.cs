@@ -118,6 +118,7 @@
             this.btnSort.TabIndex = 1;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnSearch
             // 
@@ -131,6 +132,7 @@
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel2
             // 

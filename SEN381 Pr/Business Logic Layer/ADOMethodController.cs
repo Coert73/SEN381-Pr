@@ -31,24 +31,27 @@ namespace SEN381_Pr
         }
 
         public void InsertTechData(DataGridView tab, string name, string surname, string number)
-        {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = TechCon.InsertTechnician(name, surname, number);
-            tab.DataMember = "Table";            
+        {        
+            TechCon.InsertTechnician(new Technician(name,surname,number));      
+            tab.DataSource = TechCon.LoadData();
+            tab.DataMember = "Table";         
+            MessageBox.Show("Inserted Technician");               
         }
 
-        public void UpdateTechData(DataGridView tab, string name, string surname, string number, string id)
+        public void UpdateTechData(DataGridView tab, string name, string surname, string number, int id)
         {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = TechCon.UpdateTechnician(name,surname,number,id);
+            TechCon.UpdateTechnician(new Technician(name, surname, number), id);
+            tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
+            MessageBox.Show("Updated Technician");
         }
 
-        public void DeleteTechData(DataGridView tab,string id)
-        {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = TechCon.DeleteTechnician(id);
+        public void DeleteTechData(DataGridView tab,int id)
+        {            
+            TechCon.DeleteTechnician(id);                      
+            tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
+            MessageBox.Show("Deleted Technician");
         }
 
         //Methods for Jobs
@@ -57,23 +60,23 @@ namespace SEN381_Pr
             return JobCon.LoadData();
         }
 
-        public void InsertJobData(DataGridView tab, string name, string surname, string number)
+        public void InsertJobData(DataGridView tab)
         {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = JobCon.InsertJob(name, surname, number);
+            RefreshData(tab);
+            //tab.DataSource = JobCon.InsertJob(new Job());
             tab.DataMember = "Table";
         }
 
-        public void UpdateJobData(DataGridView tab, string name, string surname, string number, string id)
+        public void UpdateJobData(DataGridView tab, string id)
         {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = JobCon.UpdateJob(name, surname, number, id);
+            RefreshData(tab);
+            //tab.DataSource = JobCon.UpdateJob(new Job(), id);
             tab.DataMember = "Table";
         }
 
         public void DeleteJobData(DataGridView tab, string id)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = JobCon.DeleteJob(id);
             tab.DataMember = "Table";
         }
@@ -108,14 +111,14 @@ namespace SEN381_Pr
 
         public void LoadReqData(DataGridView tab)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = ReqCon.LoadData();
             tab.DataMember = "Table";
         }
 
         public void SortData(DataGridView tab,string sort)
         {
-            tab.AutoGenerateColumns = true;
+            RefreshData(tab);
             tab.DataSource = ReqCon.SortData(sort);
             tab.DataMember = "Table";
         }
@@ -153,6 +156,33 @@ namespace SEN381_Pr
             tab.DataSource = RepCon.LoadData();
             tab.DataMember = "Table";
         }       
+
+        public void SearchReport(DataGridView tab,int refer)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = RepCon.SearchReport(refer);
+            tab.DataMember = "Table";
+        }
+
+        public void SortReports(DataGridView tab)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = RepCon.SortReportData();
+            tab.DataMember = "Table";
+        }
+
+        public void RefreshData(DataGridView tab)
+        {
+            tab.DataSource = null;
+            tab.Rows.Clear();
+            tab.Update();
+            tab.Refresh();
+        }       
+
        
+
+        
+
+
     }
 }

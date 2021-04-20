@@ -26,31 +26,42 @@ namespace SEN381_Pr
         }
 
         private void TechnicianFrm_Load(object sender, EventArgs e)
-        {
-            dgvTechnician.AutoGenerateColumns = true;
+        {            
             dgvTechnician.DataSource = Con.LoadTechData();
             dgvTechnician.DataMember = "Table";
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
-        {
-            Con.InsertTechData(dgvTechnician,txtName.Text,txtSurname.Text,txtNumber.Text);
+        {          
+            Con.InsertTechData(dgvTechnician,txtName.Text,txtSurname.Text,txtNumber.Text);            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Con.UpdateTechData(dgvTechnician, txtName.Text, txtSurname.Text, txtNumber.Text, _id);
+            Con.UpdateTechData(dgvTechnician, txtName.Text, txtSurname.Text, txtNumber.Text, int.Parse(_id));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
-            Con.DeleteTechData(dgvTechnician, _id);
+        {         
+               Con.DeleteTechData(dgvTechnician,  int.Parse(_id));                      
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             (new MenuFrm()).Show();
             this.Hide();
+        }
+
+        private void dgvTechnician_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvTechnician.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                _id = row.Cells[0].Value.ToString();               
+                txtName.Text = row.Cells["Name"].Value.ToString();
+                txtNumber.Text = row.Cells["Number"].Value.ToString();
+                txtSurname.Text = row.Cells["Surname"].Value.ToString();
+            }
         }
     }
 }

@@ -29,5 +29,15 @@ namespace SEN381_Pr.Presentation_Layer
             (new MenuFrm()).Show();
             this.Hide();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Con.SearchReport(dgvReport, int.Parse(txtReferenceNumber.Text));
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            Con.SortReports(dgvReport);
+        }
     }
 }

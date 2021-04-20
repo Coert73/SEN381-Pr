@@ -22,12 +22,14 @@ namespace SEN381_Pr
         public ADOController()
         {
           
-        }
-
-        DataHandeler dataConnection = new DataHandeler();       
+        }       
 
         public DataSet CarryCommand(string command)
-        {        
+        {
+            _set = new DataSet();
+            DataHandeler dataConnection = new DataHandeler();
+            _dataAdapter = new SqlDataAdapter();
+
             using (var _con = new SqlConnection(dataConnection.ConnectionString))
             {
                 using (var cmd = new SqlCommand(command, _con))
@@ -39,6 +41,9 @@ namespace SEN381_Pr
 
             _dataAdapter.Dispose();
             _command.Dispose();
+
+            dataConnection.CloseConnection();
+
             return _set;
         }    
        

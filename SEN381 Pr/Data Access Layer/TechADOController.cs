@@ -20,19 +20,19 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Technition");
         }
 
-        public DataSet InsertTechnician(string name,string surname, string number)
+        public DataSet InsertTechnician(Technician tech)
         {
-            return Controller.CarryCommand($"INSERT INTO Technition (TechID,Name,Surname,Number) VALUES (0,'{name}','{surname}',{number})");
+            return Controller.CarryCommand($"INSERT INTO Technition (Name,Surname,Number) VALUES ('{tech.Name}','{tech.Surname}',{tech.Number})");
         }
 
-        public DataSet DeleteTechnician(string id)
+        public DataSet DeleteTechnician(int id)
         {
-            return Controller.CarryCommand($"DELETE FROM Technition WHERE  TechID = {id}");
+            return Controller.CarryCommand($"DELETE FROM Technition WHERE TechID = {id}");
         }
 
-        public DataSet UpdateTechnician(string name,string surname,string number,string id)
+        public DataSet UpdateTechnician(Technician tech,int id)
         {
-            return Controller.CarryCommand($"UPDATE Technition SET Name={name},Surname={surname},Number={number} WHERE TechID = {id}");
+            return Controller.CarryCommand($"UPDATE Technition SET Name='{tech.Name}',Surname='{tech.Surname}',Number='{tech.Number}' WHERE TechID = {id}");
         }
     }
 }

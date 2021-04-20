@@ -82,5 +82,10 @@ namespace SEN381_Pr
         {
             Con.LoadCallClients(dgvClients);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

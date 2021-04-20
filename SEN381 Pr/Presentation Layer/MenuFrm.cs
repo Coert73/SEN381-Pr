@@ -188,9 +188,16 @@ namespace SEN381_Pr
 
         private void MenuFrm_Load(object sender, EventArgs e)
         {
-            lblUser.Text = "User";
+            
+            
+            //lblUser.Text = "User";
         }
 
-       
+        public void GetUserName(string name)
+        {
+            lblUser.Text = name;
+        }
+
+      
     }
 }

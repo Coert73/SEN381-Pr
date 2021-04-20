@@ -234,6 +234,7 @@
     <EmbeddedResource Include="Presentation Layer\VisOptionFrm.resx">
       <DependentUpon>VisOptionFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Program\ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

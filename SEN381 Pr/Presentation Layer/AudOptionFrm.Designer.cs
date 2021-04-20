@@ -50,6 +50,7 @@ namespace SEN381_Pr
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -70,6 +71,7 @@ namespace SEN381_Pr
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(11, 78);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -90,6 +92,7 @@ namespace SEN381_Pr
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.trackBar1);
@@ -158,7 +161,7 @@ namespace SEN381_Pr
             // 
             // brnReturn
             // 
-            this.brnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.brnReturn.BackColor = System.Drawing.Color.White;
             this.brnReturn.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.brnReturn.FlatAppearance.BorderSize = 3;
             this.brnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,7 +177,7 @@ namespace SEN381_Pr
             // 
             // btnCustVol
             // 
-            this.btnCustVol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCustVol.BackColor = System.Drawing.Color.White;
             this.btnCustVol.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnCustVol.FlatAppearance.BorderSize = 3;
             this.btnCustVol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -190,7 +193,7 @@ namespace SEN381_Pr
             // 
             // btnhearaid
             // 
-            this.btnhearaid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnhearaid.BackColor = System.Drawing.Color.White;
             this.btnhearaid.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnhearaid.FlatAppearance.BorderSize = 3;
             this.btnhearaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -17,11 +17,6 @@ namespace SEN381_Pr
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClientAdd_MouseEnter(object sender, EventArgs e)
         {
             btnClientAdd.BackColor = Color.MediumSpringGreen;
@@ -58,24 +53,6 @@ namespace SEN381_Pr
             btnClientDel.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnReturn_MouseEnter(object sender, EventArgs e)
-        {
-            btnReturn.BackColor = Color.MediumSpringGreen;
-            btnReturn.ForeColor = Color.White;
-        }
-
-        private void btnReturn_MouseLeave(object sender, EventArgs e)
-        {
-            btnReturn.BackColor = SystemColors.ButtonFace;
-            btnReturn.ForeColor = SystemColors.ControlText;
-        }
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            (new MenuFrm()).Show();
-            this.Hide();
-        }
-
         ADOMethodController Con = new ADOMethodController();
 
         private void ClientFrm_Load(object sender, EventArgs e)
@@ -83,9 +60,10 @@ namespace SEN381_Pr
             Con.LoadCallClients(dgvClients);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
+            (new MenuFrm()).Show();
+            this.Hide();
         }
     }
 }

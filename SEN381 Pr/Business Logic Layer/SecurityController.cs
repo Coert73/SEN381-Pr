@@ -25,6 +25,7 @@ namespace SEN381_Pr
             if (credentials[0] == user && credentials[1] == pass)
             {
                 MenuFrm formMen = new MenuFrm();
+                formMen.GetUserName(user);
                 formMen.Show();               
                 form.Hide();
             }

@@ -12,6 +12,10 @@ namespace SEN381_Pr.Presentation_Layer
 {
     public partial class CallHandlerFrm : Form
     {
+        public static string FirstName ="";
+        public static string SurName = "";
+        public static string Number = "";
+
         public CallHandlerFrm()
         {
             InitializeComponent();
@@ -51,6 +55,32 @@ namespace SEN381_Pr.Presentation_Layer
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnMakeCall_Click(object sender, EventArgs e)
+        {
+            if (dgvClientsContact.Rows[0].Cells[0].Selected)
+            {
+                MessageBox.Show("Please choose a contact to call");
+            }
+            else
+            {
+                (new Dialer()).Show();
+            }
+            
+        }
+
+        private void dgvClientsContact_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvClientsContact.CurrentRow;
+
+            if (!row.IsNewRow)
+            {
+
+                FirstName = row.Cells["Name"].Value.ToString();
+                SurName = row.Cells["Surname"].Value.ToString();
+                Number = row.Cells["Number"].Value.ToString();
+            }
         }
     }
 }

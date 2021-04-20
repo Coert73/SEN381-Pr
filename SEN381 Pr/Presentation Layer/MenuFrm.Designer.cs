@@ -58,6 +58,7 @@ namespace SEN381_Pr
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnServices = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,7 +82,6 @@ namespace SEN381_Pr
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(890, 82);
             this.panel1.TabIndex = 0;
-            
             // 
             // pictureBox1
             // 
@@ -183,9 +183,9 @@ namespace SEN381_Pr
             this.btnLogOut.FlatAppearance.BorderSize = 3;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(41, 533);
+            this.btnLogOut.Location = new System.Drawing.Point(5, 456);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(334, 33);
+            this.btnLogOut.Size = new System.Drawing.Size(138, 33);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -200,9 +200,9 @@ namespace SEN381_Pr
             this.btnOptionsOpen.FlatAppearance.BorderSize = 3;
             this.btnOptionsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptionsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptionsOpen.Location = new System.Drawing.Point(41, 486);
+            this.btnOptionsOpen.Location = new System.Drawing.Point(5, 417);
             this.btnOptionsOpen.Name = "btnOptionsOpen";
-            this.btnOptionsOpen.Size = new System.Drawing.Size(334, 33);
+            this.btnOptionsOpen.Size = new System.Drawing.Size(138, 33);
             this.btnOptionsOpen.TabIndex = 9;
             this.btnOptionsOpen.Text = "Options";
             this.btnOptionsOpen.UseVisualStyleBackColor = false;
@@ -310,9 +310,11 @@ namespace SEN381_Pr
             this.panel3.Controls.Add(this.lblUser);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(1019, 80);
+            this.panel3.Controls.Add(this.btnOptionsOpen);
+            this.panel3.Controls.Add(this.btnLogOut);
+            this.panel3.Location = new System.Drawing.Point(1012, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 498);
+            this.panel3.Size = new System.Drawing.Size(148, 498);
             this.panel3.TabIndex = 14;
             // 
             // lblUser
@@ -413,12 +415,28 @@ namespace SEN381_Pr
             this.pictureBox9.TabIndex = 24;
             this.pictureBox9.TabStop = false;
             // 
+            // btnServices
+            // 
+            this.btnServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnServices.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnServices.FlatAppearance.BorderSize = 3;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.Location = new System.Drawing.Point(41, 487);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(209, 43);
+            this.btnServices.TabIndex = 25;
+            this.btnServices.Text = "Services";
+            this.btnServices.UseVisualStyleBackColor = false;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
             this.ClientSize = new System.Drawing.Size(1161, 574);
+            this.Controls.Add(this.btnServices);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -427,8 +445,6 @@ namespace SEN381_Pr
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnOptionsOpen);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnTechOpen);
             this.Controls.Add(this.panel1);
@@ -496,5 +512,6 @@ namespace SEN381_Pr
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button btnServices;
     }
 }

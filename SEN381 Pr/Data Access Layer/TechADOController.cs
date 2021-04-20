@@ -20,9 +20,9 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Technition");
         }
 
-        public DataSet InsertTechnician(string name,string surname, string number)
+        public DataSet InsertTechnician(Technician tech)
         {
-            return Controller.CarryCommand($"INSERT INTO Technition (Name,Surname,Number) VALUES ('{name}','{surname}',{number})");
+            return Controller.CarryCommand($"INSERT INTO Technition (Name,Surname,Number) VALUES ('{tech.Name}','{tech.Surname}',{tech.Number})");
         }
 
         public DataSet DeleteTechnician(int id)
@@ -30,9 +30,9 @@ namespace SEN381_Pr
             return Controller.CarryCommand($"DELETE FROM Technition WHERE TechID = {id}");
         }
 
-        public DataSet UpdateTechnician(string name,string surname,string number,int id)
+        public DataSet UpdateTechnician(Technician tech,int id)
         {
-            return Controller.CarryCommand($"UPDATE Technition SET Name='{name}',Surname='{surname}',Number='{number}' WHERE TechID = {id}");
+            return Controller.CarryCommand($"UPDATE Technition SET Name='{tech.Name}',Surname='{tech.Surname}',Number='{tech.Number}' WHERE TechID = {id}");
         }
     }
 }

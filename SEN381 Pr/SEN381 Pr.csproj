@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,32 +47,193 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="BusinessClient.cs" />
-    <Compile Include="Call.cs" />
-    <Compile Include="CallHandler.cs" />
-    <Compile Include="Calls.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Contract.cs" />
-    <Compile Include="DataHandeler.cs" />
-    <Compile Include="FileHandler.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Business Logic Layer\Address.cs" />
+    <Compile Include="Presentation Layer\Business_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentation Layer\Business_Form.Designer.cs">
+      <DependentUpon>Business_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="IndividualClient.cs" />
-    <Compile Include="Job.cs" />
-    <Compile Include="Jobs.cs" />
-    <Compile Include="Package.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Data Access Layer\ContractADOController.cs" />
+    <Compile Include="Data Access Layer\CallsADOController.cs" />
+    <Compile Include="Data Access Layer\ClientADOController.cs" />
+    <Compile Include="Data Access Layer\ContactsADOController.cs" />
+    <Compile Include="Data Access Layer\ADOController.cs" />
+    <Compile Include="Data Access Layer\LoginADOController.cs" />
+    <Compile Include="KeyGenerationController.cs" />
+    <Compile Include="Presentation Layer\AudOptionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\AudOptionFrm.Designer.cs">
+      <DependentUpon>AudOptionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Logic Layer\BusinessClient.cs" />
+    <Compile Include="Business Logic Layer\Call.cs" />
+    <Compile Include="Business Logic Layer\CallHandler.cs" />
+    <Compile Include="Business Logic Layer\Calls.cs" />
+    <Compile Include="Business Logic Layer\ADOMethodController.cs" />
+    <Compile Include="Business Logic Layer\Client.cs" />
+    <Compile Include="Presentation Layer\CallHandlerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\CallHandlerFrm.Designer.cs">
+      <DependentUpon>CallHandlerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ClientFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ClientFrm.Designer.cs">
+      <DependentUpon>ClientFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Logic Layer\Contract.cs" />
+    <Compile Include="Data Access Layer\DataHandeler.cs" />
+    <Compile Include="Data Access Layer\FileHandler.cs" />
+    <Compile Include="Presentation Layer\ContractsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ContractsFrm.Designer.cs">
+      <DependentUpon>ContractsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\CreateContractFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\CreateContractFrm.Designer.cs">
+      <DependentUpon>CreateContractFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\CreatePackageFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\CreatePackageFrm.Designer.cs">
+      <DependentUpon>CreatePackageFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Access Layer\JobsADOController.cs" />
+    <Compile Include="Presentation Layer\Dialer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Dialer.Designer.cs">
+      <DependentUpon>Dialer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\JobsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\JobsFrm.Designer.cs">
+      <DependentUpon>JobsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\RequestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\RequestFrm.Designer.cs">
+      <DependentUpon>RequestFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Logic Layer\SecurityController.cs" />
+    <Compile Include="Data Access Layer\TechADOController.cs" />
+    <Compile Include="Presentation Layer\TechPanelFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\TechPanelFrm.Designer.cs">
+      <DependentUpon>TechPanelFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\MenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\MenuFrm.Designer.cs">
+      <DependentUpon>MenuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Logic Layer\IndividualClient.cs" />
+    <Compile Include="Business Logic Layer\Job.cs" />
+    <Compile Include="Business Logic Layer\Jobs.cs" />
+    <Compile Include="Presentation Layer\OptionsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\OptionsFrm.Designer.cs">
+      <DependentUpon>OptionsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Logic Layer\Package.cs" />
+    <Compile Include="Business Logic Layer\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportHandler.cs" />
-    <Compile Include="Request.cs" />
-    <Compile Include="Service.cs" />
-    <Compile Include="Services.cs" />
-    <Compile Include="Technician.cs" />
+    <Compile Include="Business Logic Layer\ReportHandler.cs" />
+    <Compile Include="Business Logic Layer\Request.cs" />
+    <Compile Include="Business Logic Layer\Service.cs" />
+    <Compile Include="Business Logic Layer\Technician.cs" />
+    <Compile Include="Presentation Layer\TechnicianFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\TechnicianFrm.Designer.cs">
+      <DependentUpon>TechnicianFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\VisOptionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\VisOptionFrm.Designer.cs">
+      <DependentUpon>VisOptionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Access Layer\RequestADOController.cs" />
+    <Compile Include="Data Access Layer\ReportADOController.cs" />
+    <Compile Include="Data Access Layer\ServicesADOController.cs" />
+    <Compile Include="Presentation Layer\ServicesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ServicesFrm.Designer.cs">
+      <DependentUpon>ServicesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="Presentation Layer\Business_Form.resx">
+      <DependentUpon>Business_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\AudOptionFrm.resx">
+      <DependentUpon>AudOptionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\CallHandlerFrm.resx">
+      <DependentUpon>CallHandlerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ClientFrm.resx">
+      <DependentUpon>ClientFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ContractsFrm.resx">
+      <DependentUpon>ContractsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\CreateContractFrm.resx">
+      <DependentUpon>CreateContractFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\CreatePackageFrm.resx">
+      <DependentUpon>CreatePackageFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Dialer.resx">
+      <DependentUpon>Dialer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\JobsFrm.resx">
+      <DependentUpon>JobsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\RequestFrm.resx">
+      <DependentUpon>RequestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\TechPanelFrm.resx">
+      <DependentUpon>TechPanelFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\MenuFrm.resx">
+      <DependentUpon>MenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\OptionsFrm.resx">
+      <DependentUpon>OptionsFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,8 +242,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
+    <EmbeddedResource Include="Presentation Layer\TechnicianFrm.resx">
+      <DependentUpon>TechnicianFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\VisOptionFrm.resx">
+      <DependentUpon>VisOptionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ServicesFrm.resx">
+      <DependentUpon>ServicesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Program\ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,7 +266,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Program\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar-man-icon-profile-placeholder-260nw-1229859850.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calldeclinepic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone Internal RingingCalling.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cell phone keypad sound effect-[AudioTrimmer.com].wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

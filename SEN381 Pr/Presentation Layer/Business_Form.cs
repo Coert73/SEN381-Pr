@@ -21,5 +21,11 @@ namespace SEN381_Pr
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            (new MenuFrm()).Show();
+            this.Hide();
+        }
     }
 }

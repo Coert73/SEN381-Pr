@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressADOController.cs" />
     <Compile Include="Business Logic Layer\Address.cs" />
+    <Compile Include="BusinessADOController.cs" />
     <Compile Include="Presentation Layer\Business_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +62,6 @@
     <Compile Include="Data Access Layer\ContactsADOController.cs" />
     <Compile Include="Data Access Layer\ADOController.cs" />
     <Compile Include="Data Access Layer\LoginADOController.cs" />
-    <Compile Include="KeyGenerationController.cs" />
     <Compile Include="Presentation Layer\AudOptionFrm.cs">
       <SubType>Form</SubType>
     </Compile>

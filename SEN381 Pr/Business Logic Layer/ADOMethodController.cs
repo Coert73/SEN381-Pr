@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace SEN381_Pr
 {
+    #region ADOControllers
     class ADOMethodController
     {
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,7 +28,7 @@ namespace SEN381_Pr
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
-
+        #region Methods For Technicians
         public DataSet LoadTechData()
         {
             return TechCon.LoadData();
@@ -56,10 +57,10 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Technician");
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Services
-
+        #region Methods For Services
         public void LoadServices(DataGridView tab)
         {            
             tab.DataSource = ServicesCon.LoadData();
@@ -90,10 +91,10 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Service");
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Package Methods and Functions
-
+        #region Methods For Package
         public void LoadPackageData(DataGridView tab)
         {
             tab.DataSource = PackCon.LoadData();
@@ -159,10 +160,11 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Package");
         }
-
+        #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Jobs
+        #region Methods For Jobs 
         public DataSet LoadJobData()
         {
             return JobCon.LoadData();
@@ -193,10 +195,10 @@ namespace SEN381_Pr
         {
             lbl.Text = JobCon.CountJobs().ToString() + " Jobs";
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Security Layer Controllers
-
+        #region Security Layer Controllers
         public List<string> ValidateCredentials(string username)
         {
             List<string> UserCredentials = new List<string>();
@@ -220,10 +222,10 @@ namespace SEN381_Pr
 
             return UserCredentials;
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Request ADO Controllers/Methods
-
+        #region Request ADO Controller Methods
         public void LoadReqData(DataGridView tab)
         {
             RefreshData(tab);
@@ -237,10 +239,10 @@ namespace SEN381_Pr
             tab.DataSource = ReqCon.SortData(sort);
             tab.DataMember = "Table";
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Call Handler ADO Method Controllers
-
+        #region Call Handler ADO Controller Methods
         public void LoadCallClients(DataGridView tab)
         {
             tab.AutoGenerateColumns = true;
@@ -254,27 +256,27 @@ namespace SEN381_Pr
             tab.DataSource = CallCon.LoadData();
             tab.DataMember = "Table";
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Contract ADO Controller Methods
-
+        #region Contract ADO Controller Methods
         public void LoadContracts(DataGridView tab)
         {
             tab.AutoGenerateColumns = true;
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
         }
-
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Report ADO Controller Methods
-
+        #region Report ADO Controller Methods
         public void LoadReports(DataGridView tab) {
 
             tab.AutoGenerateColumns = true;
             tab.DataSource = RepCon.LoadData();
             tab.DataMember = "Table";
-        }       
-
+        }
+        
         public void SearchReport(DataGridView tab,int refer)
         {
             tab.AutoGenerateColumns = true;
@@ -295,12 +297,8 @@ namespace SEN381_Pr
             tab.Rows.Clear();
             tab.Update();
             tab.Refresh();
-        }       
-
-       
-
-        
-
-
+        }
+        #endregion
     }
+    #endregion
 }

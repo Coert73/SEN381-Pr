@@ -5,9 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region
     public class IndividualClient : Client
     {
-
+        #region Constructor
         public override string BusinessID { get => BusinessID; set => BusinessID = value; }
         public override Contract ClientContract { get => ClientContract; set => ClientContract = value; }
         public override Address ClientAddress { get => ClientAddress; set => ClientAddress = value; }
@@ -28,12 +29,16 @@ namespace SEN381_Pr
             CallsMade = callsMade;
             Position = position;
         }
-
+        #endregion
+        #region Methods
+        #region ToString
         public override string ToString()
         {
             return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position}"; 
         }
+        #endregion
 
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is IndividualClient client &&
@@ -56,7 +61,9 @@ namespace SEN381_Pr
                    CallsMade == client.CallsMade &&
                    Position == client.Position;
         }
+        #endregion
 
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = 920791913;
@@ -80,5 +87,8 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Position);
             return hashCode;
         }
+        #endregion
+#endregion
     }
+#endregion
 }

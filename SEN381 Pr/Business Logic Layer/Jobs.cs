@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Jobs
     public abstract class Jobs
-    {       
+    {
+        #region Constructor
         private string _referenceNumber;
         private string _progression;
         private DateTime _arramgedData;
@@ -19,5 +21,7 @@ namespace SEN381_Pr
         public abstract DateTime ArramgedData { get; set; }
         public abstract bool Completed { get; set; }
         public abstract Technician JobTechnician { get; set; }
+        #endregion
     }
+    #endregion
 }

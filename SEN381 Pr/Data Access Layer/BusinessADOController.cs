@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SEN381_Pr
 {
-    class KeyGenerationController
+    class BusinessADOController
     {
     }
 }

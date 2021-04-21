@@ -24,6 +24,7 @@ namespace SEN381_Pr
         ReportADOController RepCon = new ReportADOController();
         ServicesADOController ServicesCon = new ServicesADOController();
         PackageADOController PackCon = new PackageADOController();
+        ContractADOController ConCon = new ContractADOController();
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
@@ -160,6 +161,40 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Package");
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Contract Methods and Functions
+
+        public void LoadContracts(DataGridView tab)
+        {
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertContracts(DataGridView tab, string id, string packageId,string name,string contractType,string start,string end,bool status,char level)
+        {
+            id = level + name.Substring(0, 3).ToUpper() + (ServicesCon.CountServices() + 1).ToString();
+            ContractCon.InsertContract(new Contract(id,packageId,name,contractType,start,end,status,level));
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Service");
+        }
+
+        public void UpdateContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, char level)
+        {           
+            ContractCon.UpdateContract(new Contract(id, packageId, name, contractType, start, end, status, level));
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Service");
+        }
+
+        public void DeleteContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, char level)
+        {           
+            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, level));
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Service");
+        }
+
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Jobs
@@ -253,17 +288,7 @@ namespace SEN381_Pr
             tab.AutoGenerateColumns = true;
             tab.DataSource = CallCon.LoadData();
             tab.DataMember = "Table";
-        }
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Contract ADO Controller Methods
-
-        public void LoadContracts(DataGridView tab)
-        {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = ContractCon.LoadData();
-            tab.DataMember = "Table";
-        }
+        }      
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Report ADO Controller Methods

@@ -94,34 +94,70 @@ namespace SEN381_Pr
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Package Methods and Functions
 
-        public DataSet LoadPackageData()
+        public void LoadPackageData(DataGridView tab)
         {
-            return PackCon.LoadData();
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
         }
 
         public void InsertPackageData(DataGridView tab, string id, string name, string type, ListBox list)
         {
+            List<string> ServiceList = new List<string>();                
+
+            int index = 12 - list.Items.Count;       
+
+            foreach (var item in list.Items)
+            {
+                ServiceList.Add(item.ToString());
+            }
+            
+            for (int i = 0; i < index; i++)
+            {
+                ServiceList.Add("NONON5");
+            }
+
             id =  name.Substring(0, 3).ToUpper() + type + (PackCon.CountPackages() + 1).ToString();
-            PackCon.InsertPackage(new Package());
+            PackCon.InsertPackage(new Package(id, name, type, ServiceList));
             tab.DataSource = PackCon.LoadData();
             tab.DataMember = "Table";
-            MessageBox.Show("Inserted Technician");
+            MessageBox.Show("Inserted Package");
         }
 
-        public void UpdatePackageData(DataGridView tab)
+        public void UpdatePackageData(DataGridView tab, string id, string name, string type, ListBox list)
         {
-            PackCon.UpdatePackage(new Package());
+            List<string> ServiceList = new List<string>();
+
+            int index = 12 - list.Items.Count;
+
+            foreach (var item in list.Items)
+            {
+                ServiceList.Add(item.ToString());
+            }
+
+            for (int i = 0; i < index; i++)
+            {
+                ServiceList.Add("NONON5");
+            }
+
+            PackCon.UpdatePackage(new Package(id,name,type,ServiceList));
             tab.DataSource = PackCon.LoadData();
             tab.DataMember = "Table";
-            MessageBox.Show("Updated Technician");
+            MessageBox.Show("Updated Package");
         }
 
-        public void DeletePackageData(DataGridView tab)
+        public void DeletePackageData(DataGridView tab, string id, string name, string type, ListBox list)
         {
-            PackCon.DeletePackage(new Package());
+            List<string> ServiceList = new List<string>();
+
+            foreach (var item in list.Items)
+            {
+                ServiceList.Add(item.ToString());
+            }
+
+            PackCon.DeletePackage(new Package(id, name, type, ServiceList));
             tab.DataSource = PackCon.LoadData();
             tab.DataMember = "Table";
-            MessageBox.Show("Deleted Technician");
+            MessageBox.Show("Deleted Package");
         }
 
 

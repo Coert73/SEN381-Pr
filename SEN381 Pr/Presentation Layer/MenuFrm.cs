@@ -202,6 +202,23 @@ namespace SEN381_Pr
         {
             (new ServicesFrm()).Show();
             this.Hide();
+        }  
+
+        private void btnBusiness_Click_1(object sender, EventArgs e)
+        {
+            (new Business_Form()).Show();
+            this.Hide();
+        }
+
+        private void lblJobsDone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPackages_Click(object sender, EventArgs e)
+        {
+            (new PackagesFrm()).Show();
+            this.Hide();
         }
     }
 }

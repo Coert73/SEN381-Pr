@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PackagesFrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvPackages = new System.Windows.Forms.DataGridView();
             this.btnClientDel = new System.Windows.Forms.Button();
             this.btnClientEdit = new System.Windows.Forms.Button();
             this.btnClientAdd = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvPackages = new System.Windows.Forms.DataGridView();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnAddService = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(792, 626);
             this.panel1.TabIndex = 0;
+            // 
+            // dgvPackages
+            // 
+            this.dgvPackages.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPackages.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPackages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPackages.Location = new System.Drawing.Point(15, 15);
+            this.dgvPackages.Name = "dgvPackages";
+            this.dgvPackages.Size = new System.Drawing.Size(763, 597);
+            this.dgvPackages.TabIndex = 0;
+            this.dgvPackages.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackages_CellClick);
             // 
             // btnClientDel
             // 
@@ -79,6 +90,7 @@
             this.btnClientDel.TabIndex = 2;
             this.btnClientDel.Text = "Delete";
             this.btnClientDel.UseVisualStyleBackColor = false;
+            this.btnClientDel.Click += new System.EventHandler(this.btnClientDel_Click);
             // 
             // btnClientEdit
             // 
@@ -93,6 +105,7 @@
             this.btnClientEdit.TabIndex = 1;
             this.btnClientEdit.Text = "Update";
             this.btnClientEdit.UseVisualStyleBackColor = false;
+            this.btnClientEdit.Click += new System.EventHandler(this.btnClientEdit_Click);
             // 
             // btnClientAdd
             // 
@@ -107,6 +120,7 @@
             this.btnClientAdd.TabIndex = 0;
             this.btnClientAdd.Text = "Insert";
             this.btnClientAdd.UseVisualStyleBackColor = false;
+            this.btnClientAdd.Click += new System.EventHandler(this.btnClientAdd_Click);
             // 
             // btnBack
             // 
@@ -131,16 +145,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(381, 157);
             this.panel3.TabIndex = 25;
-            // 
-            // dgvPackages
-            // 
-            this.dgvPackages.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPackages.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPackages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPackages.Location = new System.Drawing.Point(15, 15);
-            this.dgvPackages.Name = "dgvPackages";
-            this.dgvPackages.Size = new System.Drawing.Size(763, 597);
-            this.dgvPackages.TabIndex = 0;
             // 
             // textBox2
             // 
@@ -191,9 +195,9 @@
             this.label2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Package ID";
+            this.label2.Text = "Package Name";
             // 
             // label1
             // 
@@ -201,36 +205,37 @@
             this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 18;
-            this.label1.Text = "PackageId";
+            this.label1.Text = "Package ID";
             // 
-            // textBox6
+            // txtType
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(15, 124);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(351, 19);
-            this.textBox6.TabIndex = 17;
+            this.txtType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtType.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtType.Location = new System.Drawing.Point(15, 124);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(351, 19);
+            this.txtType.TabIndex = 17;
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(15, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(351, 19);
-            this.textBox3.TabIndex = 16;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(15, 77);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(351, 19);
+            this.txtName.TabIndex = 16;
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(15, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(351, 19);
-            this.textBox1.TabIndex = 15;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(15, 30);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(351, 19);
+            this.txtId.TabIndex = 15;
             // 
             // panel2
             // 
@@ -239,11 +244,11 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.listBox1);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.txtType);
             this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
@@ -251,24 +256,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(381, 415);
             this.panel2.TabIndex = 24;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(15, 178);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(351, 186);
-            this.listBox1.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Services";
             // 
             // btnAddService
             // 
@@ -284,6 +271,24 @@
             this.btnAddService.Text = "Add Service";
             this.btnAddService.UseVisualStyleBackColor = false;
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Services";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(15, 178);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(351, 186);
+            this.listBox1.TabIndex = 24;
             // 
             // pictureBox1
             // 
@@ -310,9 +315,10 @@
             this.Name = "PackagesFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PackagesFrm";
+            this.Load += new System.EventHandler(this.PackagesFrm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -336,9 +342,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.Label label3;

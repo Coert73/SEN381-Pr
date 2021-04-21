@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace SEN381_Pr
 {
     public partial class MenuFrm : Form
-    {
-
+    {        
         public MenuFrm()
         {
             InitializeComponent();
@@ -186,10 +185,11 @@ namespace SEN381_Pr
             btnLogOut.ForeColor = SystemColors.ControlText;
         }
 
+
         private void MenuFrm_Load(object sender, EventArgs e)
         {
-            
-            
+            ADOMethodController Con = new ADOMethodController();
+            Con.CountJobs(lblJobsDone);
             //lblUser.Text = "User";
         }
 

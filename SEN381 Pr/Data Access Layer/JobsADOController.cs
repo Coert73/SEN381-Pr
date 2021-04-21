@@ -31,5 +31,10 @@ namespace SEN381_Pr
         {
             return Controller.CarryCommand($"");
         }
+
+        public int CountJobs()
+        {
+            return Controller.CarryCommand("SELECT * FROM Jobs").Tables[0].Rows.Count;
+        }
     }
 }

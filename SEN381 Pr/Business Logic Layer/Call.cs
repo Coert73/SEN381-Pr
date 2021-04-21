@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Call
     public class Call : Calls
     {
+        #region Constructor
         public override BusinessClient Client { get => Client; set => Client = value; }
         public override DateTime CallLogging { get => CallLogging; set => CallLogging = value; }
         public override Service ServiceType { get => ServiceType; set => ServiceType = value; }
@@ -19,7 +21,9 @@ namespace SEN381_Pr
             ServiceType = serviceType;
             ClientRequest = clientRequest;
         }
-
+        #endregion
+        #region Methods
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is Call call &&
@@ -32,7 +36,8 @@ namespace SEN381_Pr
                    EqualityComparer<Service>.Default.Equals(ServiceType, call.ServiceType) &&
                    ClientRequest == call.ClientRequest;
         }
-
+        #endregion
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = -890523730;
@@ -46,10 +51,15 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ClientRequest);
             return hashCode;
         }
+        #endregion
+        #region ToString
         public override string ToString()
         {
             return "ClientRequest" + ClientRequest;
         }
+        #endregion
+        #endregion
     }
+    #endregion
 
 }

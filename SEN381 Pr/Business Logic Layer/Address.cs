@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Address 
     public class Address
     {
         private string _addressId;
@@ -13,6 +14,7 @@ namespace SEN381_Pr
         private string _city;
         private string _country;
 
+        #region Constructor
         public Address( string id,string street, string code, string city, string country)
         {
             _addressId = id;
@@ -27,7 +29,8 @@ namespace SEN381_Pr
         public string Code { get => _code; set => _code = value; }
         public string City { get => _city; set => _city = value; }
         public string Country { get => _country; set => _country = value; }
-
+        #endregion
+        
         public Client Client
         {
             get => default;
@@ -35,7 +38,9 @@ namespace SEN381_Pr
             {
             }
         }
+        #region Methods
 
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is Address address &&
@@ -50,7 +55,9 @@ namespace SEN381_Pr
                    City == address.City &&
                    Country == address.Country;
         }
+        #endregion
 
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = 260441318;
@@ -65,10 +72,14 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Country);
             return hashCode;
         }
-
+        #endregion
+        #region ToString
         public override string ToString()
         {
             return $"ID:{AddressId},Street:{Street},Code:{Code},City:{City}, Country:{Country}"; ;
         }
+        #endregion
+        #endregion
     }
+    #endregion
 }

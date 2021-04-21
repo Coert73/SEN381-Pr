@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Package
     public class Package
     {
+        #region Constructor
         private string _id;
         private string _name;
         private string _type;
@@ -24,7 +26,10 @@ namespace SEN381_Pr
         public string Name { get => _name; set => _name = value; }
         public string Type { get => _type; set => _type = value; }
         public List<string> Services { get => _services; set => _services = value; }
+        #endregion
 
+        #region Methods
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is Package package &&
@@ -37,7 +42,8 @@ namespace SEN381_Pr
                    Type == package.Type &&
                    EqualityComparer<List<string>>.Default.Equals(Services, package.Services);
         }
-
+        #endregion
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = -735467416;
@@ -51,10 +57,14 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<List<string>>.Default.GetHashCode(Services);
             return hashCode;
         }
-
+        #endregion
+        #region ToString
         public override string ToString()
         {
             return base.ToString();
         }
+        #endregion
+        #endregion
     }
+    #endregion
 }

@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Contract
     public class Contract
     {
+        #region Constructor
         private string _contractName;
         private string _contractType;
         private List<Service> _contractService;
@@ -25,6 +27,7 @@ namespace SEN381_Pr
         public List<Service> ContractService { get => _contractService; set => _contractService = value; }
         public List<Package> Packages { get => _packages; set => _packages = value; }
 
+        #endregion
         public Client Client
         {
             get => default;
@@ -32,7 +35,9 @@ namespace SEN381_Pr
             {
             }
         }
+        #region Methods
 
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is Contract contract &&
@@ -41,7 +46,8 @@ namespace SEN381_Pr
                    EqualityComparer<List<Service>>.Default.Equals(_contractService, contract._contractService) &&
                    EqualityComparer<List<Package>>.Default.Equals(_packages, contract._packages);
         }
-
+        #endregion
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = 1030794865;
@@ -51,10 +57,15 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<List<Package>>.Default.GetHashCode(_packages);
             return hashCode;
         }
+        #endregion
 
+        #region ToString
         public override string ToString()
         {
             return "Contract: " + ContractName + " " + ContractType + " " + ContractService;
         }
+        #endregion
+        #endregion
     }
+    #endregion
 }

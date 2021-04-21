@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region CallHandler
     public class CallHandler
     {
+        #region Constructor
         private Call _clientCall;
         private Request _clientRequest;
         private string _referenceNumber;
@@ -21,7 +23,7 @@ namespace SEN381_Pr
         public Call ClientCall { get => _clientCall; set => _clientCall = value; }
         public Request ClientRequest { get => _clientRequest; set => _clientRequest = value; }
         public string ReferenceNumber { get => _referenceNumber; set => _referenceNumber = value; }
-
+        #endregion
         public void LogCall()
         {
 
@@ -46,7 +48,8 @@ namespace SEN381_Pr
         {
 
         }
-
+        #region Methods
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is CallHandler handler &&
@@ -57,7 +60,8 @@ namespace SEN381_Pr
                    EqualityComparer<Request>.Default.Equals(ClientRequest, handler.ClientRequest) &&
                    ReferenceNumber == handler.ReferenceNumber;
         }
-
+        #endregion
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = -2125340607;
@@ -69,5 +73,8 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ReferenceNumber);
             return hashCode;
         }
+        #endregion
+        #endregion
     }
+    #endregion
 }

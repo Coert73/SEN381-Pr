@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Calls
     public abstract class Calls
     {
         private BusinessClient _client;
@@ -17,4 +18,5 @@ namespace SEN381_Pr
         public abstract Service ServiceType { get; set; }
         public abstract string ClientRequest { get; set; }
     }
+    #endregion
 }

@@ -79,6 +79,7 @@
             this.btnClientDel.TabIndex = 2;
             this.btnClientDel.Text = "Delete";
             this.btnClientDel.UseVisualStyleBackColor = false;
+            this.btnClientDel.Click += new System.EventHandler(this.btnClientDel_Click);
             // 
             // btnClientEdit
             // 
@@ -93,6 +94,7 @@
             this.btnClientEdit.TabIndex = 1;
             this.btnClientEdit.Text = "Update";
             this.btnClientEdit.UseVisualStyleBackColor = false;
+            this.btnClientEdit.Click += new System.EventHandler(this.btnClientEdit_Click);
             // 
             // btnClientAdd
             // 
@@ -107,6 +109,7 @@
             this.btnClientAdd.TabIndex = 0;
             this.btnClientAdd.Text = "Insert";
             this.btnClientAdd.UseVisualStyleBackColor = false;
+            this.btnClientAdd.Click += new System.EventHandler(this.btnClientAdd_Click);
             // 
             // btnBack
             // 
@@ -191,9 +194,9 @@
             this.label2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Package ID";
+            this.label2.Text = "Package Name";
             // 
             // label1
             // 
@@ -201,9 +204,9 @@
             this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 18;
-            this.label1.Text = "PackageId";
+            this.label1.Text = "Package ID";
             // 
             // textBox6
             // 
@@ -310,6 +313,7 @@
             this.Name = "PackagesFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PackagesFrm";
+            this.Load += new System.EventHandler(this.PackagesFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).EndInit();

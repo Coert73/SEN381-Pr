@@ -12,6 +12,8 @@ namespace SEN381_Pr
 {
     public partial class PackagesFrm : Form
     {
+        public delegate void delPassService(ListBox box);
+
         public PackagesFrm()
         {
             InitializeComponent();
@@ -25,7 +27,35 @@ namespace SEN381_Pr
 
         private void btnAddService_Click(object sender, EventArgs e)
         {
-            (new ServiceSelectFrm()).Show();            
+            ServiceSelectFrm ser = new ServiceSelectFrm();
+            delPassService del = new delPassService(ser.GetService);
+            del(this.listBox1);
+            ser.Show();
+        }
+
+        public void RecieveService(String str)
+        {
+            listBox1.Items.Add(str);
+        }
+
+        private void PackagesFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientDel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

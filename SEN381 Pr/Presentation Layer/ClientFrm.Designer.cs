@@ -60,8 +60,8 @@ namespace SEN381_Pr
             this.btnClientDel = new System.Windows.Forms.Button();
             this.btnClientEdit = new System.Windows.Forms.Button();
             this.btnClientAdd = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.panel2.SuspendLayout();
@@ -382,6 +382,7 @@ namespace SEN381_Pr
             this.btnClientEdit.TabIndex = 1;
             this.btnClientEdit.Text = "Update";
             this.btnClientEdit.UseVisualStyleBackColor = false;
+            this.btnClientEdit.Click += new System.EventHandler(this.btnClientEdit_Click);
             this.btnClientEdit.MouseEnter += new System.EventHandler(this.btnClientEdit_MouseEnter);
             this.btnClientEdit.MouseLeave += new System.EventHandler(this.btnClientEdit_MouseLeave);
             // 
@@ -401,16 +402,6 @@ namespace SEN381_Pr
             this.btnClientAdd.MouseEnter += new System.EventHandler(this.btnClientAdd_MouseEnter);
             this.btnClientAdd.MouseLeave += new System.EventHandler(this.btnClientAdd_MouseLeave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(973, 542);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnBack
             // 
             this.btnBack.FlatAppearance.BorderSize = 0;
@@ -423,6 +414,16 @@ namespace SEN381_Pr
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(973, 542);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // ClientFrm
             // 

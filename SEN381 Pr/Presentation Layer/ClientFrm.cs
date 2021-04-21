@@ -65,5 +65,10 @@ namespace SEN381_Pr
             (new MenuFrm()).Show();
             this.Hide();
         }
+
+        private void btnClientEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

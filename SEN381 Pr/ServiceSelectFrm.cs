@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace SEN381_Pr
 {
     public partial class ServiceSelectFrm : Form
-    {
+    {       
 
-        ADOMethodController Con = new ADOMethodController();
+        ADOMethodController Con = new ADOMethodController();      
 
         public ServiceSelectFrm()
         {
@@ -30,20 +30,36 @@ namespace SEN381_Pr
             Con.LoadServices(dgvServiceSelect);
         }
 
+        string idToCarry = "";
+
         private void dgvServiceSelect_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            lbxItems.Items.Clear();
+
             DataGridViewRow row = dgvServiceSelect.CurrentRow;
             if (!row.IsNewRow)
             {
-                rtbText. = row.Cells["ServiceId"].Value.ToString();
-                txtName.Text = row.Cells["ServiceName"].Value.ToString();
-                txtDescription.Text = row.Cells["ServiceDescription"].Value.ToString();
-                textLevel.Text = row.Cells["ServiceLevel"].Value.ToString();
-                textDur.Text = row.Cells["ResolutionPeriod"].Value.ToString();
-                textSLA.Text = row.Cells["ServiceLevelAgreement"].Value.ToString();
-                chkEquipment.Checked = Convert.ToBoolean(row.Cells["IsEquipment"].Value);
-
+                lbxItems.Items.Add(row.Cells["ServiceId"].Value.ToString());
+                idToCarry = row.Cells["ServiceId"].Value.ToString();
+                lbxItems.Items.Add(row.Cells["ServiceName"].Value.ToString());
+                lbxItems.Items.Add(row.Cells["ServiceDescription"].Value.ToString());
+                lbxItems.Items.Add(row.Cells["ServiceLevel"].Value.ToString());
+                lbxItems.Items.Add(row.Cells["ResolutionPeriod"].Value.ToString());
+                lbxItems.Items.Add(row.Cells["ServiceLevelAgreement"].Value.ToString());
+                lbxItems.Items.Add(Convert.ToBoolean(row.Cells["IsEquipment"].Value));
             }
+        }
+
+        private void btnClientAdd_Click(object sender, EventArgs e)
+        {
+            box.Items.Add(idToCarry);
+        }
+
+        ListBox box = new ListBox();
+
+        public void GetService(ListBox list)
+        {
+            box = list;
         }
     }
 }

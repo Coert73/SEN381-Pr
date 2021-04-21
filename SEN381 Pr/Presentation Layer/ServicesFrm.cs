@@ -62,7 +62,6 @@ namespace SEN381_Pr
                 textDur.Text = row.Cells["ResolutionPeriod"].Value.ToString();
                 textSLA.Text = row.Cells["ServiceLevelAgreement"].Value.ToString();
                 chkEquipment.Checked = Convert.ToBoolean(row.Cells["IsEquipment"].Value);
-
             }
         }
     }

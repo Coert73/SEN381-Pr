@@ -11,7 +11,7 @@ namespace SEN381_Pr
 {
     class ADOMethodController
     {
-
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Business Logic Layer part of the data passing thru...
 
         TechADOController TechCon = new TechADOController();
@@ -23,7 +23,9 @@ namespace SEN381_Pr
         ContractADOController ContractCon = new ContractADOController();
         ReportADOController RepCon = new ReportADOController();
         ServicesADOController ServicesCon = new ServicesADOController();
+        PackageADOController PackCon = new PackageADOController();
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
 
         public DataSet LoadTechData()
@@ -55,6 +57,7 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Technician");
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Services
 
         public void LoadServices(DataGridView tab)
@@ -88,6 +91,41 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Service");
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Package Methods and Functions
+
+        public DataSet LoadPackageData()
+        {
+            return PackCon.LoadData();
+        }
+
+        public void InsertPackageData(DataGridView tab, string id, string name, string type, ListBox list)
+        {
+            id =  name.Substring(0, 3).ToUpper() + type + (PackCon.CountPackages() + 1).ToString();
+            PackCon.InsertPackage(new Package());
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Technician");
+        }
+
+        public void UpdatePackageData(DataGridView tab)
+        {
+            PackCon.UpdatePackage(new Package());
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Technician");
+        }
+
+        public void DeletePackageData(DataGridView tab)
+        {
+            PackCon.DeletePackage(new Package());
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Technician");
+        }
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Jobs
         public DataSet LoadJobData()
         {
@@ -115,6 +153,7 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Security Layer Controllers
 
         public List<string> ValidateCredentials(string username)
@@ -141,6 +180,7 @@ namespace SEN381_Pr
             return UserCredentials;
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Request ADO Controllers/Methods
 
         public void LoadReqData(DataGridView tab)
@@ -157,6 +197,7 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Call Handler ADO Method Controllers
 
         public void LoadCallClients(DataGridView tab)
@@ -173,6 +214,7 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Contract ADO Controller Methods
 
         public void LoadContracts(DataGridView tab)
@@ -182,6 +224,7 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Report ADO Controller Methods
 
         public void LoadReports(DataGridView tab) {

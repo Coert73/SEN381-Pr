@@ -214,5 +214,11 @@ namespace SEN381_Pr
         {
 
         }
+
+        private void btnPackages_Click(object sender, EventArgs e)
+        {
+            (new PackagesFrm()).Show();
+            this.Hide();
+        }
     }
 }

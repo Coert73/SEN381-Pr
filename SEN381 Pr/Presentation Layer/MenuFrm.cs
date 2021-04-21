@@ -198,6 +198,10 @@ namespace SEN381_Pr
             lblUser.Text = name;
         }
 
-      
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            (new ServicesFrm()).Show();
+            this.Hide();
+        }
     }
 }

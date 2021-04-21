@@ -9,55 +9,34 @@ namespace SEN381_Pr
     {
         private string _name;
         private string _surname;
-        private string _position;
+        private string _number;
 
-        public Technician(string name, string surname, string position)
+        public Technician(string name, string surname, string number)
         {
-            _name = name;
-            _surname = surname;
-            _position = position;
-        }
-
-        public Jobs Jobs
-        {
-            get => default;
-            set
-            {
-            }
+            Name = name;
+            Surname = surname;
+            Number = number;
         }
 
         public string Name { get => _name; set => _name = value; }
         public string Surname { get => _surname; set => _surname = value; }
-        public string Position { get => _position; set => _position = value; }
+        public string Number { get => _number; set => _number = value; }
 
         public override bool Equals(object obj)
         {
             return obj is Technician technician &&
                    _name == technician._name &&
                    _surname == technician._surname &&
-                   _position == technician._position &&
-                   EqualityComparer<Jobs>.Default.Equals(Jobs, technician.Jobs) &&
-                   Name == technician.Name &&
-                   Surname == technician.Surname &&
-                   Position == technician.Position;
+                   _number == technician._number;
         }
 
         public override int GetHashCode()
         {
-            int hashCode = -2134339200;
+            int hashCode = -1019785001;
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_name);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_surname);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_position);
-            hashCode = hashCode * -1521134295 + EqualityComparer<Jobs>.Default.GetHashCode(Jobs);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Surname);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Position);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_number);
             return hashCode;
-        }
-
-        public override string ToString()
-        {
-            return $"Name:{Name},Surname:{Surname},Position:{Position}"; ;
         }
     }
 }

@@ -22,6 +22,7 @@ namespace SEN381_Pr
         ClientADOController ClientCon = new ClientADOController();
         ContractADOController ContractCon = new ContractADOController();
         ReportADOController RepCon = new ReportADOController();
+        ServicesADOController ServicesCon = new ServicesADOController();
 
         //Methods For Technicians
 
@@ -32,7 +33,7 @@ namespace SEN381_Pr
 
         public void InsertTechData(DataGridView tab, string name, string surname, string number)
         {        
-            TechCon.InsertTechnician(name, surname, number);      
+            TechCon.InsertTechnician(new Technician(name,surname,number));      
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";         
             MessageBox.Show("Inserted Technician");               
@@ -40,7 +41,7 @@ namespace SEN381_Pr
 
         public void UpdateTechData(DataGridView tab, string name, string surname, string number, int id)
         {
-            TechCon.UpdateTechnician(name,surname,number,id);
+            TechCon.UpdateTechnician(new Technician(name, surname, number), id);
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Updated Technician");
@@ -54,23 +55,56 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Technician");
         }
 
+        //Methods for Services
+
+        public void LoadServices(DataGridView tab)
+        {            
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertService(DataGridView tab, string id,string name,string desc,string level,int period,string sal,bool equip)
+        {
+            id = level + name.Substring(0, 3).ToUpper() + (ServicesCon.CountServices() + 1).ToString();                      
+            ServicesCon.InsertService(new Service(id.ToString(),name,desc,period,sal,level,equip));
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Service");
+        }
+
+        public void UpdateService(DataGridView tab, string id, string name, string desc, string level, int period, string sal, bool equip)
+        {            
+            ServicesCon.UpdateService(new Service(id, name, desc, period, sal, level, equip));
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Service");
+        }
+
+        public void DeleteService(DataGridView tab, string id, string name, string desc, string level, int period, string sal, bool equip)
+        {
+            ServicesCon.DeleteService(new Service(id, name, desc, period, sal, level, equip));
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Service");
+        }
+
         //Methods for Jobs
         public DataSet LoadJobData()
         {
             return JobCon.LoadData();
         }
 
-        public void InsertJobData(DataGridView tab, string name, string surname, string number)
+        public void InsertJobData(DataGridView tab)
         {
             RefreshData(tab);
-            tab.DataSource = JobCon.InsertJob(name, surname, number);
+            //tab.DataSource = JobCon.InsertJob(new Job());
             tab.DataMember = "Table";
         }
 
-        public void UpdateJobData(DataGridView tab, string name, string surname, string number, string id)
+        public void UpdateJobData(DataGridView tab, string id)
         {
             RefreshData(tab);
-            tab.DataSource = JobCon.UpdateJob(name, surname, number, id);
+            //tab.DataSource = JobCon.UpdateJob(new Job(), id);
             tab.DataMember = "Table";
         }
 
@@ -157,6 +191,20 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }       
 
+        public void SearchReport(DataGridView tab,int refer)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = RepCon.SearchReport(refer);
+            tab.DataMember = "Table";
+        }
+
+        public void SortReports(DataGridView tab)
+        {
+            tab.AutoGenerateColumns = true;
+            tab.DataSource = RepCon.SortReportData();
+            tab.DataMember = "Table";
+        }
+
         public void RefreshData(DataGridView tab)
         {
             tab.DataSource = null;
@@ -164,5 +212,11 @@ namespace SEN381_Pr
             tab.Update();
             tab.Refresh();
         }       
+
+       
+
+        
+
+
     }
 }

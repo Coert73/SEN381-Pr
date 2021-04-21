@@ -189,6 +189,11 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        public void CountJobs(Label lbl)
+        {
+            lbl.Text = JobCon.CountJobs().ToString() + " Jobs";
+        }
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Security Layer Controllers
 

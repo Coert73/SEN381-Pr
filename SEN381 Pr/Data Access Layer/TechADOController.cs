@@ -22,17 +22,23 @@ namespace SEN381_Pr
 
         public DataSet InsertTechnician(Technician tech)
         {
-            return Controller.CarryCommand($"INSERT INTO Technician (Name,Surname,Number) VALUES ('{tech.Name}','{tech.Surname}',{tech.Number})");
+
+            return Controller.CarryCommand($"INSERT INTO Technician (TechID,TechName,Surname,Number) VALUES ('{tech.ID}','{tech.Name}','{tech.Surname}','{tech.Number}')");
         }
 
-        public DataSet DeleteTechnician(int id)
+        public DataSet DeleteTechnician(Technician tech)
         {
-            return Controller.CarryCommand($"DELETE FROM Technician WHERE TechID = {id}");
+            return Controller.CarryCommand($"DELETE FROM Technician WHERE TechID = '{tech.ID}'");
         }
 
-        public DataSet UpdateTechnician(Technician tech,int id)
+        public DataSet UpdateTechnician(Technician tech)
         {
-            return Controller.CarryCommand($"UPDATE Technician SET Name='{tech.Name}',Surname='{tech.Surname}',Number='{tech.Number}' WHERE TechID = {id}");
+            return Controller.CarryCommand($"UPDATE Technician SET TechName='{tech.Name}',Surname='{tech.Surname}',Number='{tech.Number}' WHERE TechID = '{tech.ID}'");
+        }
+
+        public int CountTechs()
+        {
+            return Controller.CarryCommand("SELECT * FROM Technician").Tables[0].Rows.Count;
         }
     }
 }

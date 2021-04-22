@@ -9,17 +9,20 @@ namespace SEN381_Pr
     public class Technician
     {
         #region Constructor
+        private string _id;
         private string _name;
         private string _surname;
         private string _number;
 
-        public Technician(string name, string surname, string number)
+        public Technician(string id, string name, string surname, string number)
         {
+            ID = id;
             Name = name;
             Surname = surname;
             Number = number;
         }
 
+        public string ID {get => _id; set => _id = value;}
         public string Name { get => _name; set => _name = value; }
         public string Surname { get => _surname; set => _surname = value; }
         public string Number { get => _number; set => _number = value; }
@@ -30,6 +33,7 @@ namespace SEN381_Pr
         public override bool Equals(object obj)
         {
             return obj is Technician technician &&
+                    _id == technician._id &&
                    _name == technician._name &&
                    _surname == technician._surname &&
                    _number == technician._number;

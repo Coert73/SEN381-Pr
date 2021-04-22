@@ -34,25 +34,26 @@ namespace SEN381_Pr
             return TechCon.LoadData();
         }
 
-        public void InsertTechData(DataGridView tab, string name, string surname, string number)
-        {        
-            TechCon.InsertTechnician(new Technician(name,surname,number));      
+        public void InsertTechData(DataGridView tab,string id, string name, string surname, string number)
+        {
+            id = (name.Substring(0, 2).ToUpper() + surname.Substring(0,2).ToUpper() + (TechCon.CountTechs() + 1)).ToString();
+            TechCon.InsertTechnician(new Technician(id,name,surname,number));      
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";         
             MessageBox.Show("Inserted Technician");               
         }
 
-        public void UpdateTechData(DataGridView tab, string name, string surname, string number, int id)
+        public void UpdateTechData(DataGridView tab, string id, string name, string surname, string number)
         {
-            TechCon.UpdateTechnician(new Technician(name, surname, number), id);
+            TechCon.UpdateTechnician(new Technician(id,name, surname, number));
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Updated Technician");
         }
 
-        public void DeleteTechData(DataGridView tab,int id)
+        public void DeleteTechData(DataGridView tab, string id, string name, string surname, string number)
         {            
-            TechCon.DeleteTechnician(id);                      
+            TechCon.DeleteTechnician(new Technician(id, name, surname, number));                      
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Technician");

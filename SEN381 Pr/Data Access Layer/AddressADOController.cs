@@ -17,9 +17,9 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Address");
         }
 
-        public DataSet InsertData(int clientid, int contractid, string callduration, string calldate)
+        public DataSet InsertData(string Addressid, string street, string code, string city, string country)
         {
-            return Controller.CarryCommand($"INSERT INTO Address(AddressId,Street,PostalCode,City,Country) VALUES ({clientid},{contractid},'{callduration}','{calldate}')");
+            return Controller.CarryCommand($"INSERT INTO Address(AddressId,Street,PostalCode,City,Country) VALUES ({Addressid},{street},'{code}','{country}')");
         }
 
         public DataSet DeleteService(Address adr)

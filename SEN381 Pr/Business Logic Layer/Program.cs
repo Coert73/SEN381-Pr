@@ -7,7 +7,8 @@ using System.Windows.Forms;
 namespace SEN381_Pr
 {
     static class Program
-    {       
+    {
+        #region Main   
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,6 +19,7 @@ namespace SEN381_Pr
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginFrm());
-        }       
+        }
+        #endregion
     }
 }

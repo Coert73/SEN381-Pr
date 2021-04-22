@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Service 
     public class Service 
     {
+        #region Constructor
         private string _serviceId;
         private string _serviceName;
         private string _serviceDescription;
@@ -33,7 +35,10 @@ namespace SEN381_Pr
         public string ServiceAgreement { get => _serviceAgreement; set => _serviceAgreement = value; }
         public string ServiceLevel { get => _serviceLevel; set => _serviceLevel = value; }
         public bool Equipment { get => _equipment; set => _equipment = value; }
+        #endregion
 
+        #region Methods
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is Service service &&
@@ -52,7 +57,8 @@ namespace SEN381_Pr
                    ServiceLevel == service.ServiceLevel &&
                    Equipment == service.Equipment;
         }
-
+        #endregion
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = 1366509473;
@@ -72,10 +78,14 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + Equipment.GetHashCode();
             return hashCode;
         }
-
+        #endregion
+        #region ToString
         public override string ToString()
         {
             return base.ToString();
         }
+        #endregion
+        #endregion
     }
+    #endregion
 }

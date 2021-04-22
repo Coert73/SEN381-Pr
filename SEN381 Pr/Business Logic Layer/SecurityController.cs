@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace SEN381_Pr
 {
+    #region SecurityController
     class SecurityController
     {
 
@@ -35,4 +36,5 @@ namespace SEN381_Pr
             }
         }      
     }
+    #endregion
 }

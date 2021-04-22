@@ -11,7 +11,7 @@ namespace SEN381_Pr
 {
     class ADOMethodController
     {
-
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Business Logic Layer part of the data passing thru...
 
         TechADOController TechCon = new TechADOController();
@@ -23,7 +23,10 @@ namespace SEN381_Pr
         ContractADOController ContractCon = new ContractADOController();
         ReportADOController RepCon = new ReportADOController();
         ServicesADOController ServicesCon = new ServicesADOController();
+        PackageADOController PackCon = new PackageADOController();
+        ContractADOController ConCon = new ContractADOController();
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
 
         public DataSet LoadTechData()
@@ -55,6 +58,7 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Technician");
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Services
 
         public void LoadServices(DataGridView tab)
@@ -88,6 +92,111 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Service");
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Package Methods and Functions
+
+        public void LoadPackageData(DataGridView tab)
+        {
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertPackageData(DataGridView tab, string id, string name, string type, ListBox list)
+        {
+            List<string> ServiceList = new List<string>();                
+
+            int index = 12 - list.Items.Count;       
+
+            foreach (var item in list.Items)
+            {
+                ServiceList.Add(item.ToString());
+            }
+            
+            for (int i = 0; i < index; i++)
+            {
+                ServiceList.Add("NONON5");
+            }
+
+            id =  name.Substring(0, 3).ToUpper() + type + (PackCon.CountPackages() + 1).ToString();
+            PackCon.InsertPackage(new Package(id, name, type, ServiceList));
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Package");
+        }
+
+        public void UpdatePackageData(DataGridView tab, string id, string name, string type, ListBox list)
+        {
+            List<string> ServiceList = new List<string>();
+
+            int index = 12 - list.Items.Count;
+
+            foreach (var item in list.Items)
+            {
+                ServiceList.Add(item.ToString());
+            }
+
+            for (int i = 0; i < index; i++)
+            {
+                ServiceList.Add("NONON5");
+            }
+
+            PackCon.UpdatePackage(new Package(id,name,type,ServiceList));
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Package");
+        }
+
+        public void DeletePackageData(DataGridView tab, string id, string name, string type, ListBox list)
+        {
+            List<string> ServiceList = new List<string>();
+
+            foreach (var item in list.Items)
+            {
+                ServiceList.Add(item.ToString());
+            }
+
+            PackCon.DeletePackage(new Package(id, name, type, ServiceList));
+            tab.DataSource = PackCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Package");
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Contract Methods and Functions
+
+        public void LoadContracts(DataGridView tab)
+        {
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertContracts(DataGridView tab, string id, string packageId,string name,string contractType,string start,string end,bool status,char level)
+        {
+            id = level + name.Substring(0, 3).ToUpper() + (ServicesCon.CountServices() + 1).ToString();
+            ContractCon.InsertContract(new Contract(id,packageId,name,contractType,start,end,status,level));
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Service");
+        }
+
+        public void UpdateContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, char level)
+        {           
+            ContractCon.UpdateContract(new Contract(id, packageId, name, contractType, start, end, status, level));
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Service");
+        }
+
+        public void DeleteContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, char level)
+        {           
+            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, level));
+            tab.DataSource = ContractCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Service");
+        }
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Jobs
         public DataSet LoadJobData()
         {
@@ -115,6 +224,12 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        public void CountJobs(Label lbl)
+        {
+            lbl.Text = JobCon.CountJobs().ToString() + " Jobs";
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Security Layer Controllers
 
         public List<string> ValidateCredentials(string username)
@@ -141,6 +256,7 @@ namespace SEN381_Pr
             return UserCredentials;
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Request ADO Controllers/Methods
 
         public void LoadReqData(DataGridView tab)
@@ -157,6 +273,7 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Call Handler ADO Method Controllers
 
         public void LoadCallClients(DataGridView tab)
@@ -171,17 +288,9 @@ namespace SEN381_Pr
             tab.AutoGenerateColumns = true;
             tab.DataSource = CallCon.LoadData();
             tab.DataMember = "Table";
-        }
+        }      
 
-        //Contract ADO Controller Methods
-
-        public void LoadContracts(DataGridView tab)
-        {
-            tab.AutoGenerateColumns = true;
-            tab.DataSource = ContractCon.LoadData();
-            tab.DataMember = "Table";
-        }
-
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Report ADO Controller Methods
 
         public void LoadReports(DataGridView tab) {

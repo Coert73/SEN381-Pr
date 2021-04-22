@@ -31,8 +31,8 @@
             this.btnClientAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rtbText = new System.Windows.Forms.RichTextBox();
             this.dgvServiceSelect = new System.Windows.Forms.DataGridView();
+            this.lbxItems = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceSelect)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.btnClientAdd.TabIndex = 1;
             this.btnClientAdd.Text = "Select";
             this.btnClientAdd.UseVisualStyleBackColor = false;
+            this.btnClientAdd.Click += new System.EventHandler(this.btnClientAdd_Click);
             // 
             // button1
             // 
@@ -75,16 +76,6 @@
             this.panel1.Size = new System.Drawing.Size(385, 392);
             this.panel1.TabIndex = 3;
             // 
-            // rtbText
-            // 
-            this.rtbText.BackColor = System.Drawing.Color.White;
-            this.rtbText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbText.Location = new System.Drawing.Point(12, 410);
-            this.rtbText.Name = "rtbText";
-            this.rtbText.Size = new System.Drawing.Size(385, 126);
-            this.rtbText.TabIndex = 4;
-            this.rtbText.Text = "";
-            // 
             // dgvServiceSelect
             // 
             this.dgvServiceSelect.BackgroundColor = System.Drawing.Color.White;
@@ -95,12 +86,20 @@
             this.dgvServiceSelect.TabIndex = 0;
             this.dgvServiceSelect.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiceSelect_CellClick);
             // 
+            // lbxItems
+            // 
+            this.lbxItems.FormattingEnabled = true;
+            this.lbxItems.Location = new System.Drawing.Point(12, 410);
+            this.lbxItems.Name = "lbxItems";
+            this.lbxItems.Size = new System.Drawing.Size(385, 121);
+            this.lbxItems.TabIndex = 1;
+            // 
             // ServiceSelectFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 590);
-            this.Controls.Add(this.rtbText);
+            this.Controls.Add(this.lbxItems);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClientAdd);
@@ -120,6 +119,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvServiceSelect;
-        private System.Windows.Forms.RichTextBox rtbText;
+        private System.Windows.Forms.ListBox lbxItems;
     }
 }

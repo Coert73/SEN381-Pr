@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region ReportHandler
     public class ReportHandler
     {
+        #region Constructor
         private string _referenceNumber;
         private BusinessClient _client;
         private Job _job;
@@ -21,12 +23,12 @@ namespace SEN381_Pr
         public string ReferenceNumber { get => _referenceNumber; set => _referenceNumber = value; }
         public BusinessClient Client { get => _client; set => _client = value; }
         public Job Job { get => _job; set => _job = value; }
-
+        #endregion
         public void GenerateReport()
         {
 
         }
-
+        #region Equals 
         public override bool Equals(object obj)
         {
             return obj is ReportHandler handler &&
@@ -37,7 +39,9 @@ namespace SEN381_Pr
                    EqualityComparer<BusinessClient>.Default.Equals(Client, handler.Client) &&
                    EqualityComparer<Job>.Default.Equals(Job, handler.Job);
         }
+        #endregion
 
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = -1287161391;
@@ -49,9 +53,8 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<Job>.Default.GetHashCode(Job);
             return hashCode;
         }
-
-       
-
+        #endregion
 
     }
+    #endregion
 }

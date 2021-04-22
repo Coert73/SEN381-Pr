@@ -17,5 +17,25 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Contract");
         }
 
+        public DataSet InsertContract(Contract con)
+        {
+            return Controller.CarryCommand($"INSERT INTO Conctract (ContractId,PackageId,ContractName,ContractType,ContractLeaseStart,ContractLeaseEnd,ContractStatus,ContractServiceLevel) VALUES ()");
+        }
+
+        public DataSet DeleteContract(Contract con)
+        {
+            return Controller.CarryCommand($"DELETE FROM Contract WHERE ContractId = '{con.ContractId}'");
+        }
+
+        public DataSet UpdateContract(Contract con)
+        {
+            return Controller.CarryCommand($"UPDATE Contract SET");
+        }
+
+        public int CountContract()
+        {
+            return Controller.CarryCommand("SELECT * FROM Contract").Tables[0].Rows.Count;
+        }
+
     }
 }

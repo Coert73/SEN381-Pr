@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Client
     public abstract class Client
     {
 
@@ -43,4 +44,5 @@ namespace SEN381_Pr
             }
         }
     }
+    #endregion
 }

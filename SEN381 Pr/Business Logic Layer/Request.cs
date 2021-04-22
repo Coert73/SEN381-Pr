@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Request
     public class Request
     {
+        #region Constructer
         private string _referenceNumber;
         private bool _requestAppropriation;
         private Job _requestJob;
@@ -21,7 +23,7 @@ namespace SEN381_Pr
         public string ReferenceNumber { get => _referenceNumber; set => _referenceNumber = value; }
         public bool RequestAppropriation { get => _requestAppropriation; set => _requestAppropriation = value; }
         public Job RequestJob { get => _requestJob; set => _requestJob = value; }
-
+        #endregion
         public Jobs Jobs
         {
             get => default;
@@ -37,7 +39,8 @@ namespace SEN381_Pr
             {
             }
         }
-
+        #region Methods
+        #region Equals
         public override bool Equals(object obj)
         {
             return obj is Request request &&
@@ -48,7 +51,8 @@ namespace SEN381_Pr
                    RequestAppropriation == request.RequestAppropriation &&
                    EqualityComparer<Job>.Default.Equals(RequestJob, request.RequestJob);
         }
-
+        #endregion
+        #region GetHashCode
         public override int GetHashCode()
         {
             int hashCode = 1247221067;
@@ -60,5 +64,8 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<Job>.Default.GetHashCode(RequestJob);
             return hashCode;
         }
+        #endregion
+        #endregion
     }
+    #endregion
 }

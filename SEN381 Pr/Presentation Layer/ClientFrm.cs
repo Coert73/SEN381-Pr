@@ -57,7 +57,10 @@ namespace SEN381_Pr
 
         private void ClientFrm_Load(object sender, EventArgs e)
         {
-            Con.LoadCallClients(dgvClients);           
+            dgvClients.DataSource = Con.LoadClientData();
+            dgvClients.DataMember = "Table";
+            dgvAddress.DataSource = Con.LoadAddressData();
+            dgvAddress.DataMember = "Table";
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -68,7 +71,7 @@ namespace SEN381_Pr
 
         private void btnClientEdit_Click(object sender, EventArgs e)
         {
-
+            Con.UpdateClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text);
         }
 
         private void btnAddress_Click(object sender, EventArgs e)
@@ -79,12 +82,47 @@ namespace SEN381_Pr
 
         private void btnClientAdd_Click(object sender, EventArgs e)
         {
-
+            //string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID
+            Con.InsertClientData(dgvClients,txtBusiness.Text,txtContract.Text,txtAddress.Text,txtClientName.Text,txtClientSurn.Text,txtClientNum.Text,txtCalls.Text,txtPos.Text,txtAltContact.Text,txtAltNumb.Text,txtClientID.Text);
         }
 
         private void btnClientDel_Click(object sender, EventArgs e)
         {
+            Con.DeleteClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text);
+        }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvAddress_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvAddress.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtAddress.Text = row.Cells["AddressId"].Value.ToString();
+                
+            }
+        }
+
+        private void dgvClients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvClients.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtBusiness.Text = row.Cells["BusinessId"].Value.ToString();
+                txtContract.Text = row.Cells["ContractId"].Value.ToString();
+                txtAddress.Text = row.Cells["AddressId"].Value.ToString();
+                txtClientName.Text = row.Cells["ClientName"].Value.ToString();
+                txtClientSurn.Text = row.Cells["Surname"].Value.ToString();
+                txtClientNum.Text = row.Cells["Number"].Value.ToString();
+                txtCalls.Text = row.Cells["CallsMade"].Value.ToString();
+                txtPos.Text = row.Cells["Position"].Value.ToString();
+                txtAltContact.Text = row.Cells["AlternativeContact"].Value.ToString();
+                txtAltNumb.Text = row.Cells["AlternativeNumber"].Value.ToString();
+                txtClientID.Text = row.Cells["ClientId"].Value.ToString();
+            }
         }
     }
 }

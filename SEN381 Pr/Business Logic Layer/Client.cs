@@ -10,8 +10,8 @@ namespace SEN381_Pr
     {
 
         private string _businessID;
-        private Contract _clientcontract;
-        private Address _clientaddress;
+        private string _clientcontract;
+        private string _clientaddress;
         private string _clientname;
         private string _clientsurname;
         private string _number;
@@ -23,8 +23,8 @@ namespace SEN381_Pr
 
 
         public abstract string BusinessID { get; set; }
-        public abstract Contract ClientContract { get; set; }
-        public abstract Address ClientAddress { get; set; }
+        public abstract string ClientContract { get; set; }
+        public abstract string ClientAddress { get; set; }
         public abstract string ClientName { get; set; }
         public abstract string ClientSurname { get; set; }
         public abstract string ClientNumber { get; set; }

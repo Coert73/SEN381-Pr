@@ -26,6 +26,15 @@ namespace SEN381_Pr
         PackageADOController PackCon = new PackageADOController();
         ContractADOController ConCon = new ContractADOController();
         BusinessADOController BusCon = new BusinessADOController();
+        AddressADOController AddCon = new AddressADOController();
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Methods for Addresses
+        public DataSet LoadAddressData()
+        {
+            return AddCon.LoadData();
+        }
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
@@ -35,29 +44,63 @@ namespace SEN381_Pr
             return TechCon.LoadData();
         }
 
-        public void InsertTechData(DataGridView tab,string id, string name, string surname, string number)
+        public void InsertTechData(DataGridView tab, string id, string name, string surname, string number)
         {
-            id = (name.Substring(0, 2).ToUpper() + surname.Substring(0,2).ToUpper() + (TechCon.CountTechs() + 1)).ToString();
-            TechCon.InsertTechnician(new Technician(id,name,surname,number));      
+            id = (name.Substring(0, 2).ToUpper() + surname.Substring(0, 2).ToUpper() + (TechCon.CountTechs() + 1)).ToString();
+            TechCon.InsertTechnician(new Technician(id, name, surname, number));
             tab.DataSource = TechCon.LoadData();
-            tab.DataMember = "Table";         
-            MessageBox.Show("Inserted Technician");               
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Technician");
         }
 
         public void UpdateTechData(DataGridView tab, string id, string name, string surname, string number)
         {
-            TechCon.UpdateTechnician(new Technician(id,name, surname, number));
+            TechCon.UpdateTechnician(new Technician(id, name, surname, number));
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Updated Technician");
         }
 
         public void DeleteTechData(DataGridView tab, string id, string name, string surname, string number)
-        {            
-            TechCon.DeleteTechnician(new Technician(id, name, surname, number));                      
+        {
+            TechCon.DeleteTechnician(new Technician(id, name, surname, number));
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Technician");
+        }
+
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Methods For Clients
+
+        public DataSet LoadClientData()
+        {
+            return ClientCon.LoadData();
+        }
+
+        public void InsertClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID)
+        {
+            clientID = "001";
+            ClientCon.InsertClient(new IndividualClient(businessID,  clientContract, clientAddress,  clientName, clientSurname, clientNumber,  callsMade, position, altcontact,  altnum, clientID));      
+            tab.DataSource = ClientCon.LoadData();
+            tab.DataMember = "Table";         
+            MessageBox.Show("Inserted Client");               
+        }
+
+        public void UpdateClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID)
+        {
+            ClientCon.UpdateClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID));
+            tab.DataSource = ClientCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Client");
+        }
+
+        public void DeleteClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID)
+        {
+            ClientCon.DeleteClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID));
+            tab.DataSource = ClientCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Client");
         }
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

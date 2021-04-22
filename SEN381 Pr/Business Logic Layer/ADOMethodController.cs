@@ -170,26 +170,47 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
-        public void InsertContracts(DataGridView tab, string id, string packageId,string name,string contractType,string start,string end,bool status,char level)
+        public void InsertContracts(DataGridView tab, string id, string packageId,string name,string contractType,string start,string end,bool status,string level)
         {
-            id = level + name.Substring(0, 3).ToUpper() + (ServicesCon.CountServices() + 1).ToString();
-            ContractCon.InsertContract(new Contract(id,packageId,name,contractType,start,end,status,level));
+            string num = ConCon.CountContract().ToString();
+            int length = num.Length; 
+
+            if (ConCon.CountContract() == 0)
+            {
+                num = "000001";
+            }
+            else
+            {
+                int temp = int.Parse(num);
+                num = (temp + 1).ToString();
+
+                if (num.Length < 6)
+                {
+                    for (int i = 0; i < 6 - length; i++)
+                    {
+                        num = "0" + num;
+                    }
+                }
+            }          
+
+            id = start.Substring(0, 4) + contractType.Substring(0,1) + level + num;
+            ContractCon.InsertContract(new Contract(id,packageId,name,contractType,start.Replace("/","-"),end.Replace("/", "-"), status,char.Parse(level.Substring(0,1))));
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Inserted Service");
         }
 
-        public void UpdateContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, char level)
+        public void UpdateContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, string level)
         {           
-            ContractCon.UpdateContract(new Contract(id, packageId, name, contractType, start, end, status, level));
+            ContractCon.UpdateContract(new Contract(id, packageId, name, contractType, start.Replace("/", "-"), end.Replace("/", "-"), status, char.Parse(level.Substring(0, 1))));
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Updated Service");
         }
 
-        public void DeleteContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, char level)
+        public void DeleteContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, string level)
         {           
-            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, level));
+            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, char.Parse(level)));
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Service");

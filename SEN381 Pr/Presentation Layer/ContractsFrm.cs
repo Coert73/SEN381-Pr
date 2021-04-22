@@ -65,25 +65,35 @@ namespace SEN381_Pr.Presentation_Layer
             DataGridViewRow row = dgvContracts.CurrentRow;
             if (!row.IsNewRow)
             {                
-                txtContracId.Text = row.Cells[""].Value.ToString();
-                txtContractName.Text = row.Cells[""].Value.ToString();
-                txtContractType.Text = row.Cells[""].Value.ToString();
+                txtContracId.Text = row.Cells["ContractId"].Value.ToString();
+                txtContractName.Text = row.Cells["ContractName"].Value.ToString();
+                txtContractType.Text = row.Cells["ContractType"].Value.ToString();
+                txtPackageID.Text = row.Cells["PackageId"].Value.ToString();
+                dtpEnd.Text = row.Cells["ContractLeaseEnd"].Value.ToString(); ;
+                dtpStart.Text = row.Cells["ContractLeaseStart"].Value.ToString(); ;        
+                chkbxStatus.Checked = Convert.ToBoolean(row.Cells["ContractStatus"].Value); 
+                txtServiceLevel.Text =  row.Cells["ContractServiceLevel"].Value.ToString();
             }
         }
 
         private void btnContract_Click(object sender, EventArgs e)
         {
-            Con.InsertContracts(dgvContracts,txtContracId.Text,txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text,dtpEnd.Text,chkbxStatus.Checked,char.Parse(txtServiceLevel.ToString()));
+            Con.InsertContracts(dgvContracts,txtContracId.Text,txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text,dtpEnd.Text,chkbxStatus.Checked,txtServiceLevel.Text);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Con.UpdateContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, char.Parse(txtServiceLevel.ToString()));
+            Con.UpdateContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Con.DeleteContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, char.Parse(txtServiceLevel.ToString()));
+            Con.DeleteContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

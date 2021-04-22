@@ -29,8 +29,8 @@ namespace SEN381_Pr
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvClients = new System.Windows.Forms.DataGridView();
@@ -62,19 +62,23 @@ namespace SEN381_Pr
             this.btnClientAdd = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvAddress = new System.Windows.Forms.DataGridView();
+            this.btnAddress = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.dgvClients);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 564);
+            this.panel1.Size = new System.Drawing.Size(691, 564);
             this.panel1.TabIndex = 3;
             // 
             // dgvClients
@@ -83,24 +87,24 @@ namespace SEN381_Pr
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClients.GridColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvClients.Location = new System.Drawing.Point(3, 3);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.Size = new System.Drawing.Size(742, 558);
+            this.dgvClients.Size = new System.Drawing.Size(685, 558);
             this.dgvClients.TabIndex = 1;
             // 
             // panel2
@@ -127,7 +131,7 @@ namespace SEN381_Pr
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(766, 12);
+            this.panel2.Location = new System.Drawing.Point(921, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(381, 360);
             this.panel2.TabIndex = 4;
@@ -348,7 +352,7 @@ namespace SEN381_Pr
             this.panel3.Controls.Add(this.btnClientDel);
             this.panel3.Controls.Add(this.btnClientEdit);
             this.panel3.Controls.Add(this.btnClientAdd);
-            this.panel3.Location = new System.Drawing.Point(766, 378);
+            this.panel3.Location = new System.Drawing.Point(921, 378);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(381, 157);
             this.panel3.TabIndex = 5;
@@ -366,6 +370,7 @@ namespace SEN381_Pr
             this.btnClientDel.TabIndex = 2;
             this.btnClientDel.Text = "Delete";
             this.btnClientDel.UseVisualStyleBackColor = false;
+            this.btnClientDel.Click += new System.EventHandler(this.btnClientDel_Click);
             this.btnClientDel.MouseEnter += new System.EventHandler(this.btnClientDel_MouseEnter);
             this.btnClientDel.MouseLeave += new System.EventHandler(this.btnClientDel_MouseLeave);
             // 
@@ -399,6 +404,7 @@ namespace SEN381_Pr
             this.btnClientAdd.TabIndex = 0;
             this.btnClientAdd.Text = "Insert";
             this.btnClientAdd.UseVisualStyleBackColor = false;
+            this.btnClientAdd.Click += new System.EventHandler(this.btnClientAdd_Click);
             this.btnClientAdd.MouseEnter += new System.EventHandler(this.btnClientAdd_MouseEnter);
             this.btnClientAdd.MouseLeave += new System.EventHandler(this.btnClientAdd_MouseLeave);
             // 
@@ -407,7 +413,7 @@ namespace SEN381_Pr
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(975, 541);
+            this.btnBack.Location = new System.Drawing.Point(1130, 541);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(172, 41);
             this.btnBack.TabIndex = 24;
@@ -418,19 +424,45 @@ namespace SEN381_Pr
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(973, 542);
+            this.pictureBox1.Location = new System.Drawing.Point(1128, 542);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvAddress
+            // 
+            this.dgvAddress.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddress.Location = new System.Drawing.Point(710, 12);
+            this.dgvAddress.Name = "dgvAddress";
+            this.dgvAddress.Size = new System.Drawing.Size(204, 523);
+            this.dgvAddress.TabIndex = 25;
+            // 
+            // btnAddress
+            // 
+            this.btnAddress.BackColor = System.Drawing.Color.White;
+            this.btnAddress.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddress.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddress.Location = new System.Drawing.Point(710, 540);
+            this.btnAddress.Name = "btnAddress";
+            this.btnAddress.Size = new System.Drawing.Size(203, 35);
+            this.btnAddress.TabIndex = 26;
+            this.btnAddress.Text = "Edit Addresses";
+            this.btnAddress.UseVisualStyleBackColor = false;
+            this.btnAddress.Click += new System.EventHandler(this.btnAddress_Click);
+            // 
             // ClientFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 588);
+            this.ClientSize = new System.Drawing.Size(1314, 588);
+            this.Controls.Add(this.btnAddress);
+            this.Controls.Add(this.dgvAddress);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
@@ -447,6 +479,7 @@ namespace SEN381_Pr
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddress)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,5 +516,7 @@ namespace SEN381_Pr
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridView dgvAddress;
+        private System.Windows.Forms.Button btnAddress;
     }
 }

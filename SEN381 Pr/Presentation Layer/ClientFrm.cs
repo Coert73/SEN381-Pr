@@ -57,7 +57,7 @@ namespace SEN381_Pr
 
         private void ClientFrm_Load(object sender, EventArgs e)
         {
-            Con.LoadCallClients(dgvClients);
+            Con.LoadCallClients(dgvClients);           
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -67,6 +67,21 @@ namespace SEN381_Pr
         }
 
         private void btnClientEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientDel_Click(object sender, EventArgs e)
         {
 
         }

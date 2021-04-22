@@ -19,7 +19,8 @@ namespace SEN381_Pr
 
         public DataSet InsertContract(Contract con)
         {
-            return Controller.CarryCommand($"INSERT INTO Conctract (ContractId,PackageId,ContractName,ContractType,ContractLeaseStart,ContractLeaseEnd,ContractStatus,ContractServiceLevel) VALUES ()");
+            return Controller.CarryCommand($"INSERT INTO Contract (ContractId,PackageId,ContractName,ContractType,ContractLeaseStart,ContractLeaseEnd,ContractStatus,ContractServiceLevel) VALUES ('{con.ContractId}','{con.PackageId}','{con.ContractName}','{con.ContractType}','{con.Start}','{con.End}',{Convert.ToByte(con.Status)},'{con.Servicelevel}')");
+              
         }
 
         public DataSet DeleteContract(Contract con)
@@ -29,7 +30,7 @@ namespace SEN381_Pr
 
         public DataSet UpdateContract(Contract con)
         {
-            return Controller.CarryCommand($"UPDATE Contract SET");
+            return Controller.CarryCommand($"UPDATE Contract SET PackageId = '{con.PackageId}',ContractName = '{con.ContractName}',ContractType = '{con.ContractType}',ContractLeaseStart = '{con.Start}',ContractLeaseEnd = '{con.End}',ContractStatus= {Convert.ToByte(con.Status)},ContractServiceLevel = '{con.Servicelevel}' WHERE ContractId = '{con.ContractId}'");
         }
 
         public int CountContract()

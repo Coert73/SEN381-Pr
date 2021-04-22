@@ -32,18 +32,19 @@ namespace SEN381_Pr
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
-        {          
-            Con.InsertTechData(dgvTechnician,txtName.Text,txtSurname.Text,txtNumber.Text);            
+        {    
+            
+            Con.InsertTechData(dgvTechnician,txtTechID.Text,txtName.Text,txtSurname.Text,txtNumber.Text);            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Con.UpdateTechData(dgvTechnician, txtName.Text, txtSurname.Text, txtNumber.Text, int.Parse(_id));
+            Con.UpdateTechData(dgvTechnician, txtTechID.Text,txtName.Text, txtSurname.Text, txtNumber.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {         
-               Con.DeleteTechData(dgvTechnician,  int.Parse(_id));                      
+               Con.DeleteTechData(dgvTechnician, txtTechID.Text, txtName.Text, txtSurname.Text, txtNumber.Text);                      
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -57,8 +58,8 @@ namespace SEN381_Pr
             DataGridViewRow row = dgvTechnician.CurrentRow;
             if (!row.IsNewRow)
             {
-                _id = row.Cells[0].Value.ToString();               
-                txtName.Text = row.Cells["Name"].Value.ToString();
+                txtTechID.Text = row.Cells["TechID"].Value.ToString();
+                txtName.Text = row.Cells["TechName"].Value.ToString();
                 txtNumber.Text = row.Cells["Number"].Value.ToString();
                 txtSurname.Text = row.Cells["Surname"].Value.ToString();
             }

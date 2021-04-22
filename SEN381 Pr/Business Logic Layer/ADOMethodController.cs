@@ -25,6 +25,7 @@ namespace SEN381_Pr
         ServicesADOController ServicesCon = new ServicesADOController();
         PackageADOController PackCon = new PackageADOController();
         ContractADOController ConCon = new ContractADOController();
+        BusinessADOController BusCon = new BusinessADOController();
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
@@ -215,6 +216,40 @@ namespace SEN381_Pr
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Service");
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Business Methods
+
+        public void LoadBusinessData(DataGridView tab)
+        {
+            tab.DataSource = BusCon.LoadBusiness();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertBusinessData(DataGridView tab, string id, string name)
+        {
+            id = "BUS" + ((BusCon.CountBusiness() + 1).ToString());    
+            BusCon.InsertBusiness(new BusinessClient(name, id));
+            tab.DataSource = BusCon.LoadBusiness();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Business");
+        }
+
+        public void UpdateBusinessData(DataGridView tab, string id,string name)
+        {         
+            BusCon.UpdateBusiness(new BusinessClient(name, id));
+            tab.DataSource = BusCon.LoadBusiness();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Business");
+        }
+
+        public void DeleteBusinessData(DataGridView tab, string id, string name)
+        {           
+            BusCon.DeleteBusiness(new BusinessClient(name, id));
+            tab.DataSource = BusCon.LoadBusiness();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Business");
         }
 
 

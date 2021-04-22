@@ -73,7 +73,8 @@ namespace SEN381_Pr
 
         private void btnAddress_Click(object sender, EventArgs e)
         {
-
+            (new AddressFrm()).Show();
+            this.Hide();
         }
 
         private void btnClientAdd_Click(object sender, EventArgs e)

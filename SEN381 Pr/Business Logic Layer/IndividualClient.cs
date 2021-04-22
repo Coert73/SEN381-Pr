@@ -17,8 +17,10 @@ namespace SEN381_Pr
         public override string ClientNumber { get => ClientNumber; set => ClientNumber = value; }
         public override string CallsMade { get => CallsMade; set => CallsMade = value; }
         public override string Position { get => Position; set => Position = value; }
-
-        public IndividualClient(string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position)
+        public override string AltContact { get => AltContact; set => AltContact = value; }
+        public override string AltNum { get => AltNum ; set => AltNum = value; }
+        public override string ClientID { get => ClientID ; set => ClientID = value; }
+        public IndividualClient(string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID)
         {
             BusinessID = businessID;
             ClientContract = clientContract;
@@ -28,13 +30,17 @@ namespace SEN381_Pr
             ClientNumber = clientNumber;
             CallsMade = callsMade;
             Position = position;
+            AltContact = altcontact;
+            AltNum = altnum;
+            ClientID = clientID;
+
         }
         #endregion
         #region Methods
         #region ToString
         public override string ToString()
         {
-            return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position}"; 
+            return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position},Alternative Contact:{AltContact}, Alternative Number:{AltNum}, ClientID:{ClientID}"; 
         }
         #endregion
 
@@ -59,7 +65,10 @@ namespace SEN381_Pr
                    ClientSurname == client.ClientSurname &&
                    ClientNumber == client.ClientNumber &&
                    CallsMade == client.CallsMade &&
-                   Position == client.Position;
+                   Position == client.Position &&
+                   AltContact == client.AltContact &&
+                   AltNum == client.AltNum &&
+                   ClientID == client.ClientID;
         }
         #endregion
 
@@ -85,6 +94,10 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ClientNumber);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CallsMade);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Position);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(AltContact);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(AltNum);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ClientID);
+
             return hashCode;
         }
         #endregion

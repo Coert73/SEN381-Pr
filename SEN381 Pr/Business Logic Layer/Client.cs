@@ -17,6 +17,9 @@ namespace SEN381_Pr
         private string _number;
         private int _callsMade;
         private string _position;
+        private string _clientID;
+        private string _altNum;
+        private string _altContact;
 
 
         public abstract string BusinessID { get; set; }
@@ -27,7 +30,9 @@ namespace SEN381_Pr
         public abstract string ClientNumber { get; set; }
         public abstract string CallsMade { get; set; }
         public abstract string Position { get; set; }
-
+        public abstract string ClientID { get; set; }
+        public abstract string AltNum { get; set; }
+        public abstract string AltContact { get; set; }
         public BusinessClient BusinessClient
         {
             get => default;

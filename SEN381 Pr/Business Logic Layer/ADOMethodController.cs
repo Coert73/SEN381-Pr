@@ -78,26 +78,28 @@ namespace SEN381_Pr
             return ClientCon.LoadData();
         }
 
-        public void InsertClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID)
+        public void InsertClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID, string clientservicelevel)
         {
-            clientID = "001";
-            ClientCon.InsertClient(new IndividualClient(businessID,  clientContract, clientAddress,  clientName, clientSurname, clientNumber,  callsMade, position, altcontact,  altnum, clientID));      
+            int charcount = 8 - (ClientCon.CountClients().ToString().Length);
+            clientID = clientservicelevel + (ClientCon.CountClients() + 1).ToString().PadLeft(charcount,'0');
+            MessageBox.Show(clientID);
+            ClientCon.InsertClient(new IndividualClient(businessID,  clientContract, clientAddress,  clientName, clientSurname, clientNumber,  callsMade, position, altcontact,  altnum, clientID, clientservicelevel));      
             tab.DataSource = ClientCon.LoadData();
             tab.DataMember = "Table";         
             MessageBox.Show("Inserted Client");               
         }
 
-        public void UpdateClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID)
+        public void UpdateClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID, string clientservicelevel)
         {
-            ClientCon.UpdateClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID));
+            ClientCon.UpdateClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID, clientservicelevel));
             tab.DataSource = ClientCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Updated Client");
         }
 
-        public void DeleteClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID)
+        public void DeleteClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID, string clientservicelevel)
         {
-            ClientCon.DeleteClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID));
+            ClientCon.DeleteClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID, clientservicelevel));
             tab.DataSource = ClientCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Client");

@@ -17,7 +17,7 @@ namespace SEN381_Pr
 
         public DataSet InsertClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"INSERT INTO Clients (BusinessId,ContractId,Name,Surname,Number,CallsMade,Position,AlternativeContact,AlternativeNumber,ClientId) VALUES ({client.BusinessID},{client.ClientContract},'{client.ClientName}','{client.ClientSurname}','{client.ClientNumber}','{client.CallsMade}','{client.Position}','{client.AltContact}','{client.AltNum}','{client.ClientID}')");
+            return Controller.CarryCommand($"INSERT INTO Clients (BusinessId,ContractId,Name,Surname,Number,CallsMade,Position,AlternativeContact,AlternativeNumber,ClientId,ClientServiceLevel) VALUES ({client.BusinessID},{client.ClientContract},'{client.ClientName}','{client.ClientSurname}','{client.ClientNumber}','{client.CallsMade}','{client.Position}','{client.AltContact}','{client.AltNum}','{client.ClientID}','{client.ClientServiceLevel}')");
         }
 
         public DataSet DeleteClient(IndividualClient client)
@@ -27,7 +27,12 @@ namespace SEN381_Pr
 
         public DataSet UpdateClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"UPDATE Clients SET BusinessId='{client.BusinessID}',ContractId='{client.ClientContract}',Name='{client.ClientName}',Surname='{client.ClientSurname}',Number='{client.ClientNumber}',CallsMade='{client.CallsMade}',Position='{client.Position}',AlternativeContact='{client.AltContact}',AlternativeNumber='{client.AltNum}'  WHERE ClientId = '{client.ClientID}'");
+            return Controller.CarryCommand($"UPDATE Clients SET BusinessId='{client.BusinessID}',ContractId='{client.ClientContract}',Name='{client.ClientName}',Surname='{client.ClientSurname}',Number='{client.ClientNumber}',CallsMade='{client.CallsMade}',Position='{client.Position}',AlternativeContact='{client.AltContact}',AlternativeNumber='{client.AltNum}',ClientServiceLevel='{client.ClientServiceLevel}'  WHERE ClientId = '{client.ClientID}'");
+        }
+
+        public int CountClients()
+        {
+            return Controller.CarryCommand("SELECT * FROM Clients").Tables[0].Rows.Count;
         }
 
     }

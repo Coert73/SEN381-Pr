@@ -20,6 +20,7 @@ namespace SEN381_Pr
         private string _clientID;
         private string _altNum;
         private string _altContact;
+        private string _Clientservicelevel;
 
 
         public abstract string BusinessID { get; set; }
@@ -33,6 +34,7 @@ namespace SEN381_Pr
         public abstract string ClientID { get; set; }
         public abstract string AltNum { get; set; }
         public abstract string AltContact { get; set; }
+        public abstract string ClientServiceLevel { get; set; }
         public BusinessClient BusinessClient
         {
             get => default;

@@ -71,7 +71,7 @@ namespace SEN381_Pr
 
         private void btnClientEdit_Click(object sender, EventArgs e)
         {
-            Con.UpdateClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text);
+            Con.UpdateClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text,txtservicelevel.Text);
         }
 
         private void btnAddress_Click(object sender, EventArgs e)
@@ -83,12 +83,12 @@ namespace SEN381_Pr
         private void btnClientAdd_Click(object sender, EventArgs e)
         {
             //string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID
-            Con.InsertClientData(dgvClients,txtBusiness.Text,txtContract.Text,txtAddress.Text,txtClientName.Text,txtClientSurn.Text,txtClientNum.Text,txtCalls.Text,txtPos.Text,txtAltContact.Text,txtAltNumb.Text,txtClientID.Text);
+            Con.InsertClientData(dgvClients,txtBusiness.Text,txtContract.Text,txtAddress.Text,txtClientName.Text,txtClientSurn.Text,txtClientNum.Text,txtCalls.Text,txtPos.Text,txtAltContact.Text,txtAltNumb.Text,txtClientID.Text, txtservicelevel.Text);
         }
 
         private void btnClientDel_Click(object sender, EventArgs e)
         {
-            Con.DeleteClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text);
+            Con.DeleteClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text, txtservicelevel.Text);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

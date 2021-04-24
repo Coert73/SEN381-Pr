@@ -20,8 +20,10 @@ namespace SEN381_Pr
         public override string AltContact { get => AltContact; set => AltContact = value; }
         public override string AltNum { get => AltNum ; set => AltNum = value; }
         public override string ClientID { get => ClientID ; set => ClientID = value; }
-        public IndividualClient(string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID)
+        public override string ClientServiceLevel { get => ClientServiceLevel; set => ClientServiceLevel = value; }
+        public IndividualClient(string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID,string clientservicelevel)
         {
+
             BusinessID = businessID;
             ClientContract = clientContract;
             ClientAddress = clientAddress;
@@ -33,14 +35,14 @@ namespace SEN381_Pr
             AltContact = altcontact;
             AltNum = altnum;
             ClientID = clientID;
-
+            ClientServiceLevel = clientservicelevel;
         }
         #endregion
         #region Methods
         #region ToString
         public override string ToString()
         {
-            return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position},Alternative Contact:{AltContact}, Alternative Number:{AltNum}, ClientID:{ClientID}"; 
+            return $"Name:{ClientName},BusinessID:{BusinessID},Surname:{ClientSurname}, Number:{ClientNumber}, CallsNo.:{CallsMade},Position:{Position},Alternative Contact:{AltContact}, Alternative Number:{AltNum}, ClientID:{ClientID}, ClientService:{ClientServiceLevel}"; 
         }
         #endregion
 
@@ -56,6 +58,8 @@ namespace SEN381_Pr
                    ClientNumber == client.ClientNumber &&
                    CallsMade == client.CallsMade &&
                    Position == client.Position &&
+                   ClientID == client.ClientID &&
+                   ClientServiceLevel == client.ClientServiceLevel &&
                    EqualityComparer<BusinessClient>.Default.Equals(BusinessClient, client.BusinessClient) &&
                    EqualityComparer<IndividualClient>.Default.Equals(IndividualClient, client.IndividualClient) &&
                    BusinessID == client.BusinessID &&
@@ -68,7 +72,9 @@ namespace SEN381_Pr
                    Position == client.Position &&
                    AltContact == client.AltContact &&
                    AltNum == client.AltNum &&
-                   ClientID == client.ClientID;
+                   ClientID == client.ClientID &&
+                   ClientServiceLevel == client.ClientServiceLevel;
+
         }
         #endregion
 
@@ -97,6 +103,7 @@ namespace SEN381_Pr
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(AltContact);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(AltNum);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ClientID);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ClientServiceLevel);
 
             return hashCode;
         }

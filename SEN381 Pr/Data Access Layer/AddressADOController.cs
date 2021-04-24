@@ -17,19 +17,19 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Address");
         }
 
-        public DataSet InsertData(string Addressid, string street, string code, string city, string country)
+        public DataSet InsertAddress(Address adr)
         {
-            return Controller.CarryCommand($"INSERT INTO Address(AddressId,Street,PostalCode,City,Country) VALUES ({Addressid},{street},'{code}','{country}')");
+            return Controller.CarryCommand($"INSERT INTO Address (Street,PostalCode,City,Country) VALUES ('{adr.Street}','{adr.Code}','{adr.City}','{adr.Country}')");
         }
 
-        public DataSet DeleteService(Address adr)
+        public DataSet DeleteAddress(Address adr)
         {
             return Controller.CarryCommand($"DELETE FROM Address WHERE AddressId = '{adr.AddressId}'");
         }
 
-        public DataSet UpdateService(Address adr)
+        public DataSet UpdateAddress(Address adr)
         {
-            return Controller.CarryCommand($"UPDATE AddressId SET Street = '{adr.Street}',PostalCode = '{adr.Code}',City = '{adr.City}',Country = {adr.Country} WHERE AddressId = '{adr.AddressId}'");
+            return Controller.CarryCommand($"UPDATE Address SET Street = '{adr.Street}',PostalCode = '{adr.Code}',City = '{adr.City}',Country = {adr.Country} WHERE AddressId = '{adr.AddressId}'");
         }
     }
 }

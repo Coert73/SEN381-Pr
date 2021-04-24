@@ -29,12 +29,15 @@ namespace SEN381_Pr
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtservicelevel = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -76,9 +79,6 @@ namespace SEN381_Pr
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvAddress = new System.Windows.Forms.DataGridView();
             this.btnAddress = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtservicelevel = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.panel2.SuspendLayout();
@@ -102,22 +102,22 @@ namespace SEN381_Pr
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClients.GridColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvClients.Location = new System.Drawing.Point(3, 3);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClients.Size = new System.Drawing.Size(685, 745);
             this.dgvClients.TabIndex = 1;
@@ -167,6 +167,36 @@ namespace SEN381_Pr
             this.panel2.Size = new System.Drawing.Size(381, 582);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(15, 575);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(351, 3);
+            this.textBox3.TabIndex = 41;
+            // 
+            // txtservicelevel
+            // 
+            this.txtservicelevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtservicelevel.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtservicelevel.Location = new System.Drawing.Point(15, 553);
+            this.txtservicelevel.Name = "txtservicelevel";
+            this.txtservicelevel.Size = new System.Drawing.Size(351, 19);
+            this.txtservicelevel.TabIndex = 40;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 534);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 16);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Service Level";
             // 
             // textBox1
             // 
@@ -590,7 +620,7 @@ namespace SEN381_Pr
             this.dgvAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAddress.Location = new System.Drawing.Point(710, 12);
             this.dgvAddress.Name = "dgvAddress";
-            this.dgvAddress.Size = new System.Drawing.Size(204, 745);
+            this.dgvAddress.Size = new System.Drawing.Size(204, 582);
             this.dgvAddress.TabIndex = 25;
             this.dgvAddress.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddress_CellClick);
             // 
@@ -600,43 +630,13 @@ namespace SEN381_Pr
             this.btnAddress.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddress.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddress.Location = new System.Drawing.Point(710, 767);
+            this.btnAddress.Location = new System.Drawing.Point(711, 600);
             this.btnAddress.Name = "btnAddress";
             this.btnAddress.Size = new System.Drawing.Size(203, 35);
             this.btnAddress.TabIndex = 26;
             this.btnAddress.Text = "Edit Addresses";
             this.btnAddress.UseVisualStyleBackColor = false;
             this.btnAddress.Click += new System.EventHandler(this.btnAddress_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 534);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 16);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Service Level";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(15, 575);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(351, 3);
-            this.textBox3.TabIndex = 41;
-            // 
-            // txtservicelevel
-            // 
-            this.txtservicelevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtservicelevel.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtservicelevel.Location = new System.Drawing.Point(15, 553);
-            this.txtservicelevel.Name = "txtservicelevel";
-            this.txtservicelevel.Size = new System.Drawing.Size(351, 19);
-            this.txtservicelevel.TabIndex = 40;
             // 
             // ClientFrm
             // 

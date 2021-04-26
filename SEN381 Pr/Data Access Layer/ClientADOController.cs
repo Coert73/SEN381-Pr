@@ -27,7 +27,7 @@ namespace SEN381_Pr
 
         public DataSet UpdateClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"UPDATE Clients SET BusinessId='{client.BusinessID}',ContractId='{client.ClientContract}',Name='{client.ClientName}',Surname='{client.ClientSurname}',Number='{client.ClientNumber}',CallsMade='{client.CallsMade}',Position='{client.Position}',AlternativeContact='{client.AltContact}',AlternativeNumber='{client.AltNum}',ClientServiceLevel='{client.ClientServiceLevel}'  WHERE ClientId = '{client.ClientID}'");
+            return Controller.CarryCommand($"UPDATE Clients SET ClientName = '{client.ClientName}',BusinessId = '{client.BusinessID}', ContractId = '{client.ClientContract}',Surname= '{client.ClientSurname}',Number = '{client.ClientNumber}',AddressId = {int.Parse(client.ClientAddress)},AlternativeContact = '{client.AltContact}',AlternativeNumber = '{client.AltNum}',CallsMade = {int.Parse(client.CallsMade)},Position = '{client.Position}',ClientServiceLevel = '{client.ClientServiceLevel}'  WHERE ClientId = '{client.ClientID}'");
         }
 
         public int CountClients()

@@ -59,7 +59,7 @@ namespace SEN381_Pr
         {
             dgvClients.DataSource = Con.LoadClientData();
             dgvClients.DataMember = "Table";
-            dgvAddress.DataSource = Con.LoadAddressData();
+            Con.LoadAddressData(dgvAddress);
             dgvAddress.DataMember = "Table";
         }
 

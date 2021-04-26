@@ -31,9 +31,34 @@ namespace SEN381_Pr
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Addresses
-        public DataSet LoadAddressData()
+        public void LoadAddressData(DataGridView tab)
         {
-            return AddCon.LoadData();
+            tab.DataSource = AddCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertAddressData(DataGridView tab, string id,string street, string code, string city, string country)
+        {            
+            AddCon.InsertAddress(new Address(id,street,code,city,country));
+            tab.DataSource = AddCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Address");
+        }
+
+        public void UpdateAddressData(DataGridView tab, string id, string street, string code, string city, string country)
+        {
+            AddCon.UpdateAddress(new Address(id, street, code, city, country));
+            tab.DataSource = AddCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Address");
+        }
+
+        public void DeleteAddressData(DataGridView tab, string id, string street, string code, string city, string country)
+        {
+            AddCon.DeleteAddress(new Address(id, street, code, city, country));
+            tab.DataSource = AddCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Address");
         }
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

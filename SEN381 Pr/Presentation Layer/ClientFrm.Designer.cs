@@ -29,8 +29,8 @@ namespace SEN381_Pr
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvClients = new System.Windows.Forms.DataGridView();
@@ -79,47 +79,53 @@ namespace SEN381_Pr
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvAddress = new System.Windows.Forms.DataGridView();
             this.btnAddress = new System.Windows.Forms.Button();
+            this.dgvContractGrid = new System.Windows.Forms.DataGridView();
+            this.dgvBusinessGrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContractGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgvBusinessGrid);
+            this.panel1.Controls.Add(this.dgvContractGrid);
             this.panel1.Controls.Add(this.dgvClients);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 748);
+            this.panel1.Size = new System.Drawing.Size(691, 755);
             this.panel1.TabIndex = 3;
             // 
             // dgvClients
             // 
-            this.dgvClients.BackgroundColor = System.Drawing.Color.White;
+            this.dgvClients.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClients.GridColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvClients.Location = new System.Drawing.Point(3, 3);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.Size = new System.Drawing.Size(685, 745);
+            this.dgvClients.Size = new System.Drawing.Size(685, 395);
             this.dgvClients.TabIndex = 1;
             this.dgvClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClients_CellClick);
             // 
@@ -638,6 +644,24 @@ namespace SEN381_Pr
             this.btnAddress.UseVisualStyleBackColor = false;
             this.btnAddress.Click += new System.EventHandler(this.btnAddress_Click);
             // 
+            // dgvContractGrid
+            // 
+            this.dgvContractGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContractGrid.Location = new System.Drawing.Point(3, 404);
+            this.dgvContractGrid.Name = "dgvContractGrid";
+            this.dgvContractGrid.Size = new System.Drawing.Size(685, 171);
+            this.dgvContractGrid.TabIndex = 2;
+            this.dgvContractGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContractGrid_CellClick);
+            // 
+            // dgvBusinessGrid
+            // 
+            this.dgvBusinessGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBusinessGrid.Location = new System.Drawing.Point(3, 581);
+            this.dgvBusinessGrid.Name = "dgvBusinessGrid";
+            this.dgvBusinessGrid.Size = new System.Drawing.Size(685, 171);
+            this.dgvBusinessGrid.TabIndex = 3;
+            this.dgvBusinessGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBusinessGrid_CellClick);
+            // 
             // ClientFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,6 +687,8 @@ namespace SEN381_Pr
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContractGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,5 +742,7 @@ namespace SEN381_Pr
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtservicelevel;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dgvBusinessGrid;
+        private System.Windows.Forms.DataGridView dgvContractGrid;
     }
 }

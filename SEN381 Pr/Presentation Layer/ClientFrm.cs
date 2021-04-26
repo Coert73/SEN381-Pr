@@ -61,6 +61,10 @@ namespace SEN381_Pr
             dgvClients.DataMember = "Table";
             Con.LoadAddressData(dgvAddress);
             dgvAddress.DataMember = "Table";
+            Con.LoadContracts(dgvContractGrid);
+            dgvContractGrid.DataMember = "Table";
+            Con.LoadBusinessData(dgvBusinessGrid);
+            dgvBusinessGrid.DataMember = "Table";
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -122,6 +126,24 @@ namespace SEN381_Pr
                 txtAltContact.Text = row.Cells["AlternativeContact"].Value.ToString();
                 txtAltNumb.Text = row.Cells["AlternativeNumber"].Value.ToString();
                 txtClientID.Text = row.Cells["ClientId"].Value.ToString();
+            }
+        }
+
+        private void dgvBusinessGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvBusinessGrid.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtBusiness.Text = row.Cells["BusinessId"].Value.ToString();
+            }
+        }
+
+        private void dgvContractGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvContractGrid.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtContract.Text = row.Cells["ContractId"].Value.ToString();
             }
         }
     }

@@ -186,7 +186,7 @@ namespace SEN381_Pr
             
             for (int i = 0; i < index; i++)
             {
-                ServiceList.Add("NONON5");
+                ServiceList.Add("NNON11");
             }
 
             id =  name.Substring(0, 3).ToUpper() + type + (PackCon.CountPackages() + 1).ToString();
@@ -282,7 +282,7 @@ namespace SEN381_Pr
 
         public void DeleteContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, string level)
         {           
-            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, char.Parse(level)));
+            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, char.Parse(level.Substring(0, 1))));
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Service");

@@ -17,12 +17,12 @@ namespace SEN381_Pr
 
         public DataSet InsertClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"INSERT INTO Clients (BusinessId,ContractId,Name,Surname,Number,CallsMade,Position,AlternativeContact,AlternativeNumber,ClientId,ClientServiceLevel) VALUES ({client.BusinessID},{client.ClientContract},'{client.ClientName}','{client.ClientSurname}','{client.ClientNumber}','{client.CallsMade}','{client.Position}','{client.AltContact}','{client.AltNum}','{client.ClientID}','{client.ClientServiceLevel}')");
+            return Controller.CarryCommand($"INSERT INTO Clients (ClientId,ClientName,BusinessId,ContractId,Surname,Number,AddressId,AlternativeContact,AlternativeNumber,CallsMade,Position,ClientServiceLevel) VALUES ('{client.ClientID}','{client.ClientName}','{client.BusinessID}','{client.ClientContract}','{client.ClientSurname}','{client.ClientNumber}',{int.Parse(client.ClientAddress)},'{client.AltContact}','{client.AltNum}',{int.Parse(client.CallsMade)},'{client.Position}','{client.ClientServiceLevel}')");
         }
 
         public DataSet DeleteClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"DELETE FROM Clients WHERE Client = '{client.ClientID}'");
+            return Controller.CarryCommand($"DELETE FROM Clients WHERE ClientId = '{client.ClientID}'");
         }
 
         public DataSet UpdateClient(IndividualClient client)

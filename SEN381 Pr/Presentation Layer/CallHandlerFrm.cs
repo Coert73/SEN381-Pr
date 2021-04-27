@@ -85,9 +85,13 @@ namespace SEN381_Pr.Presentation_Layer
             if (!row.IsNewRow)
             {
 
+
                 ID = row.Cells["ClientId"].Value.ToString();
                 contractid = row.Cells["ContractId"].Value.ToString();
                 FirstName = row.Cells["Name"].Value.ToString();
+
+                FirstName = row.Cells["ClientName"].Value.ToString();
+
                 SurName = row.Cells["Surname"].Value.ToString();
                 Number = row.Cells["Number"].Value.ToString();
             }

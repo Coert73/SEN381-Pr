@@ -180,7 +180,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDataCalls.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDataCalls.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataCalls.Size = new System.Drawing.Size(686, 550);
+            this.dgvDataCalls.Size = new System.Drawing.Size(686, 546);
             this.dgvDataCalls.TabIndex = 8;
             // 
             // btnBack

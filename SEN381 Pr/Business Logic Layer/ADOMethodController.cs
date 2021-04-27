@@ -108,7 +108,7 @@ namespace SEN381_Pr
             int charcount = 8 - (ClientCon.CountClients().ToString().Length);
             clientID = clientservicelevel + (ClientCon.CountClients() + 1).ToString().PadLeft(charcount,'0');
             MessageBox.Show(clientID);
-            ClientCon.InsertClient(new IndividualClient(businessID,  clientContract, clientAddress,  clientName, clientSurname, clientNumber,  callsMade, position, altcontact,  altnum, clientID, clientservicelevel));      
+            ClientCon.InsertClient(new IndividualClient(businessID,clientContract,clientAddress,clientName,clientSurname,clientNumber,callsMade,position,clientID,altnum,altcontact,clientservicelevel));      
             tab.DataSource = ClientCon.LoadData();
             tab.DataMember = "Table";         
             MessageBox.Show("Inserted Client");               
@@ -116,7 +116,7 @@ namespace SEN381_Pr
 
         public void UpdateClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID, string clientservicelevel)
         {
-            ClientCon.UpdateClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID, clientservicelevel));
+            ClientCon.UpdateClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, clientID, altnum, altcontact, clientservicelevel));
             tab.DataSource = ClientCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Updated Client");
@@ -124,7 +124,7 @@ namespace SEN381_Pr
 
         public void DeleteClientData(DataGridView tab, string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string altcontact, string altnum, string clientID, string clientservicelevel)
         {
-            ClientCon.DeleteClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, altcontact, altnum, clientID, clientservicelevel));
+            ClientCon.DeleteClient(new IndividualClient(businessID, clientContract, clientAddress, clientName, clientSurname, clientNumber, callsMade, position, clientID, altnum, altcontact, clientservicelevel));
             tab.DataSource = ClientCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Client");
@@ -186,7 +186,7 @@ namespace SEN381_Pr
             
             for (int i = 0; i < index; i++)
             {
-                ServiceList.Add("NONON5");
+                ServiceList.Add("NNON11");
             }
 
             id =  name.Substring(0, 3).ToUpper() + type + (PackCon.CountPackages() + 1).ToString();
@@ -282,7 +282,7 @@ namespace SEN381_Pr
 
         public void DeleteContracts(DataGridView tab, string id, string packageId, string name, string contractType, string start, string end, bool status, string level)
         {           
-            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, char.Parse(level)));
+            ContractCon.DeleteContract(new Contract(id, packageId, name, contractType, start, end, status, char.Parse(level.Substring(0, 1))));
             tab.DataSource = ContractCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Service");

@@ -17,17 +17,17 @@ namespace SEN381_Pr
 
         public DataSet InsertClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"INSERT INTO Clients (BusinessId,ContractId,Name,Surname,Number,CallsMade,Position,AlternativeContact,AlternativeNumber,ClientId,ClientServiceLevel) VALUES ({client.BusinessID},{client.ClientContract},'{client.ClientName}','{client.ClientSurname}','{client.ClientNumber}','{client.CallsMade}','{client.Position}','{client.AltContact}','{client.AltNum}','{client.ClientID}','{client.ClientServiceLevel}')");
+            return Controller.CarryCommand($"INSERT INTO Clients (ClientId,ClientName,BusinessId,ContractId,Surname,Number,AddressId,AlternativeContact,AlternativeNumber,CallsMade,Position,ClientServiceLevel) VALUES ('{client.ClientID}','{client.ClientName}','{client.BusinessID}','{client.ClientContract}','{client.ClientSurname}','{client.ClientNumber}',{int.Parse(client.ClientAddress)},'{client.AltContact}','{client.AltNum}',{int.Parse(client.CallsMade)},'{client.Position}','{client.ClientServiceLevel}')");
         }
 
         public DataSet DeleteClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"DELETE FROM Clients WHERE Client = '{client.ClientID}'");
+            return Controller.CarryCommand($"DELETE FROM Clients WHERE ClientId = '{client.ClientID}'");
         }
 
         public DataSet UpdateClient(IndividualClient client)
         {
-            return Controller.CarryCommand($"UPDATE Clients SET BusinessId='{client.BusinessID}',ContractId='{client.ClientContract}',Name='{client.ClientName}',Surname='{client.ClientSurname}',Number='{client.ClientNumber}',CallsMade='{client.CallsMade}',Position='{client.Position}',AlternativeContact='{client.AltContact}',AlternativeNumber='{client.AltNum}',ClientServiceLevel='{client.ClientServiceLevel}'  WHERE ClientId = '{client.ClientID}'");
+            return Controller.CarryCommand($"UPDATE Clients SET ClientName = '{client.ClientName}',BusinessId = '{client.BusinessID}', ContractId = '{client.ClientContract}',Surname= '{client.ClientSurname}',Number = '{client.ClientNumber}',AddressId = {int.Parse(client.ClientAddress)},AlternativeContact = '{client.AltContact}',AlternativeNumber = '{client.AltNum}',CallsMade = {int.Parse(client.CallsMade)},Position = '{client.Position}',ClientServiceLevel = '{client.ClientServiceLevel}'  WHERE ClientId = '{client.ClientID}'");
         }
 
         public int CountClients()

@@ -47,12 +47,16 @@
             this.btnRequests = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnMakeCall = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientsContact)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataCalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvClientsContact
@@ -71,14 +75,14 @@
             this.dgvClientsContact.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientsContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientsContact.GridColor = System.Drawing.Color.MediumSpringGreen;
-            this.dgvClientsContact.Location = new System.Drawing.Point(6, 36);
+            this.dgvClientsContact.Location = new System.Drawing.Point(4, 138);
             this.dgvClientsContact.Name = "dgvClientsContact";
             this.dgvClientsContact.RowHeadersVisible = false;
             this.dgvClientsContact.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvClientsContact.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientsContact.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClientsContact.Size = new System.Drawing.Size(180, 392);
+            this.dgvClientsContact.Size = new System.Drawing.Size(230, 465);
             this.dgvClientsContact.TabIndex = 1;
             this.dgvClientsContact.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientsContact_CellClick);
             this.dgvClientsContact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
@@ -86,12 +90,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lblContacts);
             this.panel1.Controls.Add(this.dgvClientsContact);
-            this.panel1.Location = new System.Drawing.Point(12, 5);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 438);
+            this.panel1.Size = new System.Drawing.Size(239, 605);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -99,18 +104,18 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(0, 27);
+            this.textBox2.Location = new System.Drawing.Point(4, 123);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(195, 3);
+            this.textBox2.Size = new System.Drawing.Size(230, 3);
             this.textBox2.TabIndex = 20;
             // 
             // lblContacts
             // 
             this.lblContacts.AutoSize = true;
             this.lblContacts.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContacts.Location = new System.Drawing.Point(3, 7);
+            this.lblContacts.Location = new System.Drawing.Point(91, 103);
             this.lblContacts.Name = "lblContacts";
             this.lblContacts.Size = new System.Drawing.Size(56, 17);
             this.lblContacts.TabIndex = 7;
@@ -122,31 +127,33 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.lblCallHistory);
             this.panel2.Controls.Add(this.dgvDataCalls);
-            this.panel2.Location = new System.Drawing.Point(222, 5);
+            this.panel2.Location = new System.Drawing.Point(257, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 438);
+            this.panel2.Size = new System.Drawing.Size(716, 605);
             this.panel2.TabIndex = 19;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(0, 27);
+            this.textBox1.Location = new System.Drawing.Point(8, 34);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(426, 3);
+            this.textBox1.Size = new System.Drawing.Size(700, 3);
             this.textBox1.TabIndex = 19;
             // 
             // lblCallHistory
             // 
             this.lblCallHistory.AutoSize = true;
             this.lblCallHistory.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCallHistory.Location = new System.Drawing.Point(13, 7);
+            this.lblCallHistory.Location = new System.Drawing.Point(6, 9);
             this.lblCallHistory.Name = "lblCallHistory";
             this.lblCallHistory.Size = new System.Drawing.Size(71, 17);
             this.lblCallHistory.TabIndex = 9;
             this.lblCallHistory.Text = "Call History";
+            this.lblCallHistory.Click += new System.EventHandler(this.lblCallHistory_Click);
             // 
             // dgvDataCalls
             // 
@@ -164,20 +171,20 @@
             this.dgvDataCalls.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDataCalls.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDataCalls.GridColor = System.Drawing.Color.MediumSpringGreen;
-            this.dgvDataCalls.Location = new System.Drawing.Point(3, 43);
+            this.dgvDataCalls.Location = new System.Drawing.Point(16, 43);
             this.dgvDataCalls.Name = "dgvDataCalls";
             this.dgvDataCalls.RowHeadersVisible = false;
             this.dgvDataCalls.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDataCalls.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDataCalls.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataCalls.Size = new System.Drawing.Size(417, 385);
+            this.dgvDataCalls.Size = new System.Drawing.Size(686, 550);
             this.dgvDataCalls.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(727, 403);
+            this.pictureBox1.Location = new System.Drawing.Point(1038, 577);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +196,7 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(713, 402);
+            this.btnBack.Location = new System.Drawing.Point(1024, 576);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(172, 41);
             this.btnBack.TabIndex = 22;
@@ -200,10 +207,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.btnRequests);
             this.panel3.Controls.Add(this.btnReports);
             this.panel3.Controls.Add(this.btnMakeCall);
-            this.panel3.Location = new System.Drawing.Point(668, 5);
+            this.panel3.Location = new System.Drawing.Point(979, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(217, 373);
             this.panel3.TabIndex = 20;
@@ -214,7 +222,7 @@
             this.btnRequests.FlatAppearance.BorderSize = 3;
             this.btnRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequests.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequests.Location = new System.Drawing.Point(15, 163);
+            this.btnRequests.Location = new System.Drawing.Point(19, 280);
             this.btnRequests.Name = "btnRequests";
             this.btnRequests.Size = new System.Drawing.Size(179, 36);
             this.btnRequests.TabIndex = 2;
@@ -228,7 +236,7 @@
             this.btnReports.FlatAppearance.BorderSize = 3;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.Location = new System.Drawing.Point(15, 99);
+            this.btnReports.Location = new System.Drawing.Point(19, 216);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(179, 36);
             this.btnReports.TabIndex = 1;
@@ -242,7 +250,7 @@
             this.btnMakeCall.FlatAppearance.BorderSize = 3;
             this.btnMakeCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeCall.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMakeCall.Location = new System.Drawing.Point(15, 35);
+            this.btnMakeCall.Location = new System.Drawing.Point(19, 152);
             this.btnMakeCall.Name = "btnMakeCall";
             this.btnMakeCall.Size = new System.Drawing.Size(179, 36);
             this.btnMakeCall.TabIndex = 0;
@@ -250,12 +258,32 @@
             this.btnMakeCall.UseVisualStyleBackColor = true;
             this.btnMakeCall.Click += new System.EventHandler(this.btnMakeCall_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(74, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(63, 52);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
             // CallHandlerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(891, 470);
+            this.ClientSize = new System.Drawing.Size(1208, 629);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel3);
@@ -274,6 +302,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataCalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,5 +324,7 @@
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnMakeCall;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

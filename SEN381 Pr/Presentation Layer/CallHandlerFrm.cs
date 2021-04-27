@@ -82,5 +82,15 @@ namespace SEN381_Pr.Presentation_Layer
                 Number = row.Cells["Number"].Value.ToString();
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblCallHistory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

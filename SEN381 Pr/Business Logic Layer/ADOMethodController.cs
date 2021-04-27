@@ -28,6 +28,16 @@ namespace SEN381_Pr
         BusinessADOController BusCon = new BusinessADOController();
         AddressADOController AddCon = new AddressADOController();
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Methods for Calls
+        public void LoadCallsData(DataGridView tab)
+        {
+            tab.DataSource = CallCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+
+        
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Addresses

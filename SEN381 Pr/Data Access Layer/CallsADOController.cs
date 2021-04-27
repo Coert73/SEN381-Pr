@@ -17,9 +17,9 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Calls");
         }
 
-        public DataSet InsertData(string callid,string clientid,string contractid,byte inout,string callduration, string calldate)
+        public DataSet InsertData(Call call)
         {
-            return Controller.CarryCommand($"INSERT INTO Calls (CallId,ClientId,ContractId,InOut,Duration,Date) VALUES ('{callid}','{clientid}','{contractid}','{inout}','{callduration}','{calldate}')");
+            return Controller.CarryCommand($"INSERT INTO Calls (CallId,ClientId,ContractId,InOut,Duration,Date) VALUES ('{call.CallId}','{call.ClientId}','{call.ContractId}','{call.InOut}','{call.Duration}','{call.date}')");
         }
     }
 }

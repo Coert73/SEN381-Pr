@@ -66,8 +66,7 @@ namespace SEN381_Pr.Presentation_Layer
             else
             {
                 (new Dialer()).Show();
-            }
-            
+            }            
         }
 
         private void dgvClientsContact_CellClick(object sender, DataGridViewCellEventArgs e)

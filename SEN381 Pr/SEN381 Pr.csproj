@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncomingCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomingCall.Designer.cs">
+      <DependentUpon>IncomingCall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\AddressFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
       <DependentUpon>ServiceSelectFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="IncomingCall.resx">
+      <DependentUpon>IncomingCall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\AddressFrm.resx">
       <DependentUpon>AddressFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +317,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cell phone keypad sound effect-[AudioTrimmer.com].wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\callanswerpic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

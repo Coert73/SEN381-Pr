@@ -34,6 +34,7 @@ namespace SEN381_Pr.Presentation_Layer
             label1.Text = CallHandlerFrm.FirstName;
             label2.Text = CallHandlerFrm.SurName;
             label3.Text = CallHandlerFrm.Number;
+            
             timer1.Interval = 5000;
             timer2.Interval = 1000;
             tone.Position = 0;

@@ -38,6 +38,8 @@ namespace SEN381_Pr.Presentation_Layer
         {
             Con.LoadCallClients(dgvClientsContact);
             Con.LoadCalls(dgvDataCalls);
+            timer1.Interval = 90000;
+            timer1.Start();
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -88,6 +90,11 @@ namespace SEN381_Pr.Presentation_Layer
         }
 
         private void lblCallHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }

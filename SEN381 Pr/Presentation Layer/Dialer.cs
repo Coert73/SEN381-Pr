@@ -16,13 +16,19 @@ namespace SEN381_Pr.Presentation_Layer
 {
     public partial class Dialer : Form
     {
+        ADOMethodController Con = new ADOMethodController();
         CallHandlerFrm call = new CallHandlerFrm();
         static Stream tone = Properties.Resources.Phone_Internal_RingingCalling;
         SoundPlayer Player = new SoundPlayer(tone);
         Stopwatch stopwatch = new Stopwatch();
         TimeSpan Clock = new TimeSpan(00 ,00, 00);
-        string ElapsedTime = "";
-        
+        public static string ElapsedTime = "";
+        private string clientid;
+        private string contractid;
+        private byte InOut;
+        private string Date;
+
+
 
         public Dialer()
         {
@@ -34,6 +40,10 @@ namespace SEN381_Pr.Presentation_Layer
             label1.Text = CallHandlerFrm.FirstName;
             label2.Text = CallHandlerFrm.SurName;
             label3.Text = CallHandlerFrm.Number;
+            clientid = CallHandlerFrm.ID;
+            contractid = CallHandlerFrm.contractid;
+            InOut = CallHandlerFrm.inout;
+            Date = DateTime.Now.ToString("yyyy-mm-dd hh:mm");
             timer1.Interval = 5000;
             timer2.Interval = 1000;
             tone.Position = 0;
@@ -47,7 +57,11 @@ namespace SEN381_Pr.Presentation_Layer
             (new CallHandlerFrm()).Show();
             this.Hide();
             ElapsedTime = Clock.ToString(@"hh\:mm\:ss");
-            MessageBox.Show("Your call duration: " + ElapsedTime);
+
+            Con.InsertCallData("",clientid,contractid,InOut,ElapsedTime,Date);
+
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

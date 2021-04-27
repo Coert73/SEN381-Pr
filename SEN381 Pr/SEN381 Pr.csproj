@@ -57,6 +57,12 @@
     <Compile Include="Business Logic Layer\Address.cs" />
     <Compile Include="Data Access Layer\BusinessADOController.cs" />
     <Compile Include="Data Access Layer\PackageADOController.cs" />
+    <Compile Include="Presentation Layer\IncommingCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\IncommingCall.Designer.cs">
+      <DependentUpon>IncommingCall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\PackagesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +89,6 @@
     </Compile>
     <Compile Include="Business Logic Layer\BusinessClient.cs" />
     <Compile Include="Business Logic Layer\Call.cs" />
-    <Compile Include="Business Logic Layer\CallHandler.cs" />
     <Compile Include="Business Logic Layer\Calls.cs" />
     <Compile Include="Business Logic Layer\ADOMethodController.cs" />
     <Compile Include="Business Logic Layer\Client.cs" />
@@ -236,6 +241,9 @@
     <EmbeddedResource Include="Presentation Layer\Dialer.resx">
       <DependentUpon>Dialer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\IncommingCall.resx">
+      <DependentUpon>IncommingCall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\JobsFrm.resx">
       <DependentUpon>JobsFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +316,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cell phone keypad sound effect-[AudioTrimmer.com].wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\callanswerpic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

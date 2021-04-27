@@ -8,7 +8,7 @@ namespace SEN381_Pr
     #region Call
     public class Call : Calls
     {
-        public Call(string callId, string clientId, string contractId, byte inOut, string duration, DateTime date) : base(callId, clientId, contractId, inOut, duration, date)
+        public Call(string callId, string clientId, string contractId, byte inOut, string duration, string date) : base(callId, clientId, contractId, inOut, duration, date)
         {
             this.CallId = callId;
             this.ClientId = clientId;

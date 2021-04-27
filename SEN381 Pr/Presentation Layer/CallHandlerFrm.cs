@@ -12,9 +12,15 @@ namespace SEN381_Pr.Presentation_Layer
 {
     public partial class CallHandlerFrm : Form
     {
+
         public static string FirstName ="";
         public static string SurName = "";
         public static string Number = "";
+        public static string ID = "";
+        public static string contractid = "";
+        public static byte inout;
+
+
 
         public CallHandlerFrm()
         {
@@ -38,6 +44,8 @@ namespace SEN381_Pr.Presentation_Layer
         {
             Con.LoadCallClients(dgvClientsContact);
             Con.LoadCalls(dgvDataCalls);
+           
+
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -65,6 +73,7 @@ namespace SEN381_Pr.Presentation_Layer
             }
             else
             {
+                inout = 0;
                 (new Dialer()).Show();
             }            
         }
@@ -75,7 +84,14 @@ namespace SEN381_Pr.Presentation_Layer
 
             if (!row.IsNewRow)
             {
+
+
+                ID = row.Cells["ClientId"].Value.ToString();
+                contractid = row.Cells["ContractId"].Value.ToString();
+                FirstName = row.Cells["Name"].Value.ToString();
+
                 FirstName = row.Cells["ClientName"].Value.ToString();
+
                 SurName = row.Cells["Surname"].Value.ToString();
                 Number = row.Cells["Number"].Value.ToString();
             }
@@ -87,6 +103,11 @@ namespace SEN381_Pr.Presentation_Layer
         }
 
         private void lblCallHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }

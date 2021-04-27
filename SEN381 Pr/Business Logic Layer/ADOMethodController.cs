@@ -28,6 +28,22 @@ namespace SEN381_Pr
         BusinessADOController BusCon = new BusinessADOController();
         AddressADOController AddCon = new AddressADOController();
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Methods for Calls
+        public void LoadCallsData(DataGridView tab)
+        {
+            tab.DataSource = CallCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertCallData(string callid, string clientid, string contractid, byte inout, string duration, string calldate)
+        {
+            callid = (CallCon.CountCalls() + 1).ToString();
+            CallCon.InsertData(new Call(callid,clientid,contractid,inout,duration,calldate));
+            MessageBox.Show("Call logged");
+        }
+
+
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Addresses

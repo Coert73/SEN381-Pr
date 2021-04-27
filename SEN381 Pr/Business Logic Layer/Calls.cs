@@ -8,7 +8,7 @@ namespace SEN381_Pr
     #region Calls
     public abstract class Calls
     {
-        public Calls(string callId, string clientId, string contractId, byte inOut, string duration, DateTime date)
+        public Calls(string callId, string clientId, string contractId, byte inOut, string duration, string date)
         {
             CallId = callId;
             ClientId = clientId;
@@ -23,7 +23,7 @@ namespace SEN381_Pr
         public string ContractId { get; set; }
         public byte InOut { get; set; }
         public string Duration { get; set; }
-        public DateTime date { get; set; }
+        public string date { get; set; }
 
         public override bool Equals(object obj)
         {

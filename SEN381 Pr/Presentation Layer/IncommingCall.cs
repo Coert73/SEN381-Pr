@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SEN381_Pr
+namespace SEN381_Pr.Presentation_Layer
 {
-    public partial class IncomingCall : Form
+    public partial class IncommingCall : Form
     {
-        public IncomingCall()
+        public IncommingCall()
         {
             InitializeComponent();
+        }
+
+        private void IncommingCall_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

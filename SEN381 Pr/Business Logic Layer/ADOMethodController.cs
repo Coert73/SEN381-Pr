@@ -36,13 +36,14 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
-        public void InsertCallData(DataGridView tab, string callid, string clientid, string contractid, string inout, string duration, string calldate)
+        public void InsertCallData(string callid, string clientid, string contractid, byte inout, string duration, string calldate)
         {
-            CallCon.InsertData();
-            tab.DataSource = CallCon.LoadData();
-            tab.DataMember = "Table";
+            callid = (CallCon.CountCalls() + 1).ToString();
+            CallCon.InsertData(new Call(callid,clientid,contractid,inout,duration,calldate));
             MessageBox.Show("Call logged");
         }
+
+
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Addresses

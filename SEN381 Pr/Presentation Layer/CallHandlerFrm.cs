@@ -76,7 +76,6 @@ namespace SEN381_Pr.Presentation_Layer
 
             if (!row.IsNewRow)
             {
-
                 FirstName = row.Cells["Name"].Value.ToString();
                 SurName = row.Cells["Surname"].Value.ToString();
                 Number = row.Cells["Number"].Value.ToString();

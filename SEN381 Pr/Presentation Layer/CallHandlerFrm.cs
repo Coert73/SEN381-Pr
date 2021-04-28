@@ -12,7 +12,6 @@ namespace SEN381_Pr.Presentation_Layer
 {
     public partial class CallHandlerFrm : Form
     {
-
         public static string FirstName ="";
         public static string SurName = "";
         public static string Number = "";
@@ -20,7 +19,7 @@ namespace SEN381_Pr.Presentation_Layer
         public static string contractid = "";
         public static byte inout;
 
-
+        public delegate void DelEventHandler();        
 
         public CallHandlerFrm()
         {
@@ -43,9 +42,7 @@ namespace SEN381_Pr.Presentation_Layer
         private void CallHandlerFrm_Load(object sender, EventArgs e)
         {
             Con.LoadCallClients(dgvClientsContact);
-            Con.LoadCalls(dgvDataCalls);
-           
-
+            Con.LoadCalls(dgvDataCalls);        
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -76,7 +73,7 @@ namespace SEN381_Pr.Presentation_Layer
                 inout = 0;
                 (new Dialer()).Show();
             }            
-        }
+        }      
 
         private void dgvClientsContact_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,18 +81,13 @@ namespace SEN381_Pr.Presentation_Layer
 
             if (!row.IsNewRow)
             {
-
-
                 ID = row.Cells["ClientId"].Value.ToString();
-                contractid = row.Cells["ContractId"].Value.ToString();
-                FirstName = row.Cells["Name"].Value.ToString();
-
+                contractid = row.Cells["ContractId"].Value.ToString();               
                 FirstName = row.Cells["ClientName"].Value.ToString();
-
                 SurName = row.Cells["Surname"].Value.ToString();
                 Number = row.Cells["Number"].Value.ToString();
             }
-        }
+        }        
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -110,6 +102,16 @@ namespace SEN381_Pr.Presentation_Layer
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvDataCalls_Enter(object sender, EventArgs e)
+        {
+            Con.LoadCalls(dgvDataCalls);
+        }
+
+        private void CallHandlerFrm_Enter(object sender, EventArgs e)
+        {
+            Con.LoadCalls(dgvDataCalls);
         }
     }
 }

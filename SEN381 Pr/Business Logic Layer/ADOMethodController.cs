@@ -26,7 +26,7 @@ namespace SEN381_Pr
         PackageADOController PackCon = new PackageADOController();
         ContractADOController ConCon = new ContractADOController();
         BusinessADOController BusCon = new BusinessADOController();
-        AddressADOController AddCon = new AddressADOController();
+        AddressADOController AddCon = new AddressADOController();        
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Calls
@@ -36,14 +36,49 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
-        public void InsertCallData(string callid, string clientid, string contractid, byte inout, string duration, string calldate)
+        public string InsertCallData(string callid, string clientid, string contractid, byte inout, string duration, string calldate)
         {
             callid = (CallCon.CountCalls() + 1).ToString();
             CallCon.InsertData(new Call(callid,clientid,contractid,inout,duration,calldate));
+
             MessageBox.Show("Call logged");
+
+            return callid;
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+        //Methods for requests
 
+        public void InsertRequest(string clientId,string callId)
+        {
+            string referencenumber = string.Empty;
+            byte approval = 0;
+            char reqstatus = ' ';
+            Random rand = new Random();
+            long number = rand.Next(2134125, 3134125);
+            referencenumber = number.ToString();
+            number = rand.Next(2134125, 3134125);
+            referencenumber =  referencenumber +  number.ToString();
+            referencenumber += (ReqCon.CountRequest() + 1);
+            approval = 1;
+            reqstatus = 'A';
+            ReqCon.InsertRequest(new Request(referencenumber,clientId,callId,approval,reqstatus));
+            MessageBox.Show("Request Created!");
+        }
+
+        public void LoadReqData(DataGridView tab)
+        {
+            RefreshData(tab);
+            tab.DataSource = ReqCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void SortData(DataGridView tab, string sort)
+        {
+            RefreshData(tab);
+            tab.DataSource = ReqCon.SortRequestData(sort);
+            tab.DataMember = "Table";
+        }
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Addresses
@@ -346,11 +381,13 @@ namespace SEN381_Pr
             return JobCon.LoadData();
         }
 
-        public void InsertJobData(DataGridView tab)
+        public void InsertJobData(DataGridView tab,string jobId,string AddressId,string referencenumber,string level,string technician,string contractId)
         {
-            RefreshData(tab);
-            //tab.DataSource = JobCon.InsertJob(new Job());
+            jobId = "Job" + (JobCon.CountJobs() + 1).ToString();
+            JobCon.InsertJob(new Job(jobId,AddressId,referencenumber,int.Parse(level),technician,contractId));
+            tab.DataSource = LoadJobData();
             tab.DataMember = "Table";
+            MessageBox.Show("Job Created!");
         }
 
         public void UpdateJobData(DataGridView tab, string id)
@@ -360,16 +397,32 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
         }
 
-        public void DeleteJobData(DataGridView tab, string id)
-        {
-            RefreshData(tab);
-            tab.DataSource = JobCon.DeleteJob(id);
+        public void DeleteJobData(DataGridView tab,string jobId, string AddressId, string referencenumber, string level, string technician, string contractId)
+        {            
+            JobCon.DeleteJob(new Job(jobId, AddressId, referencenumber, int.Parse(level), technician, contractId));
+            tab.DataSource = LoadJobData();
             tab.DataMember = "Table";
+            MessageBox.Show("Job Deleted!");
+        }
+
+        public void EscelateJob(DataGridView tab, string jobId, string AddressId, string referencenumber, string level, string technician, string contractId)
+        {
+            JobCon.EscelateJob(new Job(jobId, AddressId, referencenumber, (int.Parse(level) + 1), technician, contractId));
+            tab.DataSource = LoadJobData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Job Escelated!");
         }
 
         public void CountJobs(Label lbl)
         {
             lbl.Text = JobCon.CountJobs().ToString() + " Jobs";
+        }
+
+        public List<string> GetClientInfoForJobs(string clientId)
+        {
+            List<string> temp = new List<string>();
+            temp = ClientCon.ClientData(clientId);
+            return temp;
         }
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -397,25 +450,8 @@ namespace SEN381_Pr
             }
 
             return UserCredentials;
-        }
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Request ADO Controllers/Methods
-
-        public void LoadReqData(DataGridView tab)
-        {
-            RefreshData(tab);
-            tab.DataSource = ReqCon.LoadData();
-            tab.DataMember = "Table";
-        }
-
-        public void SortData(DataGridView tab,string sort)
-        {
-            RefreshData(tab);
-            tab.DataSource = ReqCon.SortData(sort);
-            tab.DataMember = "Table";
-        }
-
+        }            
+        
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Call Handler ADO Method Controllers
 

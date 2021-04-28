@@ -27,12 +27,11 @@ namespace SEN381_Pr.Presentation_Layer
         private string contractid;
         private byte InOut;
         private string Date;
-
-
+        private DataGridView _frm;
 
         public Dialer()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
 
         private void Dialer_Load(object sender, EventArgs e)
@@ -43,7 +42,7 @@ namespace SEN381_Pr.Presentation_Layer
             clientid = CallHandlerFrm.ID;
             contractid = CallHandlerFrm.contractid;
             InOut = CallHandlerFrm.inout;
-            Date = DateTime.Now.ToString("yyyy-mm-dd hh:mm");
+            Date = DateTime.Now.ToString("yyyy-MM-dd");
             timer1.Interval = 5000;
             timer2.Interval = 1000;
             tone.Position = 0;
@@ -51,17 +50,16 @@ namespace SEN381_Pr.Presentation_Layer
             Player.Play();   
         }
 
+        delegate void delDialer(DataGridView view);
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Player.Stop();
             (new CallHandlerFrm()).Show();
             this.Hide();
             ElapsedTime = Clock.ToString(@"hh\:mm\:ss");
-
-            Con.InsertCallData("",clientid,contractid,InOut,ElapsedTime,Date);
-
-
-
+            Con.InsertRequest(clientid,Con.InsertCallData("", clientid, contractid, InOut, ElapsedTime, Date));     
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -77,5 +75,6 @@ namespace SEN381_Pr.Presentation_Layer
             Clock = stopwatch.Elapsed;
             label5.Text = Clock.ToString(@"hh\:mm\:ss");
         }
+
     }
 }

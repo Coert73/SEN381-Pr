@@ -35,5 +35,17 @@ namespace SEN381_Pr
             return Controller.CarryCommand("SELECT * FROM Clients").Tables[0].Rows.Count;
         }
 
+        public List<string> ClientData(string id)
+        {
+            List<string> temp = new List<string>();
+
+            DataSet set = Controller.CarryCommand($"SELECT ContractId,AddressId FROM Clients WHERE ClientId = '{id}'");
+
+            temp.Add(set.Tables[0].Rows[0]["ContractId"].ToString());
+            temp.Add(set.Tables[0].Rows[0]["AddressId"].ToString());
+
+            return temp;
+        }
+
     }
 }

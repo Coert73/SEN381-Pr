@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace SEN381_Pr
 {
+    #region SecurityController
     class SecurityController
     {
 
@@ -25,6 +26,7 @@ namespace SEN381_Pr
             if (credentials[0] == user && credentials[1] == pass)
             {
                 MenuFrm formMen = new MenuFrm();
+                formMen.GetUserName(user);
                 formMen.Show();               
                 form.Hide();
             }
@@ -34,4 +36,5 @@ namespace SEN381_Pr
             }
         }      
     }
+    #endregion
 }

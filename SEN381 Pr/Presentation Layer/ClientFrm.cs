@@ -17,11 +17,6 @@ namespace SEN381_Pr
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClientAdd_MouseEnter(object sender, EventArgs e)
         {
             btnClientAdd.BackColor = Color.MediumSpringGreen;
@@ -58,34 +53,98 @@ namespace SEN381_Pr
             btnClientDel.ForeColor = SystemColors.ControlText;
         }
 
-        private void btnReturn_MouseEnter(object sender, EventArgs e)
+        ADOMethodController Con = new ADOMethodController();
+
+        private void ClientFrm_Load(object sender, EventArgs e)
         {
-            btnReturn.BackColor = Color.MediumSpringGreen;
-            btnReturn.ForeColor = Color.White;
+            dgvClients.DataSource = Con.LoadClientData();
+            dgvClients.DataMember = "Table";
+            Con.LoadAddressData(dgvAddress);
+            dgvAddress.DataMember = "Table";
+            Con.LoadContracts(dgvContractGrid);
+            dgvContractGrid.DataMember = "Table";
+            Con.LoadBusinessData(dgvBusinessGrid);
+            dgvBusinessGrid.DataMember = "Table";
         }
 
-        private void btnReturn_MouseLeave(object sender, EventArgs e)
-        {
-            btnReturn.BackColor = SystemColors.ButtonFace;
-            btnReturn.ForeColor = SystemColors.ControlText;
-        }
-
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             (new MenuFrm()).Show();
             this.Hide();
         }
 
-        ADOMethodController Con = new ADOMethodController();
-
-        private void ClientFrm_Load(object sender, EventArgs e)
+        private void btnClientEdit_Click(object sender, EventArgs e)
         {
-            Con.LoadCallClients(dgvClients);
+            Con.UpdateClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text,txtservicelevel.Text);
+        }
+
+        private void btnAddress_Click(object sender, EventArgs e)
+        {
+            (new AddressFrm()).Show();
+            this.Hide();
+        }
+
+        private void btnClientAdd_Click(object sender, EventArgs e)
+        {
+            //string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID
+            Con.InsertClientData(dgvClients,txtBusiness.Text,txtContract.Text,txtAddress.Text,txtClientName.Text,txtClientSurn.Text,txtClientNum.Text,txtCalls.Text,txtPos.Text,txtAltContact.Text,txtAltNumb.Text,txtClientID.Text, txtservicelevel.Text);
+        }
+
+        private void btnClientDel_Click(object sender, EventArgs e)
+        {
+            Con.DeleteClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text, txtservicelevel.Text);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dgvAddress_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvAddress.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtAddress.Text = row.Cells["AddressId"].Value.ToString();
+                
+            }
+        }
+
+        private void dgvClients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvClients.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtBusiness.Text = row.Cells["BusinessId"].Value.ToString();
+                txtContract.Text = row.Cells["ContractId"].Value.ToString();
+                txtAddress.Text = row.Cells["AddressId"].Value.ToString();
+                txtClientName.Text = row.Cells["ClientName"].Value.ToString();
+                txtClientSurn.Text = row.Cells["Surname"].Value.ToString();
+                txtClientNum.Text = row.Cells["Number"].Value.ToString();
+                txtCalls.Text = row.Cells["CallsMade"].Value.ToString();
+                txtPos.Text = row.Cells["Position"].Value.ToString();
+                txtAltContact.Text = row.Cells["AlternativeContact"].Value.ToString();
+                txtAltNumb.Text = row.Cells["AlternativeNumber"].Value.ToString();
+                txtClientID.Text = row.Cells["ClientId"].Value.ToString();
+            }
+        }
+
+        private void dgvBusinessGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvBusinessGrid.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtBusiness.Text = row.Cells["BusinessId"].Value.ToString();
+            }
+        }
+
+        private void dgvContractGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvContractGrid.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtContract.Text = row.Cells["ContractId"].Value.ToString();
+            }
         }
     }
 }

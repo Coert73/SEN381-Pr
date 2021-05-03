@@ -14,6 +14,7 @@ namespace SEN381_Pr
 {
     public partial class LoginFrm : Form
     {
+        
         public LoginFrm()
         {
             InitializeComponent();
@@ -26,7 +27,9 @@ namespace SEN381_Pr
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SecurityController Con = new SecurityController(this,txtUsername.Text,txtPassword.Text);             
+            
+            SecurityController Con = new SecurityController(this,txtUsername.Text,txtPassword.Text);
+            
         }        
 
         private void LoginFrm_Load(object sender, EventArgs e)
@@ -44,5 +47,7 @@ namespace SEN381_Pr
         {
             Properties.Settings.Default.Reload();
         }
+
+        
     }
 }

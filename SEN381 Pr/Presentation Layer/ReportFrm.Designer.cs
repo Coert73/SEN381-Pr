@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvReport = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.lblReferenceNumber = new System.Windows.Forms.Label();
             this.txtReferenceNumber = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,22 +64,22 @@
             this.dgvReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReport.GridColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvReport.Location = new System.Drawing.Point(16, 16);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.RowHeadersVisible = false;
             this.dgvReport.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvReport.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvReport.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReport.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReport.Size = new System.Drawing.Size(530, 448);
             this.dgvReport.TabIndex = 1;
@@ -84,27 +87,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.btnExit);
             this.panel3.Controls.Add(this.btnSort);
             this.panel3.Controls.Add(this.btnSearch);
-            this.panel3.Location = new System.Drawing.Point(578, 226);
+            this.panel3.Location = new System.Drawing.Point(578, 262);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(381, 184);
+            this.panel3.Size = new System.Drawing.Size(381, 139);
             this.panel3.TabIndex = 4;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnExit.FlatAppearance.BorderSize = 3;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(14, 131);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(351, 36);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSort
             // 
@@ -140,7 +128,7 @@
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.lblReferenceNumber);
             this.panel2.Controls.Add(this.txtReferenceNumber);
-            this.panel2.Location = new System.Drawing.Point(578, 65);
+            this.panel2.Location = new System.Drawing.Point(578, 101);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(381, 105);
             this.panel2.TabIndex = 3;
@@ -175,12 +163,37 @@
             this.txtReferenceNumber.Size = new System.Drawing.Size(351, 20);
             this.txtReferenceNumber.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(793, 436);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(779, 435);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(172, 41);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ReportFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(963, 501);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -194,6 +207,7 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,7 +216,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel2;
@@ -210,5 +223,7 @@
         private System.Windows.Forms.Label lblReferenceNumber;
         private System.Windows.Forms.TextBox txtReferenceNumber;
         private System.Windows.Forms.DataGridView dgvReport;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

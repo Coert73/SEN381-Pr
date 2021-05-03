@@ -5,28 +5,37 @@ using System.Text;
 
 namespace SEN381_Pr
 {
+    #region Client
     public abstract class Client
     {
+        public Client(string businessID, string clientContract, string clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position, string clientID, string altNum, string altContact, string clientServiceLevel)
+        {
+            BusinessID = businessID;
+            ClientContract = clientContract;
+            ClientAddress = clientAddress;
+            ClientName = clientName;
+            ClientSurname = clientSurname;
+            ClientNumber = clientNumber;
+            CallsMade = callsMade;
+            Position = position;
+            ClientID = clientID;
+            AltNum = altNum;
+            AltContact = altContact;
+            ClientServiceLevel = clientServiceLevel;
+        }
 
-        private string _businessID;
-        private Contract _clientcontract;
-        private Address _clientaddress;
-        private string _clientname;
-        private string _clientsurname;
-        private string _number;
-        private int _callsMade;
-        private string _position;
-
-
-        public abstract string BusinessID { get; set; }
-        public abstract Contract ClientContract { get; set; }
-        public abstract Address ClientAddress { get; set; }
-        public abstract string ClientName { get; set; }
-        public abstract string ClientSurname { get; set; }
-        public abstract string ClientNumber { get; set; }
-        public abstract string CallsMade { get; set; }
-        public abstract string Position { get; set; }
-
+        public string BusinessID { get; set; }
+        public string ClientContract { get; set; }
+        public string ClientAddress { get; set; }
+        public string ClientName { get; set; }
+        public string ClientSurname { get; set; }
+        public string ClientNumber { get; set; }
+        public string CallsMade { get; set; }
+        public string Position { get; set; }
+        public string ClientID { get; set; }
+        public string AltNum { get; set; }
+        public string AltContact { get; set; }
+        public string ClientServiceLevel { get; set; }
         public BusinessClient BusinessClient
         {
             get => default;
@@ -43,4 +52,5 @@ namespace SEN381_Pr
             }
         }
     }
+    #endregion
 }

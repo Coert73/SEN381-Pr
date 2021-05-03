@@ -49,6 +49,9 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTechID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTechnician)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,6 +98,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtTechID);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox9);
@@ -113,7 +119,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 160);
+            this.label3.Location = new System.Drawing.Point(12, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 20;
@@ -123,7 +129,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 96);
+            this.label2.Location = new System.Drawing.Point(12, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 19;
@@ -133,7 +139,7 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(14, 197);
+            this.textBox9.Location = new System.Drawing.Point(15, 227);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -144,7 +150,7 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(14, 133);
+            this.textBox8.Location = new System.Drawing.Point(15, 163);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -155,7 +161,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(14, 60);
+            this.textBox7.Location = new System.Drawing.Point(15, 90);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -166,7 +172,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 23);
+            this.label1.Location = new System.Drawing.Point(12, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 6;
@@ -175,7 +181,7 @@
             // txtNumber
             // 
             this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumber.Location = new System.Drawing.Point(14, 180);
+            this.txtNumber.Location = new System.Drawing.Point(15, 210);
             this.txtNumber.Multiline = true;
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(351, 20);
@@ -184,7 +190,7 @@
             // txtSurname
             // 
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSurname.Location = new System.Drawing.Point(14, 116);
+            this.txtSurname.Location = new System.Drawing.Point(15, 146);
             this.txtSurname.Multiline = true;
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(351, 20);
@@ -193,7 +199,7 @@
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Location = new System.Drawing.Point(14, 43);
+            this.txtName.Location = new System.Drawing.Point(15, 73);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(351, 20);
@@ -261,6 +267,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnBack
             // 
@@ -274,6 +281,36 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(15, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(351, 3);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Technician ID";
+            // 
+            // txtTechID
+            // 
+            this.txtTechID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTechID.Location = new System.Drawing.Point(15, 27);
+            this.txtTechID.Multiline = true;
+            this.txtTechID.Name = "txtTechID";
+            this.txtTechID.Size = new System.Drawing.Size(351, 20);
+            this.txtTechID.TabIndex = 21;
             // 
             // TechnicianFrm
             // 
@@ -322,5 +359,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTechID;
     }
 }

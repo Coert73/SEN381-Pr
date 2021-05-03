@@ -45,6 +45,7 @@ namespace SEN381_Pr
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(8, 68);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -65,6 +66,7 @@ namespace SEN381_Pr
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(8, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -85,6 +87,7 @@ namespace SEN381_Pr
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnAudioOptions);
             this.panel3.Controls.Add(this.btnVisOptions);
@@ -96,7 +99,7 @@ namespace SEN381_Pr
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -114,7 +117,7 @@ namespace SEN381_Pr
             // 
             // btnAudioOptions
             // 
-            this.btnAudioOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAudioOptions.BackColor = System.Drawing.Color.White;
             this.btnAudioOptions.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.btnAudioOptions.FlatAppearance.BorderSize = 3;
             this.btnAudioOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

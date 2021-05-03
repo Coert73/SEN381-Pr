@@ -73,6 +73,16 @@ namespace SEN381_Pr.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap callanswerpic {
+            get {
+                object obj = ResourceManager.GetObject("callanswerpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calldeclinepic {
             get {
                 object obj = ResourceManager.GetObject("calldeclinepic", resourceCulture);

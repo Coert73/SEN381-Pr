@@ -29,8 +29,10 @@ namespace SEN381_Pr
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuFrm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,31 +47,45 @@ namespace SEN381_Pr
             this.btnJobsOpen = new System.Windows.Forms.Button();
             this.btnClientsOpen = new System.Windows.Forms.Button();
             this.btnContractsOpen = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnServices = new System.Windows.Forms.Button();
+            this.btnBusiness = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnTrackJobs = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblJobsDone = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnPackages = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,7 +147,7 @@ namespace SEN381_Pr
             this.btnCallOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnCallOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCallOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCallOpen.Location = new System.Drawing.Point(41, 87);
+            this.btnCallOpen.Location = new System.Drawing.Point(41, 97);
             this.btnCallOpen.Name = "btnCallOpen";
             this.btnCallOpen.Size = new System.Drawing.Size(209, 43);
             this.btnCallOpen.TabIndex = 2;
@@ -148,7 +164,7 @@ namespace SEN381_Pr
             this.btnReportsOpen.FlatAppearance.BorderSize = 3;
             this.btnReportsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportsOpen.Location = new System.Drawing.Point(41, 144);
+            this.btnReportsOpen.Location = new System.Drawing.Point(41, 154);
             this.btnReportsOpen.Name = "btnReportsOpen";
             this.btnReportsOpen.Size = new System.Drawing.Size(209, 43);
             this.btnReportsOpen.TabIndex = 3;
@@ -165,7 +181,7 @@ namespace SEN381_Pr
             this.btnRequestsOpen.FlatAppearance.BorderSize = 3;
             this.btnRequestsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequestsOpen.Location = new System.Drawing.Point(41, 201);
+            this.btnRequestsOpen.Location = new System.Drawing.Point(41, 211);
             this.btnRequestsOpen.Name = "btnRequestsOpen";
             this.btnRequestsOpen.Size = new System.Drawing.Size(209, 43);
             this.btnRequestsOpen.TabIndex = 4;
@@ -182,9 +198,9 @@ namespace SEN381_Pr
             this.btnLogOut.FlatAppearance.BorderSize = 3;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(41, 533);
+            this.btnLogOut.Location = new System.Drawing.Point(5, 545);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(334, 33);
+            this.btnLogOut.Size = new System.Drawing.Size(138, 33);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -199,9 +215,9 @@ namespace SEN381_Pr
             this.btnOptionsOpen.FlatAppearance.BorderSize = 3;
             this.btnOptionsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptionsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptionsOpen.Location = new System.Drawing.Point(41, 486);
+            this.btnOptionsOpen.Location = new System.Drawing.Point(5, 506);
             this.btnOptionsOpen.Name = "btnOptionsOpen";
-            this.btnOptionsOpen.Size = new System.Drawing.Size(334, 33);
+            this.btnOptionsOpen.Size = new System.Drawing.Size(138, 33);
             this.btnOptionsOpen.TabIndex = 9;
             this.btnOptionsOpen.Text = "Options";
             this.btnOptionsOpen.UseVisualStyleBackColor = false;
@@ -216,7 +232,7 @@ namespace SEN381_Pr
             this.btnTechOpen.FlatAppearance.BorderSize = 3;
             this.btnTechOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTechOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTechOpen.Location = new System.Drawing.Point(41, 429);
+            this.btnTechOpen.Location = new System.Drawing.Point(41, 439);
             this.btnTechOpen.Name = "btnTechOpen";
             this.btnTechOpen.Size = new System.Drawing.Size(209, 43);
             this.btnTechOpen.TabIndex = 8;
@@ -233,7 +249,7 @@ namespace SEN381_Pr
             this.btnJobsOpen.FlatAppearance.BorderSize = 3;
             this.btnJobsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJobsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobsOpen.Location = new System.Drawing.Point(41, 372);
+            this.btnJobsOpen.Location = new System.Drawing.Point(41, 382);
             this.btnJobsOpen.Name = "btnJobsOpen";
             this.btnJobsOpen.Size = new System.Drawing.Size(209, 43);
             this.btnJobsOpen.TabIndex = 7;
@@ -250,7 +266,7 @@ namespace SEN381_Pr
             this.btnClientsOpen.FlatAppearance.BorderSize = 3;
             this.btnClientsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientsOpen.Location = new System.Drawing.Point(41, 315);
+            this.btnClientsOpen.Location = new System.Drawing.Point(41, 325);
             this.btnClientsOpen.Name = "btnClientsOpen";
             this.btnClientsOpen.Size = new System.Drawing.Size(209, 43);
             this.btnClientsOpen.TabIndex = 6;
@@ -267,7 +283,7 @@ namespace SEN381_Pr
             this.btnContractsOpen.FlatAppearance.BorderSize = 3;
             this.btnContractsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContractsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContractsOpen.Location = new System.Drawing.Point(41, 258);
+            this.btnContractsOpen.Location = new System.Drawing.Point(41, 268);
             this.btnContractsOpen.Name = "btnContractsOpen";
             this.btnContractsOpen.Size = new System.Drawing.Size(209, 43);
             this.btnContractsOpen.TabIndex = 5;
@@ -277,11 +293,6 @@ namespace SEN381_Pr
             this.btnContractsOpen.MouseEnter += new System.EventHandler(this.btnContractsOpen_MouseEnter);
             this.btnContractsOpen.MouseLeave += new System.EventHandler(this.btnContractsOpen_MouseLeave);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
@@ -290,18 +301,8 @@ namespace SEN381_Pr
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(227, 579);
+            this.textBox1.Size = new System.Drawing.Size(227, 676);
             this.textBox1.TabIndex = 12;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // panel3
             // 
@@ -309,9 +310,11 @@ namespace SEN381_Pr
             this.panel3.Controls.Add(this.lblUser);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(1019, 80);
+            this.panel3.Controls.Add(this.btnOptionsOpen);
+            this.panel3.Controls.Add(this.btnLogOut);
+            this.panel3.Location = new System.Drawing.Point(1012, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 498);
+            this.panel3.Size = new System.Drawing.Size(148, 595);
             this.panel3.TabIndex = 14;
             // 
             // lblUser
@@ -335,89 +338,247 @@ namespace SEN381_Pr
             this.label3.TabIndex = 14;
             this.label3.Text = "Welcome Back";
             // 
-            // pictureBox5
+            // pictureBox2
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(43, 91);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // btnServices
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(43, 147);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
+            this.btnServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnServices.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnServices.FlatAppearance.BorderSize = 3;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.Location = new System.Drawing.Point(41, 496);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(209, 43);
+            this.btnServices.TabIndex = 25;
+            this.btnServices.Text = "Services";
+            this.btnServices.UseVisualStyleBackColor = false;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
-            // pictureBox4
+            // btnBusiness
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(43, 204);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
+            this.btnBusiness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBusiness.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnBusiness.FlatAppearance.BorderSize = 3;
+            this.btnBusiness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusiness.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusiness.Location = new System.Drawing.Point(41, 553);
+            this.btnBusiness.Name = "btnBusiness";
+            this.btnBusiness.Size = new System.Drawing.Size(209, 43);
+            this.btnBusiness.TabIndex = 26;
+            this.btnBusiness.Text = "Business";
+            this.btnBusiness.UseVisualStyleBackColor = false;
+            this.btnBusiness.Click += new System.EventHandler(this.btnBusiness_Click_1);
             // 
-            // pictureBox6
+            // chart1
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(43, 261);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 21;
-            this.pictureBox6.TabStop = false;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(17, 15);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(535, 250);
+            this.chart1.TabIndex = 27;
+            this.chart1.Text = "chart1";
             // 
-            // pictureBox7
+            // panel4
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(43, 318);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.chart1);
+            this.panel4.Location = new System.Drawing.Point(273, 87);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(569, 281);
+            this.panel4.TabIndex = 28;
             // 
-            // pictureBox8
+            // btnTrackJobs
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(43, 375);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 23;
-            this.pictureBox8.TabStop = false;
+            this.btnTrackJobs.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrackJobs.Location = new System.Drawing.Point(848, 334);
+            this.btnTrackJobs.Name = "btnTrackJobs";
+            this.btnTrackJobs.Size = new System.Drawing.Size(159, 34);
+            this.btnTrackJobs.TabIndex = 29;
+            this.btnTrackJobs.Text = "Track Jobs";
+            this.btnTrackJobs.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(273, 374);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(502, 284);
+            this.panel5.TabIndex = 30;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.White;
+            this.monthCalendar1.Location = new System.Drawing.Point(780, 374);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 31;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(780, 543);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(227, 43);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Customer Satisfaction";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.panel6.Controls.Add(this.lblJobsDone);
+            this.panel6.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.ForeColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(848, 87);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(159, 245);
+            this.panel6.TabIndex = 33;
+            // 
+            // lblJobsDone
+            // 
+            this.lblJobsDone.AutoSize = true;
+            this.lblJobsDone.Location = new System.Drawing.Point(46, 109);
+            this.lblJobsDone.Name = "lblJobsDone";
+            this.lblJobsDone.Size = new System.Drawing.Size(66, 26);
+            this.lblJobsDone.TabIndex = 0;
+            this.lblJobsDone.Text = "0 Jobs";
+            this.lblJobsDone.Click += new System.EventHandler(this.lblJobsDone_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(780, 592);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(227, 65);
+            this.panel7.TabIndex = 34;
+            // 
+            // btnPackages
+            // 
+            this.btnPackages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPackages.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnPackages.FlatAppearance.BorderSize = 3;
+            this.btnPackages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPackages.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPackages.Location = new System.Drawing.Point(43, 610);
+            this.btnPackages.Name = "btnPackages";
+            this.btnPackages.Size = new System.Drawing.Size(209, 43);
+            this.btnPackages.TabIndex = 35;
+            this.btnPackages.Text = "Packages";
+            this.btnPackages.UseVisualStyleBackColor = false;
+            this.btnPackages.Click += new System.EventHandler(this.btnPackages_Click);
             // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(43, 432);
+            this.pictureBox9.Location = new System.Drawing.Point(43, 442);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(37, 37);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 24;
             this.pictureBox9.TabStop = false;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(43, 385);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 23;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(43, 328);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 22;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(43, 271);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(43, 214);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(43, 157);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(43, 101);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
-            this.ClientSize = new System.Drawing.Size(1161, 574);
+            this.ClientSize = new System.Drawing.Size(1161, 670);
+            this.Controls.Add(this.btnPackages);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btnTrackJobs);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.btnBusiness);
+            this.Controls.Add(this.btnServices);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -426,8 +587,6 @@ namespace SEN381_Pr
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnOptionsOpen);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnTechOpen);
             this.Controls.Add(this.panel1);
@@ -451,16 +610,20 @@ namespace SEN381_Pr
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,7 +644,6 @@ namespace SEN381_Pr
         private System.Windows.Forms.Button btnJobsOpen;
         private System.Windows.Forms.Button btnClientsOpen;
         private System.Windows.Forms.Button btnContractsOpen;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -495,5 +657,17 @@ namespace SEN381_Pr
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.Button btnBusiness;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnTrackJobs;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblJobsDone;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnPackages;
     }
 }

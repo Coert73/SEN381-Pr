@@ -121,6 +121,9 @@
   <data name="avatar-man-icon-profile-placeholder-260nw-1229859850" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar-man-icon-profile-placeholder-260nw-1229859850.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="callanswerpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\callanswerpic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calldeclinepic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calldeclinepic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

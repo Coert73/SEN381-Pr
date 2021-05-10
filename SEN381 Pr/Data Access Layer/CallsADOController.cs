@@ -21,6 +21,7 @@ namespace SEN381_Pr
         public int CountCalls()
         {
             return Controller.CarryCommand("SELECT * FROM Calls").Tables[0].Rows.Count;
+        }
 
         public DataSet InsertData(Call call)
         {

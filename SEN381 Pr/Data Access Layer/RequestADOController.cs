@@ -16,7 +16,28 @@ namespace SEN381_Pr
             return Controller.CarryCommand($"SELECT * FROM Requests");
         }
 
-        public DataSet SortData(string sort)
+        public DataSet InsertRequest(Request req)
+        {
+            return Controller.CarryCommand($"INSERT INTO Requests (ReferenceNumber,ClientId,CallId,Approval,ReqStatus) VALUES ('{req.ReferenceNumber}','{req.ClientId}','{req.CallId}',{req.Approval},'{req.ReqStatus}')");
+        }
+
+        public DataSet DeleteRequest(Request req)
+        {
+            return Controller.CarryCommand($"");
+        }
+
+        public DataSet UpdateRequest(Request req)
+        {
+            return Controller.CarryCommand($"");
+        }
+
+        public int CountRequest()
+        {
+            return Controller.CarryCommand("SELECT * FROM Requests").Tables[0].Rows.Count;
+        }
+
+
+        public DataSet SortRequestData(string sort)
         {
 
             DataSet set = new DataSet();

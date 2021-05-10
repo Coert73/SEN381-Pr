@@ -39,5 +39,10 @@ namespace SEN381_Pr
         {
             Con.LoadReqData(dgvRequests);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

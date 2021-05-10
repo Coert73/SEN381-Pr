@@ -29,43 +29,55 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobsFrm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEscelate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLevel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtContract = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTech = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtReference = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtJobID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvRequests = new System.Windows.Forms.DataGridView();
+            this.dgvTechnicians = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTechnicians)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(975, 571);
+            this.pictureBox1.Location = new System.Drawing.Point(975, 914);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +89,7 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(975, 571);
+            this.btnBack.Location = new System.Drawing.Point(975, 914);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(172, 41);
             this.btnBack.TabIndex = 9;
@@ -88,13 +100,28 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnEscelate);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.btnInsert);
-            this.panel3.Location = new System.Drawing.Point(766, 331);
+            this.panel3.Location = new System.Drawing.Point(424, 752);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(381, 234);
+            this.panel3.Size = new System.Drawing.Size(485, 206);
             this.panel3.TabIndex = 7;
+            // 
+            // btnEscelate
+            // 
+            this.btnEscelate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEscelate.FlatAppearance.BorderSize = 3;
+            this.btnEscelate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscelate.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscelate.Location = new System.Drawing.Point(67, 24);
+            this.btnEscelate.Name = "btnEscelate";
+            this.btnEscelate.Size = new System.Drawing.Size(351, 36);
+            this.btnEscelate.TabIndex = 3;
+            this.btnEscelate.Text = "Escelate";
+            this.btnEscelate.UseVisualStyleBackColor = true;
+            this.btnEscelate.Click += new System.EventHandler(this.btnEscelate_Click);
             // 
             // btnDelete
             // 
@@ -102,7 +129,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 3;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(15, 163);
+            this.btnDelete.Location = new System.Drawing.Point(67, 147);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(351, 36);
             this.btnDelete.TabIndex = 2;
@@ -116,7 +143,7 @@
             this.btnUpdate.FlatAppearance.BorderSize = 3;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(15, 99);
+            this.btnUpdate.Location = new System.Drawing.Point(67, 106);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(351, 36);
             this.btnUpdate.TabIndex = 1;
@@ -130,7 +157,7 @@
             this.btnInsert.FlatAppearance.BorderSize = 3;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(15, 35);
+            this.btnInsert.Location = new System.Drawing.Point(67, 65);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(351, 36);
             this.btnInsert.TabIndex = 0;
@@ -141,31 +168,65 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtLevel);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.txtContract);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtTech);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox9);
             this.panel2.Controls.Add(this.textBox8);
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(766, 9);
+            this.panel2.Controls.Add(this.txtReference);
+            this.panel2.Controls.Add(this.txtAddress);
+            this.panel2.Controls.Add(this.txtJobID);
+            this.panel2.Location = new System.Drawing.Point(12, 614);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(381, 316);
+            this.panel2.Size = new System.Drawing.Size(406, 344);
             this.panel2.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 174);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 17);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Escalation Level";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(18, 217);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(351, 3);
+            this.textBox1.TabIndex = 28;
+            // 
+            // txtLevel
+            // 
+            this.txtLevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLevel.Location = new System.Drawing.Point(18, 194);
+            this.txtLevel.Multiline = true;
+            this.txtLevel.Name = "txtLevel";
+            this.txtLevel.ReadOnly = true;
+            this.txtLevel.Size = new System.Drawing.Size(351, 20);
+            this.txtLevel.TabIndex = 27;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 230);
+            this.label5.Location = new System.Drawing.Point(15, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 26;
@@ -175,27 +236,27 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(16, 273);
+            this.textBox6.Location = new System.Drawing.Point(18, 324);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(351, 3);
             this.textBox6.TabIndex = 25;
             // 
-            // textBox10
+            // txtContract
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(16, 250);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(351, 20);
-            this.textBox10.TabIndex = 24;
+            this.txtContract.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContract.Location = new System.Drawing.Point(18, 301);
+            this.txtContract.Multiline = true;
+            this.txtContract.Name = "txtContract";
+            this.txtContract.Size = new System.Drawing.Size(351, 20);
+            this.txtContract.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 181);
+            this.label4.Location = new System.Drawing.Point(15, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 23;
@@ -205,27 +266,27 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(16, 224);
+            this.textBox4.Location = new System.Drawing.Point(18, 275);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(351, 3);
             this.textBox4.TabIndex = 22;
             // 
-            // textBox5
+            // txtTech
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(16, 201);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(351, 20);
-            this.textBox5.TabIndex = 21;
+            this.txtTech.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTech.Location = new System.Drawing.Point(18, 252);
+            this.txtTech.Multiline = true;
+            this.txtTech.Name = "txtTech";
+            this.txtTech.Size = new System.Drawing.Size(351, 20);
+            this.txtTech.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 132);
+            this.label3.Location = new System.Drawing.Point(15, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 17);
             this.label3.TabIndex = 20;
@@ -235,7 +296,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 83);
+            this.label2.Location = new System.Drawing.Point(15, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 19;
@@ -245,7 +306,7 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(16, 175);
+            this.textBox9.Location = new System.Drawing.Point(18, 161);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -256,7 +317,7 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(16, 126);
+            this.textBox8.Location = new System.Drawing.Point(18, 112);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -267,7 +328,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(16, 77);
+            this.textBox7.Location = new System.Drawing.Point(18, 63);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -278,38 +339,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 34);
+            this.label1.Location = new System.Drawing.Point(15, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Job ID";
             // 
-            // textBox3
+            // txtReference
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(16, 152);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(351, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtReference.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReference.Location = new System.Drawing.Point(18, 138);
+            this.txtReference.Multiline = true;
+            this.txtReference.Name = "txtReference";
+            this.txtReference.Size = new System.Drawing.Size(351, 20);
+            this.txtReference.TabIndex = 2;
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(16, 103);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(351, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Location = new System.Drawing.Point(18, 89);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(351, 20);
+            this.txtAddress.TabIndex = 1;
             // 
-            // textBox1
+            // txtJobID
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(16, 54);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(351, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtJobID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtJobID.Location = new System.Drawing.Point(18, 40);
+            this.txtJobID.Multiline = true;
+            this.txtJobID.Name = "txtJobID";
+            this.txtJobID.ReadOnly = true;
+            this.txtJobID.Size = new System.Drawing.Size(351, 20);
+            this.txtJobID.TabIndex = 0;
             // 
             // panel1
             // 
@@ -317,7 +379,7 @@
             this.panel1.Controls.Add(this.dgvJobs);
             this.panel1.Location = new System.Drawing.Point(12, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 599);
+            this.panel1.Size = new System.Drawing.Size(663, 599);
             this.panel1.TabIndex = 5;
             // 
             // dgvJobs
@@ -326,6 +388,42 @@
             this.dgvJobs.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvJobs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvJobs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJobs.GridColor = System.Drawing.Color.MediumSpringGreen;
+            this.dgvJobs.Location = new System.Drawing.Point(18, 17);
+            this.dgvJobs.Name = "dgvJobs";
+            this.dgvJobs.RowHeadersVisible = false;
+            this.dgvJobs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvJobs.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvJobs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvJobs.Size = new System.Drawing.Size(627, 565);
+            this.dgvJobs.TabIndex = 0;
+            this.dgvJobs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellClick);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.dgvRequests);
+            this.panel4.Location = new System.Drawing.Point(681, 9);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(466, 599);
+            this.panel4.TabIndex = 6;
+            // 
+            // dgvRequests
+            // 
+            this.dgvRequests.BackgroundColor = System.Drawing.Color.White;
+            this.dgvRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRequests.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvRequests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -333,25 +431,39 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvJobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobs.GridColor = System.Drawing.Color.MediumSpringGreen;
-            this.dgvJobs.Location = new System.Drawing.Point(16, 14);
-            this.dgvJobs.Name = "dgvJobs";
-            this.dgvJobs.RowHeadersVisible = false;
-            this.dgvJobs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvRequests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRequests.GridColor = System.Drawing.Color.MediumSpringGreen;
+            this.dgvRequests.Location = new System.Drawing.Point(17, 17);
+            this.dgvRequests.Name = "dgvRequests";
+            this.dgvRequests.RowHeadersVisible = false;
+            this.dgvRequests.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvJobs.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvJobs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvJobs.Size = new System.Drawing.Size(715, 569);
-            this.dgvJobs.TabIndex = 0;
+            this.dgvRequests.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvRequests.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRequests.Size = new System.Drawing.Size(433, 565);
+            this.dgvRequests.TabIndex = 1;
+            this.dgvRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequests_CellContentClick);
+            // 
+            // dgvTechnicians
+            // 
+            this.dgvTechnicians.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTechnicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTechnicians.Location = new System.Drawing.Point(424, 614);
+            this.dgvTechnicians.Name = "dgvTechnicians";
+            this.dgvTechnicians.Size = new System.Drawing.Size(723, 132);
+            this.dgvTechnicians.TabIndex = 10;
+            this.dgvTechnicians.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnicians_CellClick);
+            this.dgvTechnicians.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnicians_CellContentClick);
             // 
             // JobsFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1159, 620);
+            this.ClientSize = new System.Drawing.Size(1159, 967);
+            this.Controls.Add(this.dgvTechnicians);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel3);
@@ -368,6 +480,9 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTechnicians)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,20 +498,27 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtContract;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTech;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtReference;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtJobID;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvJobs;
+        private System.Windows.Forms.Button btnEscelate;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvRequests;
+        private System.Windows.Forms.DataGridView dgvTechnicians;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLevel;
     }
 }

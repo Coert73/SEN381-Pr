@@ -433,21 +433,29 @@ namespace SEN381_Pr
             List<string> UserCredentials = new List<string>();
             int i = 0;
 
-            foreach (DataRow row in SecCon.LoadData(username).Tables[i].Rows)
-            {               
-                if (username == row.ItemArray.GetValue(1).ToString())
+            if (SecCon.LoadData(username).Tables[i].Rows.Count > 0)
+            {
+                foreach (DataRow row in SecCon.LoadData(username).Tables[i].Rows)
                 {
-                    UserCredentials.Add(row.ItemArray.GetValue(1).ToString());
-                    UserCredentials.Add(row.ItemArray.GetValue(3).ToString());
-                    break;
+                    if (username == row.ItemArray.GetValue(1).ToString())
+                    {
+                        UserCredentials.Add(row.ItemArray.GetValue(1).ToString());
+                        UserCredentials.Add(row.ItemArray.GetValue(3).ToString());
+
+                    }
+                    else
+                    {
+                        UserCredentials.Add("NONE");
+                        UserCredentials.Add("NONE");
+                    }
+                    i++;
                 }
-                else
-                {
-                    UserCredentials.Add(null);
-                    UserCredentials.Add(null);
-                }
-                i++;
             }
+            else
+            {
+                UserCredentials.Add("NONE");
+                UserCredentials.Add("NONE");
+            }                        
 
             return UserCredentials;
         }            

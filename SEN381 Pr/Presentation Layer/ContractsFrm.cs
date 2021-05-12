@@ -78,17 +78,42 @@ namespace SEN381_Pr.Presentation_Layer
 
         private void btnContract_Click(object sender, EventArgs e)
         {
-            Con.InsertContracts(dgvContracts,txtContracId.Text,txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text,dtpEnd.Text,chkbxStatus.Checked,txtServiceLevel.Text);
+            if (txtPackageID.Text == string.Empty || txtContractName.Text == string.Empty  || txtContractType.Text == string.Empty  || dtpStart.Text == string.Empty  || dtpEnd.Text == string.Empty  || txtServiceLevel.Text == string.Empty )
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.InsertContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Con.UpdateContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+            if (txtContracId.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an ID to update!");
+            } 
+            else if(txtPackageID.Text == string.Empty || txtContractName.Text == string.Empty || txtContractType.Text == string.Empty || dtpStart.Text == string.Empty || dtpEnd.Text == string.Empty || txtServiceLevel.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.UpdateContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Con.DeleteContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+            if (txtContracId.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an ID to delete!");
+            }
+            else
+            {
+                Con.DeleteContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

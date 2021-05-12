@@ -27,9 +27,22 @@ namespace SEN381_Pr
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            SecurityController Con = new SecurityController(this,txtUsername.Text,txtPassword.Text);
-            
+            if (txtUsername.Text == string.Empty && txtPassword.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter a username and password!");
+            }
+            else if (txtPassword.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter a password!");
+            }
+            else if (txtUsername.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter a username");
+            }
+            else
+            {
+                SecurityController Con = new SecurityController(this, txtUsername.Text, txtPassword.Text);
+            }                  
         }        
 
         private void LoginFrm_Load(object sender, EventArgs e)

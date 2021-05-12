@@ -27,17 +27,43 @@ namespace SEN381_Pr
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            Con.InsertService(dgvServices, txtID.Text, txtName.Text, txtDescription.Text, textLevel.Text, int.Parse(textDur.Text), textSLA.Text, chkEquipment.Checked);
+            if (txtName.Text == string.Empty || txtDescription.Text == string.Empty || textLevel.Text == string.Empty || textDur.Text == string.Empty || textSLA.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.InsertService(dgvServices, txtID.Text, txtName.Text, txtDescription.Text, textLevel.Text, int.Parse(textDur.Text), textSLA.Text, chkEquipment.Checked);
+            }            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Con.UpdateService(dgvServices, txtID.Text, txtName.Text, txtDescription.Text, textLevel.Text, int.Parse(textDur.Text), textSLA.Text, chkEquipment.Checked);
+            if (txtID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select and ID");
+            }                
+            else if(txtName.Text == string.Empty || txtDescription.Text == string.Empty || textLevel.Text == string.Empty || textDur.Text == string.Empty || textSLA.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.UpdateService(dgvServices, txtID.Text, txtName.Text, txtDescription.Text, textLevel.Text, int.Parse(textDur.Text), textSLA.Text, chkEquipment.Checked);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Con.DeleteService(dgvServices, txtID.Text, txtName.Text, txtDescription.Text, textLevel.Text, int.Parse(textDur.Text), textSLA.Text, chkEquipment.Checked);
+            if (txtID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select and ID");
+            }
+            else
+            {
+                Con.DeleteService(dgvServices, txtID.Text, txtName.Text, txtDescription.Text, textLevel.Text, int.Parse(textDur.Text), textSLA.Text, chkEquipment.Checked);
+
+            }
         }
 
         private void ServicesFrm_Load(object sender, EventArgs e)

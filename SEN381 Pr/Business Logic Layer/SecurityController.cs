@@ -24,7 +24,7 @@ namespace SEN381_Pr
             List<string> credentials = Controller.ValidateCredentials(user);
 
             if (credentials[0] == user && credentials[1] == pass)
-            {
+            {                
                 MenuFrm formMen = new MenuFrm();
                 formMen.GetUserName(user);
                 formMen.Show();               

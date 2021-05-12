@@ -69,5 +69,10 @@ namespace SEN381_Pr
                 txtType.Text = row.Cells["PackageType"].Value.ToString();                
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

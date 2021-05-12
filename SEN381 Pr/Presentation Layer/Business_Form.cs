@@ -32,17 +32,38 @@ namespace SEN381_Pr
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            Con.InsertBusinessData(dgvBusiness,txtID.Text,txtName.Text);
+            if (txtName.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter the name of the business!");
+            }
+            else 
+            {
+                Con.InsertBusinessData(dgvBusiness, txtID.Text, txtName.Text); 
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Con.UpdateBusinessData(dgvBusiness, txtID.Text, txtName.Text);
+            if (txtID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an ID!");
+            }
+            else
+            {
+                Con.UpdateBusinessData(dgvBusiness, txtID.Text, txtName.Text);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Con.DeleteBusinessData(dgvBusiness, txtID.Text, txtName.Text);
+            if (txtID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an ID!");
+            }
+            else
+            {
+                Con.DeleteBusinessData(dgvBusiness, txtID.Text, txtName.Text);
+            }
         }
 
         private void dgvBusiness_CellClick(object sender, DataGridViewCellEventArgs e)

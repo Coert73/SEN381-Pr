@@ -38,11 +38,27 @@ namespace SEN381_Pr
         private void btnReset_Click(object sender, EventArgs e)
         {
             Con.LoadReqData(dgvRequests);
+        }       
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an request!");
+            }
+            else
+            {
+                Con.UpdateRequest(dgvRequests, txtID.Text);
+            }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void dgvRequests_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            DataGridViewRow row = dgvRequests.CurrentRow;
+            if (!row.IsNewRow)
+            {
+                txtID.Text = row.Cells["ReferenceNumber"].Value.ToString();
+            }
         }
     }
 }

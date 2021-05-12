@@ -10,7 +10,8 @@ using System.Windows.Forms;
 namespace SEN381_Pr
 {
     class ADOMethodController
-    {
+    {      
+        #region Controllers
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Business Logic Layer part of the data passing thru...
 
@@ -26,8 +27,10 @@ namespace SEN381_Pr
         PackageADOController PackCon = new PackageADOController();
         ContractADOController ConCon = new ContractADOController();
         BusinessADOController BusCon = new BusinessADOController();
-        AddressADOController AddCon = new AddressADOController();        
+        AddressADOController AddCon = new AddressADOController();
+        #endregion
 
+        #region Calls
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Calls
         public void LoadCallsData(DataGridView tab)
@@ -45,7 +48,9 @@ namespace SEN381_Pr
 
             return callid;
         }
+        #endregion
 
+        #region Requests
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
         //Methods for requests
 
@@ -59,8 +64,7 @@ namespace SEN381_Pr
             referencenumber = number.ToString();
             number = rand.Next(2134125, 3134125);
             referencenumber =  referencenumber +  number.ToString();
-            referencenumber += (ReqCon.CountRequest() + 1);
-            approval = 1;
+            referencenumber += (ReqCon.CountRequest() + 1);           
             reqstatus = 'A';
             ReqCon.InsertRequest(new Request(referencenumber,clientId,callId,approval,reqstatus));
             MessageBox.Show("Request Created!");
@@ -71,6 +75,15 @@ namespace SEN381_Pr
             RefreshData(tab);
             tab.DataSource = ReqCon.LoadData();
             tab.DataMember = "Table";
+        }      
+
+        public void UpdateRequest(DataGridView tab, string referencenumber)
+        {
+            byte approval = 1;
+            ReqCon.UpdateRequest(referencenumber, approval);
+            tab.DataSource = ReqCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Closed Request!");
         }
 
         public void SortData(DataGridView tab, string sort)
@@ -79,7 +92,9 @@ namespace SEN381_Pr
             tab.DataSource = ReqCon.SortRequestData(sort);
             tab.DataMember = "Table";
         }
+        #endregion
 
+        #region Address
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Addresses
         public void LoadAddressData(DataGridView tab)
@@ -112,6 +127,9 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Address");
         }
 
+        #endregion
+
+        #region Technicians
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Technicians
 
@@ -145,7 +163,10 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Technician");
         }
 
-        
+        #endregion
+
+        #region Clients
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods For Clients
 
@@ -181,6 +202,10 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Client");
         }
 
+        #endregion
+
+        #region Services
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Services
 
@@ -214,6 +239,10 @@ namespace SEN381_Pr
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Service");
         }
+
+        #endregion
+
+        #region Packages
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Package Methods and Functions
@@ -284,6 +313,10 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Package");
         }
 
+        #endregion
+
+        #region Contracts
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Contract Methods and Functions
 
@@ -339,6 +372,10 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Service");
         }
 
+        #endregion
+
+        #region Businesses
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Business Methods
 
@@ -373,6 +410,9 @@ namespace SEN381_Pr
             MessageBox.Show("Deleted Business");
         }
 
+        #endregion
+
+        #region Jobs
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Methods for Jobs
@@ -425,6 +465,10 @@ namespace SEN381_Pr
             return temp;
         }
 
+        #endregion
+
+        #region Login
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Security Layer Controllers
 
@@ -433,25 +477,37 @@ namespace SEN381_Pr
             List<string> UserCredentials = new List<string>();
             int i = 0;
 
-            foreach (DataRow row in SecCon.LoadData(username).Tables[i].Rows)
-            {               
-                if (username == row.ItemArray.GetValue(1).ToString())
+            if (SecCon.LoadData(username).Tables[i].Rows.Count > 0)
+            {
+                foreach (DataRow row in SecCon.LoadData(username).Tables[i].Rows)
                 {
-                    UserCredentials.Add(row.ItemArray.GetValue(1).ToString());
-                    UserCredentials.Add(row.ItemArray.GetValue(3).ToString());
-                    break;
+                    if (username == row.ItemArray.GetValue(1).ToString())
+                    {
+                        UserCredentials.Add(row.ItemArray.GetValue(1).ToString());
+                        UserCredentials.Add(row.ItemArray.GetValue(3).ToString());
+
+                    }
+                    else
+                    {
+                        UserCredentials.Add("NONE");
+                        UserCredentials.Add("NONE");
+                    }
+                    i++;
                 }
-                else
-                {
-                    UserCredentials.Add(null);
-                    UserCredentials.Add(null);
-                }
-                i++;
             }
+            else
+            {
+                UserCredentials.Add("NONE");
+                UserCredentials.Add("NONE");
+            }                        
 
             return UserCredentials;
-        }            
-        
+        }
+
+        #endregion
+
+        #region CallHandler
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Call Handler ADO Method Controllers
 
@@ -467,7 +523,11 @@ namespace SEN381_Pr
             tab.AutoGenerateColumns = true;
             tab.DataSource = CallCon.LoadData();
             tab.DataMember = "Table";
-        }      
+        }
+
+        #endregion
+
+        #region Reports
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Report ADO Controller Methods
@@ -499,12 +559,8 @@ namespace SEN381_Pr
             tab.Rows.Clear();
             tab.Update();
             tab.Refresh();
-        }       
+        }
 
-       
-
-        
-
-
+        #endregion
     }
 }

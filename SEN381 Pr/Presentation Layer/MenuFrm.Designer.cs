@@ -412,6 +412,7 @@ namespace SEN381_Pr
             this.btnTrackJobs.TabIndex = 29;
             this.btnTrackJobs.Text = "Track Jobs";
             this.btnTrackJobs.UseVisualStyleBackColor = true;
+            this.btnTrackJobs.Click += new System.EventHandler(this.btnTrackJobs_Click);
             // 
             // panel5
             // 

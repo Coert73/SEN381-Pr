@@ -84,7 +84,10 @@ namespace SEN381_Pr.Presentation_Layer
             }
             else
             {
-                Con.InsertContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, dtpEnd.Text, chkbxStatus.Checked, txtServiceLevel.Text);
+                double daysdifferent = Convert.ToDouble(nudDays.Value);
+                DateTime begindate = Convert.ToDateTime(dtpStart.Text);
+                DateTime EndDate = begindate.AddDays(daysdifferent);
+                Con.InsertContracts(dgvContracts, txtContracId.Text, txtPackageID.Text, txtContractName.Text, txtContractType.Text, dtpStart.Text, EndDate.ToString(), chkbxStatus.Checked, txtServiceLevel.Text);
             }
         }
 

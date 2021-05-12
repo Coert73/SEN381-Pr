@@ -32,19 +32,44 @@ namespace SEN381_Pr
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
-        {    
+        {
+            if (txtName.Text == string.Empty || txtSurname.Text == string.Empty || txtNumber.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else 
+            {
+                Con.InsertTechData(dgvTechnician, txtTechID.Text, txtName.Text, txtSurname.Text, txtNumber.Text); 
+            }
             
-            Con.InsertTechData(dgvTechnician,txtTechID.Text,txtName.Text,txtSurname.Text,txtNumber.Text);            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Con.UpdateTechData(dgvTechnician, txtTechID.Text,txtName.Text, txtSurname.Text, txtNumber.Text);
+            if (txtTechID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select and ID!");
+            } 
+            else if (txtName.Text == string.Empty || txtSurname.Text == string.Empty || txtNumber.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.UpdateTechData(dgvTechnician, txtTechID.Text, txtName.Text, txtSurname.Text, txtNumber.Text);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {         
-               Con.DeleteTechData(dgvTechnician, txtTechID.Text, txtName.Text, txtSurname.Text, txtNumber.Text);                      
+        {
+            if (txtTechID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select and ID!");
+            }
+            else
+            {
+                Con.DeleteTechData(dgvTechnician, txtTechID.Text, txtName.Text, txtSurname.Text, txtNumber.Text);
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

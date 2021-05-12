@@ -75,7 +75,19 @@ namespace SEN381_Pr
 
         private void btnClientEdit_Click(object sender, EventArgs e)
         {
-            Con.UpdateClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text,txtservicelevel.Text);
+            if (txtClientID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an ID first!");
+            }
+            else if (txtBusiness.Text == string.Empty || txtContract.Text == string.Empty || txtAddress.Text == string.Empty || txtClientName.Text == string.Empty || txtClientSurn.Text == string.Empty || txtClientNum.Text == string.Empty || txtPos.Text == string.Empty || txtservicelevel.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.UpdateClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text, txtservicelevel.Text);
+            }
+            
         }
 
         private void btnAddress_Click(object sender, EventArgs e)
@@ -86,13 +98,27 @@ namespace SEN381_Pr
 
         private void btnClientAdd_Click(object sender, EventArgs e)
         {
-            //string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position,string altcontact,string altnum,string clientID
-            Con.InsertClientData(dgvClients,txtBusiness.Text,txtContract.Text,txtAddress.Text,txtClientName.Text,txtClientSurn.Text,txtClientNum.Text,txtCalls.Text,txtPos.Text,txtAltContact.Text,txtAltNumb.Text,txtClientID.Text, txtservicelevel.Text);
+            if (txtBusiness.Text == string.Empty || txtContract.Text == string.Empty || txtAddress.Text == string.Empty || txtClientName.Text == string.Empty || txtClientSurn.Text == string.Empty || txtClientNum.Text == string.Empty || txtPos.Text == string.Empty || txtservicelevel.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter all fields!");
+            }
+            else
+            {
+                Con.InsertClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text, txtservicelevel.Text);
+            }
+            
         }
 
         private void btnClientDel_Click(object sender, EventArgs e)
         {
-            Con.DeleteClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text, txtservicelevel.Text);
+            if (txtClientID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select an ID first!");
+            }
+            else
+            {
+                Con.DeleteClientData(dgvClients, txtBusiness.Text, txtContract.Text, txtAddress.Text, txtClientName.Text, txtClientSurn.Text, txtClientNum.Text, txtCalls.Text, txtPos.Text, txtAltContact.Text, txtAltNumb.Text, txtClientID.Text, txtservicelevel.Text);
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -63,6 +63,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvPackages = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nudDays = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -166,6 +169,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.nudDays);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.chkbxStatus);
             this.panel2.Controls.Add(this.dtpEnd);
             this.panel2.Controls.Add(this.dtpStart);
@@ -196,7 +201,7 @@
             // chkbxStatus
             // 
             this.chkbxStatus.AutoSize = true;
-            this.chkbxStatus.Location = new System.Drawing.Point(19, 205);
+            this.chkbxStatus.Location = new System.Drawing.Point(219, 205);
             this.chkbxStatus.Name = "chkbxStatus";
             this.chkbxStatus.Size = new System.Drawing.Size(56, 17);
             this.chkbxStatus.TabIndex = 40;
@@ -253,7 +258,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 182);
+            this.label5.Location = new System.Drawing.Point(216, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 17);
             this.label5.TabIndex = 32;
@@ -443,6 +448,23 @@
             this.dgvPackages.TabIndex = 0;
             this.dgvPackages.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackages_CellClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 17);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Days to resolve:";
+            // 
+            // nudDays
+            // 
+            this.nudDays.Location = new System.Drawing.Point(19, 205);
+            this.nudDays.Name = "nudDays";
+            this.nudDays.Size = new System.Drawing.Size(85, 20);
+            this.nudDays.TabIndex = 42;
+            // 
             // ContractsFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +490,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,5 +529,7 @@
         private System.Windows.Forms.CheckBox chkbxStatus;
         private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.DateTimePicker dtpStart;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown nudDays;
     }
 }

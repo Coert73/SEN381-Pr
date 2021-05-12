@@ -19,16 +19,11 @@ namespace SEN381_Pr
         public DataSet InsertRequest(Request req)
         {
             return Controller.CarryCommand($"INSERT INTO Requests (ReferenceNumber,ClientId,CallId,Approval,ReqStatus) VALUES ('{req.ReferenceNumber}','{req.ClientId}','{req.CallId}',{req.Approval},'{req.ReqStatus}')");
-        }
+        }       
 
-        public DataSet DeleteRequest(Request req)
+        public DataSet UpdateRequest(string req, byte Approval)
         {
-            return Controller.CarryCommand($"");
-        }
-
-        public DataSet UpdateRequest(Request req)
-        {
-            return Controller.CarryCommand($"");
+            return Controller.CarryCommand($"UPDATE Requests SET Approval = {Approval} WHERE ReferenceNumber = '{req}'");
         }
 
         public int CountRequest()

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestFrm));
             this.cbxRequestSort = new System.Windows.Forms.ComboBox();
             this.dgvRequests = new System.Windows.Forms.DataGridView();
@@ -39,7 +39,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             "Reference Number",
             "Client",
             "Approval"});
-            this.cbxRequestSort.Location = new System.Drawing.Point(12, 486);
+            this.cbxRequestSort.Location = new System.Drawing.Point(278, 485);
             this.cbxRequestSort.Name = "cbxRequestSort";
             this.cbxRequestSort.Size = new System.Drawing.Size(233, 21);
             this.cbxRequestSort.TabIndex = 4;
@@ -64,14 +64,14 @@
             this.dgvRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRequests.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvRequests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRequests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRequests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRequests.GridColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvRequests.Location = new System.Drawing.Point(12, 12);
@@ -79,11 +79,12 @@
             this.dgvRequests.ReadOnly = true;
             this.dgvRequests.RowHeadersVisible = false;
             this.dgvRequests.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvRequests.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvRequests.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRequests.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRequests.Size = new System.Drawing.Size(1082, 468);
             this.dgvRequests.TabIndex = 5;
+            this.dgvRequests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequests_CellClick);
             // 
             // btnSort
             // 
@@ -142,7 +143,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(12, 504);
+            this.textBox4.Location = new System.Drawing.Point(278, 503);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
@@ -162,21 +163,14 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnDelete
+            // txtID
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.White;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnDelete.FlatAppearance.BorderSize = 3;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(220, 566);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(202, 34);
-            this.btnDelete.TabIndex = 19;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.txtID.Location = new System.Drawing.Point(12, 486);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(260, 20);
+            this.txtID.TabIndex = 20;
             // 
             // RequestFrm
             // 
@@ -184,7 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1106, 642);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.pictureBox1);
@@ -214,6 +208,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

@@ -213,7 +213,7 @@
       <DependentUpon>ServiceSelectFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Business Logic Layer\Reports.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Business Logic Layer\User.cs" />
     <EmbeddedResource Include="Presentation Layer\AddressFrm.resx">
       <DependentUpon>AddressFrm.cs</DependentUpon>
     </EmbeddedResource>

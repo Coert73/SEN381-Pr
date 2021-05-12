@@ -118,8 +118,8 @@ namespace SEN381_Pr
             DataGridViewRow row = dgvJobs.CurrentRow;
             if (!row.IsNewRow)
             {
-                txtJobID.Text = row.Cells["JobId"].Value.ToString(); ;
-                txtContract.Text = row.Cells["ContractId"].Value.ToString(); ;
+                txtJobID.Text = row.Cells["JobId"].Value.ToString(); 
+                txtContract.Text = row.Cells["ContractId"].Value.ToString(); 
                 txtLevel.Text = row.Cells["EscalationLevel"].Value.ToString();
                 txtReference.Text = row.Cells["ReferenceNumber"].Value.ToString();
                 txtAddress.Text = row.Cells["AdressId"].Value.ToString();

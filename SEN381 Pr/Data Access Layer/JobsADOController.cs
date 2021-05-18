@@ -40,5 +40,10 @@ namespace SEN381_Pr
         {
             return Controller.CarryCommand($"UPDATE Jobs SET EscalationLevel = {jobTemp.EscalationLevel} WHERE JobId = '{jobTemp.JobId}'");
         }
+
+        public DataSet RetrieveAssigned()
+        {
+            return Controller.CarryCommand("SELECT * FROM Jobs");
+        }    
     }
 }

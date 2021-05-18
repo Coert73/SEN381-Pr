@@ -433,6 +433,21 @@ namespace SEN381_Pr
         public void LoadTree(TreeView tree)
         {
             DataSet ds = JobCon.LoadData();
+            List<TreeNode> treelist = new List<TreeNode>();
+
+            foreach (DataTable item in JobCon.RetrieveAssigned().Tables)
+            {
+                foreach (DataRow row in item.Rows)
+                {
+                    treelist.Add(new TreeNode(row["JobId"].ToString(), new TreeNode[] {new TreeNode(row["AssignedTechnician"].ToString())}));
+                }
+            }
+
+            TreeNode[] array = treelist.ToArray();
+
+            tree.Nodes.Add(new TreeNode("Assigned Jobs",array));
+            tree.Nodes.Add(new TreeNode("Unassigned Jobs"));
+          
               
         }     
 

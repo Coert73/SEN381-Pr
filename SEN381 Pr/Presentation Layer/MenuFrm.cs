@@ -189,8 +189,13 @@ namespace SEN381_Pr
         private void MenuFrm_Load(object sender, EventArgs e)
         {
             ADOMethodController Con = new ADOMethodController();
-            Con.CountJobs(lblJobsDone);
-            //lblUser.Text = "User";
+            Con.CountJobs(lblJobsDone);            
+            chart1.Series["Jobs"].Points.AddXY("January", "10");
+            chart1.Series["Jobs"].Points.AddXY("Febuary", "8");
+            chart1.Series["Jobs"].Points.AddXY("March", "7");
+            chart1.Series["Jobs"].Points.AddXY("April", "15");
+            chart1.Series["Jobs"].Points.AddXY("May", "25");          
+            chart1.Titles.Add("PAST JOBS");          
         }
 
         public void GetUserName(string name)
@@ -223,7 +228,13 @@ namespace SEN381_Pr
 
         private void btnTrackJobs_Click(object sender, EventArgs e)
         {
+            (new TrackJobs()).Show();
+            this.Hide();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://localhost:3000/fetch");
         }
     }
 }

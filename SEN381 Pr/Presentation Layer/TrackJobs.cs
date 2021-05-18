@@ -27,5 +27,11 @@ namespace SEN381_Pr
             (new MenuFrm()).Show();
             this.Hide();
         }
+
+        private void TrackJobs_Load(object sender, EventArgs e)
+        {
+            ADOMethodController con = new ADOMethodController();
+            con.LoadTree(trvw);
+        }
     }
 }

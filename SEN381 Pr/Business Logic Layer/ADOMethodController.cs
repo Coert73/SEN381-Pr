@@ -430,6 +430,12 @@ namespace SEN381_Pr
             MessageBox.Show("Job Created!");
         }
 
+        public void LoadTree(TreeView tree)
+        {
+            DataSet ds = JobCon.LoadData();
+              
+        }     
+
         public void UpdateJobData(DataGridView tab, string id)
         {
             RefreshData(tab);

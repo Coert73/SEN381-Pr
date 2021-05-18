@@ -214,10 +214,10 @@
     </Compile>
     <Compile Include="Business Logic Layer\Reports.cs" />
     <Compile Include="Business Logic Layer\User.cs" />
-    <Compile Include="TrackJobs.cs">
+    <Compile Include="Presentation Layer\TrackJobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrackJobs.Designer.cs">
+    <Compile Include="Presentation Layer\TrackJobs.Designer.cs">
       <DependentUpon>TrackJobs.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Presentation Layer\AddressFrm.resx">
@@ -296,7 +296,7 @@
     <EmbeddedResource Include="Presentation Layer\ServiceSelectFrm.resx">
       <DependentUpon>ServiceSelectFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrackJobs.resx">
+    <EmbeddedResource Include="Presentation Layer\TrackJobs.resx">
       <DependentUpon>TrackJobs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
